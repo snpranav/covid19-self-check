@@ -457,19 +457,19 @@
                 <div class="form-group text-left">
                     <div class="radio">
                         <label class="  btn btn-default btn-lg toggle-checkbox primary">
-                            <input name="sex" type="radio" /> &ensp; ಹೌದು
+                            <input name="cs" type="radio" /> &ensp; ಹೌದು
                         </label>
                     </div>
 
                     <div class="radio"></div>
                     <label class=" btn btn-default btn-lg toggle-checkbox primary">
-                        <input name="sex" type="radio" /> &ensp; ಇಲ್ಲ
+                        <input name="cs" type="radio" /> &ensp; ಇಲ್ಲ
                     </label>
                 </div>
 
                 <div class="radio">
                     <label class=" btn btn-default btn-lg toggle-checkbox primary">
-                        <input name="sex" type="radio" /> &ensp; ತಿಳಿದಿಲ್ಲ
+                        <input name="cs" type="radio" /> &ensp; ತಿಳಿದಿಲ್ಲ
                     </label>
                 </div>
 
@@ -497,13 +497,13 @@
                 <div class="form-group text-left">
                     <div class="radio">
                         <label class="  btn btn-default btn-lg toggle-checkbox primary">
-                            <input name="sex" type="radio" /> &ensp; ಹೌದು
+                            <input name="ps" type="radio" /> &ensp; ಹೌದು
                         </label>
                     </div>
 
                     <div class="radio"></div>
                     <label class=" btn btn-default btn-lg toggle-checkbox primary">
-                        <input name="sex" type="radio" /> &ensp; ಇಲ್ಲ
+                        <input name="ps" type="radio" /> &ensp; ಇಲ್ಲ
                     </label>
                 </div>
 
@@ -563,13 +563,13 @@
                 <div class="form-group text-left">
                     <div class="radio">
                         <label class="  btn btn-default btn-lg toggle-checkbox primary">
-                            <input name="fever" type="radio" /> &ensp; ಹೌದು
+                            <input name="headache" type="radio" /> &ensp; ಹೌದು
                         </label>
                     </div>
 
                     <div class="radio"></div>
                     <label class=" btn btn-default btn-lg toggle-checkbox primary">
-                        <input name="fever" type="radio" /> &ensp; ಇಲ್ಲ
+                        <input name="headache" type="radio" /> &ensp; ಇಲ್ಲ
                     </label>
                 </div>
 
@@ -596,13 +596,13 @@
                 <div class="form-group text-left">
                     <div class="radio">
                         <label class="  btn btn-default btn-lg toggle-checkbox primary">
-                            <input name="fever" type="radio" /> &ensp; ಹೌದು
+                            <input name="cough" type="radio" /> &ensp; ಹೌದು
                         </label>
                     </div>
 
                     <div class="radio"></div>
                     <label class=" btn btn-default btn-lg toggle-checkbox primary">
-                        <input name="fever" type="radio" /> &ensp; ಇಲ್ಲ
+                        <input name="cough" type="radio" /> &ensp; ಇಲ್ಲ
                     </label>
                 </div>
 
@@ -629,13 +629,13 @@
                 <div class="form-group text-left">
                     <div class="radio">
                         <label class="  btn btn-default btn-lg toggle-checkbox primary">
-                            <input name="fever" type="radio" /> &ensp; ಹೌದು
+                            <input name="cold" type="radio" /> &ensp; ಹೌದು
                         </label>
                     </div>
 
                     <div class="radio"></div>
                     <label class=" btn btn-default btn-lg toggle-checkbox primary">
-                        <input name="fever" type="radio" /> &ensp; ಇಲ್ಲ
+                        <input name="cold" type="radio" /> &ensp; ಇಲ್ಲ
                     </label>
                 </div>
 
@@ -662,13 +662,13 @@
                 <div class="form-group text-left">
                     <div class="radio">
                         <label class="  btn btn-default btn-lg toggle-checkbox primary">
-                            <input name="fever" type="radio" /> &ensp; ಹೌದು
+                            <input name="breathe" type="radio" /> &ensp; ಹೌದು
                         </label>
                     </div>
 
                     <div class="radio"></div>
                     <label class=" btn btn-default btn-lg toggle-checkbox primary">
-                        <input name="fever" type="radio" /> &ensp; ಇಲ್ಲ
+                        <input name="breathe" type="radio" /> &ensp; ಇಲ್ಲ
                     </label>
                 </div>
 
@@ -696,13 +696,13 @@
                 <div class="form-group text-left">
                     <div class="radio">
                         <label class="  btn btn-default btn-lg toggle-checkbox primary">
-                            <input name="fever" type="radio" /> &ensp; ಹೌದು
+                            <input name="throat" type="radio" /> &ensp; ಹೌದು
                         </label>
                     </div>
 
                     <div class="radio"></div>
                     <label class=" btn btn-default btn-lg toggle-checkbox primary">
-                        <input name="fever" type="radio" /> &ensp; ಇಲ್ಲ
+                        <input name="throat" type="radio" /> &ensp; ಇಲ್ಲ
                     </label>
                 </div>
 
@@ -774,17 +774,12 @@
                 e.preventDefault();
             });
 
-            $("#3plus").click(function(e) {
+            $("#3plus, input[name='sex'] ").click(function(e) {
                 $("#3").addClass("hidden");
                 $("#4").removeClass("hidden");
                 e.preventDefault();
             });
 
-            $("#3plus").click(function(e) {
-                $("#3").addClass("hidden");
-                $("#4").removeClass("hidden");
-                e.preventDefault();
-            });
 
             $("#4minus").click(function(e) {
                 $("#4").addClass("hidden");
@@ -792,7 +787,7 @@
                 e.preventDefault();
             });
 
-            $("#4plus").click(function(e) {
+            $("#4plus, input[name='age']").click(function(e) {
                 $("#4").addClass("hidden");
                 $("#5").removeClass("hidden");
                 e.preventDefault();
@@ -804,7 +799,7 @@
                 e.preventDefault();
             });
 
-            $("#5plus").click(function(e) {
+            $("#5plus, input[name='hs']").click(function(e) {
                 $("#5").addClass("hidden");
                 $("#6").removeClass("hidden");
                 e.preventDefault();
@@ -816,7 +811,7 @@
                 e.preventDefault();
             });
 
-            $("#6plus").click(function(e) {
+            $("#6plus, input[name='travel']").click(function(e) {
                 $("#6").addClass("hidden");
                 $("#7").removeClass("hidden");
                 e.preventDefault();
@@ -828,7 +823,7 @@
                 e.preventDefault();
             });
 
-            $("#7plus").click(function(e) {
+            $("#7plus, input[name='cs']").click(function(e) {
                 $("#7").addClass("hidden");
                 $("#8").removeClass("hidden");
                 e.preventDefault();
@@ -840,7 +835,7 @@
                 e.preventDefault();
             });
 
-            $("#8plus").click(function(e) {
+            $("#8plus, input[name='ps']").click(function(e) {
                 $("#8").addClass("hidden");
                 $("#9").removeClass("hidden");
                 e.preventDefault();
@@ -852,7 +847,7 @@
                 e.preventDefault();
             });
 
-            $("#9plus").click(function(e) {
+            $("#9plus, input[name='fever']").click(function(e) {
                 $("#9").addClass("hidden");
                 $("#10").removeClass("hidden");
                 e.preventDefault();
@@ -864,7 +859,7 @@
                 e.preventDefault();
             });
 
-            $("#10plus").click(function(e) {
+            $("#10plus, input[name='headache']").click(function(e) {
                 $("#10").addClass("hidden");
                 $("#11").removeClass("hidden");
                 e.preventDefault();
@@ -876,7 +871,7 @@
                 e.preventDefault();
             });
 
-            $("#11plus").click(function(e) {
+            $("#11plus, input[name='cough']").click(function(e) {
                 $("#11").addClass("hidden");
                 $("#12").removeClass("hidden");
                 e.preventDefault();
@@ -888,7 +883,7 @@
                 e.preventDefault();
             });
 
-            $("#12plus").click(function(e) {
+            $("#12plus, input[name='cold']").click(function(e) {
                 $("#12").addClass("hidden");
                 $("#13").removeClass("hidden");
                 e.preventDefault();
@@ -900,7 +895,7 @@
                 e.preventDefault();
             });
 
-            $("#13plus").click(function(e) {
+            $("#13plus, input[name='breathe']").click(function(e) {
                 $("#13").addClass("hidden");
                 $("#14").removeClass("hidden");
                 e.preventDefault();
@@ -912,7 +907,7 @@
                 e.preventDefault();
             });
 
-            $("#14plus").click(function(e) {
+            $("#14plus, input[name='throat']").click(function(e) {
                 $("#14").addClass("hidden");
                 $("#15").removeClass("hidden");
                 e.preventDefault();
