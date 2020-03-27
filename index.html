@@ -21,8 +21,7 @@
 <!-- Custom-->
 <style type="text/css">
 body{background-color:#F9FEFD; font-family: 'Roboto', sans-serif; }
-.cv-form{max-width:420px; margin-top: 2%; min-height: 100%; background-color:white; padding: 1em;}
-.blue-t {color:#342BAF}
+
 
 h6,h5,p {
     line-height: 1.8;
@@ -46,14 +45,13 @@ body {
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
   background-color: #f5f5f5;
 }
 
 .form-signin {
   width: 100%;
   max-width: 450px;
+  height: 100%;
   padding: 20px;
   margin: 0 auto;
   padding-top: 5px;
@@ -85,6 +83,26 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+/* *** The Checkboxes *** */
+label.btn{
+    background-color: #F6F6F6;
+    border-radius: 0;
+    font-size: 17px;
+    display: block;
+    margin-top: 1em;
+  
+}
+.country{
+    background-color: #F6F6F6;
+    border-radius: 0;
+    font-size: 17px;
+    display:  !important;
+    margin-top: 1em;
+  
+}
+
+
+
 
 .title {
 padding-bottom:.5em;
@@ -105,16 +123,11 @@ padding-bottom:.5em;
     font-weight: 500 !important;
     margin-top: -.5em;
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  padding-top:1em;
-  padding-bottom:2em;
-  min-width: 450px;
-  height: 60px; /* Set the fixed height of the footer here */
-  line-height: 60px; /* Vertically center the text there */
-  background-color: #f5f5f5;
+.hidden{
+    display: none !important;
 }
+
+
 
 </style>
 
@@ -122,9 +135,9 @@ padding-bottom:.5em;
 
 </head>
 <body class="text-center">
-  
+
     <form class="form-signin">
-        <br> 
+        <br>   <br>
         <div class="mt-5 mb-3">
          
             <h4 class="text-center  title"> ಕೊರೋನ ಲಕ್ಷಣಗಳ ಪರೀಕ್ಷಕ  </h4>
@@ -143,36 +156,385 @@ padding-bottom:.5em;
 
                     <h5 class="text-left info"> <span class="imoji"> 🏥 </span>  ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಸಮೀಪದ ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆಯನ್ನು ಸಂಪರ್ಕಿಸಿರಿ ಅಥವಾ ಉಚಿತ ಆರೋಗ್ಯ ಸಹಾಯವಾಣಿ  <br> <a href="tel:104">104</a> ಕ್ಕೆ ಕರೆ ಮಾಡಿರಿ  </h6>
 
+                
+                        <div class="mt-5 mb-3">
+      
+        
+                            <button id="1plus" class="btn btn-primary text-center float-right">ಪ್ರಾರಂಭಿಸು </button>
+                
+        
+                   </div> 
+                
+                
+                
+                
+                
+                    </div>
+                <div id="2" class="hidden">
+
+
+                    <h5 class="text-left info"> <span class="imoji"> 🤔 </span>  ಈ ಪರೀಕ್ಷೆಯನ್ನು ಯಾರಿಗೆ ಮಾಡುತಿದ್ದೀರೀ ? </h5>
+
+                        <div class="form-group text-left">
+
+                            <div class="radio">
+                            <label class="  btn btn-default btn-lg toggle-checkbox primary"><input id="one" autocomplete="off" class="cc" type="checkbox" />
+                               &ensp; ಸ್ವಯಂ ಪರೀಕ್ಷೆ 
+                            </label>
+                            </div>
+
+                    
+
+                            <div class="radio"> 
+                            <label class=" btn btn-default btn-lg toggle-checkbox primary"><input id="one" autocomplete="off" class="cc" type="checkbox" />
+                                &ensp; ಪೋಷಕರಿಗೆ
+                             </label>
+                            </div>
+
+                       
+
+                             <div class="radio">    
+                             <label class="  btn btn-default btn-lg toggle-checkbox primary"><input id="one" autocomplete="off" class="cc" type="checkbox" />
+                                &ensp; ಪತ್ನಿಗೆ 
+                             </label>
+                            </div>
+
+                     
+
+                             <div class="radio">
+                             <label class=" btn btn-default btn-lg toggle-checkbox primary"><input id="one" autocomplete="off" class="cc" type="checkbox" />
+                                &ensp; ಮಕ್ಕಳಿಗೆ 
+                             </label>
+                            </div>
+
+                         
+
+                             <div class="radio">
+                             <label class=" btn btn-default btn-lg toggle-checkbox primary"><input id="one" autocomplete="off" class="cc" type="checkbox" />
+                                &ensp; ಇತರರಿಗೆ
+                             </label>
+                            </div>
+                    
+
+
+                            <div class="mt-5 mb-3">
+      
+                                <button id="2minus" class="btn btn-primary text-center float-left">ಹಿಂದೆ  </button>
+
+                                <button id="2plus" class="btn btn-primary text-center float-right">ಮುಂದೆ </button>
+                    
+            
+                       </div> 
+
+
+
+
+
+
+                        </div>
+
+
                 </div>
-                <div id="2">
+
+                <!-- VIEW 3 (SEX) -->
+
+                <div id="3" class="hidden">
+
+                    <h5 class="text-left info"> <span class="imoji"> 👨👩 </span>  ಲಿಂಗ ನಮೂದಿಸಿ  </h5>
+
+                        <div class="form-group text-left">
+                            <div class="radio">
+                            <label class="  btn btn-default btn-lg toggle-checkbox primary"><input name="sex" type="radio" />
+                               &ensp;  ಗಂಡು
+                            </label>
+                            </div>
+
+                     
+
+                            <div class="radio"></div>
+                            <label class=" btn btn-default btn-lg toggle-checkbox primary"><input name="sex" type="radio" />
+                                &ensp;  ಹೆಣ್ಣು 
+                             </label>
+                             </div> 
+
+                          
+
+                             <div class="radio">
+                             <label class=" btn btn-default btn-lg toggle-checkbox primary"><input name="sex" type="radio" />
+                                 &ensp; ಇತರೆ  
+                              </label>
+                            </div>
+
+
+                            <div class="mt-5 mb-3">
+      
+                                <button id="3minus" class="btn btn-primary text-center float-left">ಹಿಂದೆ  </button>
+
+                                <button id="3plus" class="btn btn-primary text-center float-right">ಮುಂದೆ </button>
+                    
+            
+                       </div> 
+
+
+
+
+                
+                        </div>
+
+
+           
+
+
+                <!-- PARTICIPANT AGE -->
+
+                <div id="4" class="hidden">
+
+                        <h5 class="text-left info"> <span class="imoji"> 💯 </span>  ವಯಸ್ಸನ್ನು ನಮೂದಿಸಿ    </h5>
+    
+                            <div class="form-group text-left">
+                                
+                                <div class="radio">
+                                <label class="  btn btn-default btn-lg toggle-checkbox primary"><input name="age"  autocomplete="off"  type="radio" />
+                                   &ensp; 12 ವರ್ಷದ ಒಳಗೆ 
+                                </label>
+                                </div>
+                                
+                         
+                                
+                                <div class="radio">
+                                <label class=" btn btn-default btn-lg toggle-checkbox primary"><input name="age"   autocomplete="off"  type="radio" />
+                                    &ensp; 12 ರಿಂದ 50 ವರ್ಷ ಒಳಗೆ
+                                 </label>
+                                </div>
+                              
+    
+                                 <label class=" btn btn-default btn-lg toggle-checkbox primary"><input name="age"   autocomplete="off"  type="radio" />
+                                     &ensp; 51 ರಿಂದ 60 ವರ್ಷ ಒಳಗೆ
+                                  </label>
+    
+
+                            
+    
+                                  <label class=" btn btn-default btn-lg toggle-checkbox primary"><input name="age"   autocomplete="off"  type="radio" />
+                                      &ensp; 60 ವರ್ಷ ಮೇಲ್ಪಟ್ಟು ಒಳಗೆ
+                                   </label>
+
+
+                    
+                            </div>
+    
+                            <div class="mt-5 mb-3">
+      
+                                <button id="4minus" class="btn btn-primary text-center float-left">ಹಿಂದೆ  </button>
+
+                                <button id="4plus" class="btn btn-primary text-center float-right">ಮುಂದೆ </button>
+                    
+            
+                       </div> 
+         
+    
+
+                </div>
+
+                <!-- HEALTH HISTORY-->
+
+                <div id="5" class="hidden">
+
+                    <h5 class="text-left info"> <span class="imoji"> 😷 </span>  ನಿಮಗೆ ಈ ಅರೋಗ್ಯ ಸಮಸ್ಯೆಗಳು ಇವೆಯೇ   </h5>
+    
+                    <div class="form-group text-left">
+                        
+                        <div class="radio">
+                        <label class="  btn btn-default btn-lg toggle-checkbox primary"><input name="hs"  autocomplete="off"  type="radio" />
+                           &ensp; ಅಸ್ತಮಾ 
+                        </label>
+                        </div>
+                        
+            
+                        
+                        <div class="radio">
+                        <label class=" btn btn-default btn-lg toggle-checkbox primary"><input name="hs"   autocomplete="off"  type="radio" />
+                            &ensp; ಶ್ವಾಶಕೋಶದ ತೊಂದರೆ 
+                         </label>
+                        </div>
+
+                       
+
+                         <div class="radio">
+                         <label class=" btn btn-default btn-lg toggle-checkbox primary"><input name="hs"   autocomplete="off"  type="radio" />
+                             &ensp; ಸಕ್ಕರೆ ಕಾಯಿಲೆ 
+                          </label>
+                        </div>  
+
+                     
+                          <div class="radio">
+                          <label class=" btn btn-default btn-lg toggle-checkbox primary"><input name="hs"   autocomplete="off"  type="radio" />
+                              &ensp; ಹೃದಯದ ತೊಂದರೆ 
+                           </label>
+                          </div>
+
+                           <div class="radio">
+                            <label class=" btn btn-default btn-lg toggle-checkbox primary"><input name="hs" type="radio" />
+                                &ensp; ರೋಗ ನಿರೋಧಕ ಶಕ್ತಿಯ ಕೊರತೆ  
+                             </label>
+                           </div>
+
+                           <div class="radio">
+                            <label class=" btn btn-default btn-lg toggle-checkbox primary"><input name="hs" type="radio" />
+                                &ensp; ಗರ್ಭಿಣಿಯೇ ? 
+                             </label>
+                           </div>
+
+                           <div class="radio">
+                            <label class=" btn btn-default btn-lg toggle-checkbox primary"><input name="hs" type="radio" />
+                                &ensp; ಈ ಮೇಲಿನ ಯಾವುದು ಇಲ್ಲ  
+                             </label>
+                           </div>
+
+
+            
+                    </div>
+
+                    <div class="mt-5 mb-3">
+      
+                        <button id="5minus" class="btn btn-primary text-center float-left">ಹಿಂದೆ  </button>
+
+                        <button id="5plus" class="btn btn-primary text-center float-right">ಮುಂದೆ </button>
+            
+    
+               </div> 
+
+                </div>
+
+
+
+
+
+                <div id="6" class="hidden" >
+
+                    <h5 class="text-left info"> <span class="imoji"> ✈️  </span>  ಕಳೆದ 14 ದಿನಗಳಲ್ಲಿ ನೀವು ಅಧವಾ ನಿಮ್ಮ ಕುಟುಂಬದ ಸದಸ್ಯರು ಈ ಕೆಳಗಿನ ದೇಶಗಳಿಗೆ ಭೇಟಿ(ಪ್ರಯಾಣ) ನೀಡಿದ್ದೀರಾ  </h5>
+
+                    <div class="form-group text-left">
+                        <div class="radio">
+                        <label class="country btn-default btn-lg toggle-checkbox primary"><input name="travel" type="radio" />
+                            &ensp;    ಪ್ರಯಾಣ ಮಾಡಿಲ್ಲ  
+                         </label>
+
+
+                     
+                        <label class=" country btn-default btn-lg toggle-checkbox primary"><input name="travel" type="radio" />
+                            &ensp;  ಅಮೇರಿಕಾ
+                         </label>
+                       
+
+                   
+                         <label class="country  btn-default btn-lg toggle-checkbox primary"><input name="travel" type="radio" />
+                             &ensp;   ಇಟಲಿ 
+                          </label>
+                     
+
+              
+                          <label class=" country  btn-default btn-lg toggle-checkbox primary"><input name="travel" type="radio" />
+                              &ensp;   ಫ್ರಾನ್ಸ್
+                           </label>
+                   
+
+                        
+                           <label class=" country  btn-default btn-lg toggle-checkbox primary"><input name="travel" type="radio" />
+                               &ensp;    ಇರಾನ್
+                            </label>
+                         
+
+                        
+                            <label class=" country  btn-default btn-lg toggle-checkbox primary"><input name="travel" type="radio" />
+                                &ensp;      ಜರ್ಮನಿ
+                             </label>
+                        
+                       
+                           
+                             <label class="country   btn-default btn-lg toggle-checkbox primary"><input name="travel" type="radio" />
+                                 &ensp;     ಲಂಡನ್ (UK)
+                              </label>
+                            
+
+                           
+                              <label class=" country  btn-default btn-lg toggle-checkbox primary"><input name="travel" type="radio" />
+                                  &ensp;      ಸ್ಪೇನ್
+                               </label>
+                         
+                        
+                           
+                               <label class="country   btn-default btn-lg toggle-checkbox primary"><input name="travel" type="radio" />
+                                   &ensp;        ಮಧ್ಯ ಏಷ್ಯಾ 
+                                </label>
+                         
+
+                        
+                                <label class="country  btn-default btn-lg toggle-checkbox primary"><input name="travel" type="radio" />
+                                    &ensp;       ಸೌತ್ ಏಷ್ಯಾ
+                                 </label>
+                              
+
+                            
+                                 <label class="country  btn-default btn-lg toggle-checkbox primary"><input name="travel" type="radio" />
+                                     &ensp;        ಇತರೆ 
+                                  </label>
+                           
+                                  <div class="mt-5 mb-3">
+      
+                                    <button id="6minus" class="btn btn-primary text-center float-left">ಹಿಂದೆ  </button>
+            
+                                    <button id="6plus" class="btn btn-primary text-center float-right">ಮುಂದೆ </button>
+                        
+                
+                           </div> 
+            
+
+                                
+
+                        
+                         
+                         
+                       
+                      
+                        
+                        
+                       
+                        
+                      
+                        
+                        
+                         
+
+                         
+
+
+                        <div class="mt-5 mb-3">
+  
+                            <button id="3minus" class="btn btn-primary text-center float-left">ಹಿಂದೆ  </button>
+
+                            <button id="3plus" class="btn btn-primary text-center float-right">ಮುಂದೆ </button>
+                
+        
+                   </div> 
+
 
 
 
                 </div>
-                <div id="3"></div>
-                <div id="4"></div>
-                <div id="5"></div>
-                <div id="6"></div>
+
+
+
+
                 <div id="7"></div>
                 <div id="8"></div>
 
 
-        <footer class="footer">
-            <div class="container">
-              
-                <button class="btn btn-primary text-center float-right">ಪ್ರಾರಂಭಿಸು </button>
+       
 
+         
 
-            
-                <button class="btn btn-primary text-center float-left">ಹಿಂದೆ ಹೋಗು </button>
-
- 
-
-
-            </div>
-          </footer>
-
-            </div>
+           
 
 
           
@@ -184,108 +546,81 @@ padding-bottom:.5em;
 
        
 
-    <script src="js/jq.js" type="text/javascript"></script> 
+    <script src="js/jq.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script> 
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
    <script>
+$(document).ready(function() {
 
-$(document).ready(function() {	
-	
-	// Random Alert shown for the fun of it
-	function randomAlert() {
-		var min = 5,
-			max = 20;
-		var rand = Math.floor(Math.random() * (max - min + 1) + min); //Generate Random number between 5 - 20
-		// post time in a <span> tag in the Alert
-		$("#time").html('Next alert in ' + rand + ' seconds');
-		$('#timed-alert').fadeIn(500).delay(3000).fadeOut(500);
-		setTimeout(randomAlert, rand * 1000);
-	}
-	randomAlert();
+    $('#1plus').click(function(e){
+
+    $("#1").addClass('hidden');
+    $("#2").removeClass('hidden');
+    
+    e.preventDefault();
+    
+    });
+
+    $('#2minus').click(function(e){
+
+        $("#2").addClass('hidden');
+        $("#1").removeClass('hidden');
+
+        e.preventDefault();
+
+    });
+
+$('#2plus').click(function(e){
+$("#2").addClass('hidden');
+$("#3").removeClass('hidden');
+e.preventDefault();
 });
 
-$('.btn').click(function(event) {
-    event.preventDefault();
-    var target = $(this).data('target');
-	// console.log('#'+target);
-	$('#click-alert').html('data-target= ' + target).fadeIn(50).delay(3000).fadeOut(1000);
-	
+$('#3minus').click(function(e){
+$("#3").addClass('hidden');
+$("#2").removeClass('hidden');
+e.preventDefault();
+});
+
+$('#3plus').click(function(e){
+$("#3").addClass('hidden');
+$("#4").removeClass('hidden');
+e.preventDefault();
+});
+
+$('#3plus').click(function(e){
+$("#3").addClass('hidden');
+$("#4").removeClass('hidden');
+e.preventDefault();
+});
+
+$('#4minus').click(function(e){
+$("#4").addClass('hidden');
+$("#3").removeClass('hidden');
+e.preventDefault();
+});
+
+$('#4plus').click(function(e){
+$("#4").addClass('hidden');
+$("#5").removeClass('hidden');
+e.preventDefault();
+});
+
+$('#5minus').click(function(e){
+$("#5").addClass('hidden');
+$("#4").removeClass('hidden');
+e.preventDefault();
+});
+
+$('#5plus').click(function(e){
+$("#5").addClass('hidden');
+$("#6").removeClass('hidden');
+e.preventDefault();
 });
 
 
-// Multi-Step Form
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the crurrent tab
-
-function showTab(n) {
-  // This function will display the specified tab of the form...
-  var x = document.getElementsByClassName("tab");
-  x[n].style.display = "block";
-  //... and fix the Previous/Next buttons:
-  if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
-  } else {
-    document.getElementById("prevBtn").style.display = "inline";
-  }
-  if (n == (x.length - 1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
-  } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
-  }
-  //... and run a function that will display the correct step indicator:
-  fixStepIndicator(n)
-}
-
-function nextPrev(n) {
-  // This function will figure out which tab to display
-  var x = document.getElementsByClassName("tab");
-  // Exit the function if any field in the current tab is invalid:
-  if (n == 1 && !validateForm()) return false;
-  // Hide the current tab:
-  x[currentTab].style.display = "none";
-  // Increase or decrease the current tab by 1:
-  currentTab = currentTab + n;
-  // if you have reached the end of the form...
-  if (currentTab >= x.length) {
-    // ... the form gets submitted:
-    document.getElementById("regForm").submit();
-    return false;
-  }
-  // Otherwise, display the correct tab:
-  showTab(currentTab);
-}
-
-function validateForm() {
-  // This function deals with validation of the form fields
-  var x, y, i, valid = true;
-  x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input");
-  // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if (y[i].value == "") {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false
-      valid = false;
-    }
-  }
-  // If the valid status is true, mark the step as finished and valid:
-  if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
-  }
-  return valid; // return the valid status
-}
-
-function fixStepIndicator(n) {
-  // This function removes the "active" class of all steps...
-  var i, x = document.getElementsByClassName("step");
-  for (i = 0; i < x.length; i++) {
-    x[i].className = x[i].className.replace(" active", "");
-  }
-  //... and adds the "active" class on the current step:
-  x[n].className += " active";
-}
+ }); 
 
 
 
