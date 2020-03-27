@@ -188,31 +188,31 @@
                 <div class="form-group text-left">
                     <div class="radio">
                         <label class="  btn btn-default btn-lg toggle-checkbox primary">
-                            <input autocomplete="off" type="checkbox" /> &ensp; ಸ್ವಯಂ ಪರೀಕ್ಷೆ
+                            <input name="participant" autocomplete="off" type="radio" /> &ensp; ಸ್ವಯಂ ಪರೀಕ್ಷೆ
                         </label>
                     </div>
 
                     <div class="radio">
                         <label class=" btn btn-default btn-lg toggle-checkbox primary">
-                            <input autocomplete="off" type="checkbox" /> &ensp; ಪೋಷಕರಿಗೆ
+                            <input name="participant" autocomplete="off" type="radio" /> &ensp; ಪೋಷಕರಿಗೆ
                         </label>
                     </div>
 
                     <div class="radio">
                         <label class="  btn btn-default btn-lg toggle-checkbox primary">
-                            <input autocomplete="off" type="checkbox" /> &ensp; ಪತ್ನಿಗೆ
+                            <input name="participant" autocomplete="off" type="radio" /> &ensp; ಪತ್ನಿಗೆ
                         </label>
                     </div>
 
                     <div class="radio">
                         <label class=" btn btn-default btn-lg toggle-checkbox primary">
-                            <input autocomplete="off" type="checkbox" /> &ensp; ಮಕ್ಕಳಿಗೆ
+                            <input name="participant" autocomplete="off" type="radio" /> &ensp; ಮಕ್ಕಳಿಗೆ
                         </label>
                     </div>
 
                     <div class="radio">
                         <label class=" btn btn-default btn-lg toggle-checkbox primary">
-                            <input autocomplete="off" type="checkbox" /> &ensp; ಇತರರಿಗೆ
+                            <input name="participant" autocomplete="off" type="radio" /> &ensp; ಇತರರಿಗೆ
                         </label>
                     </div>
 
@@ -741,12 +741,16 @@
 
     <script>
         $(document).ready(function() {
+
+          
+
             $("#1plus").click(function(e) {
                 $("#1").addClass("hidden");
                 $("#2").removeClass("hidden");
 
                 e.preventDefault();
             });
+
 
             $("#2minus").click(function(e) {
                 $("#2").addClass("hidden");
@@ -755,11 +759,14 @@
                 e.preventDefault();
             });
 
-            $("#2plus").click(function(e) {
+
+            $("#2plus, input[name='participant']").click(function(e) {
                 $("#2").addClass("hidden");
                 $("#3").removeClass("hidden");
                 e.preventDefault();
             });
+
+
 
             $("#3minus").click(function(e) {
                 $("#3").addClass("hidden");
