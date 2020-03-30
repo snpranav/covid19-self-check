@@ -1,10 +1,12 @@
-const staticCacheName = 'site-static-v1';
+const staticCacheName = 'site-static-v1-covid';
+
 const assets = [
   '/',
   '/index.html',
+  '/sw.js',
+  '/manifest.json',
   '/js/jq.js',
   '/js/bootstrap.min.js',
-  '/assets/js/jq.js',
   'css/bootstrap.min.css',
   'https://fonts.googleapis.com/css?family=Roboto&display=swap',
 ];
@@ -17,13 +19,12 @@ self.addEventListener('install', evt => {
     })
   );
 });
-
 // activate event
 self.addEventListener('activate', evt => {
   evt.waitUntil(
     caches.keys().then(keys => {
       return Promise.all(keys
-        .filter(key =>  key !== dynamicCacheName)
+        .filter(key => key !== staticCacheName)
         .map(key => caches.delete(key))
       );
     })
@@ -33,12 +34,7 @@ self.addEventListener('activate', evt => {
 self.addEventListener('fetch', evt => {
   evt.respondWith(
     caches.match(evt.request).then(cacheRes => {
-      return cacheRes || fetch(evt.request).then(fetchRes => {
-        return caches.open(dynamicCacheName).then(cache => {
-          cache.put(evt.request.url, fetchRes.clone());
-          return fetchRes;
-        })
-      });
+      return cacheRes || fetch(evt.request);
     })
   );
 });
