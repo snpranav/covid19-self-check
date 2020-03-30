@@ -1,4 +1,4 @@
-const staticCacheName = '63r2364274';
+const staticCacheName = '63r236sh73784274';
 
 const assets = [
   '/',
