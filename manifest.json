@@ -1,0 +1,16 @@
+{
+    "dir": "ltr",
+    "lang": "kn",
+    "name": "COVID-19 SYMPTOM DIAGNOSIS APP",
+    "scope": "/",
+    "display": "browser",
+    "start_url": "index.html",
+    "short_name": "COVID-19 TEST",
+    "theme_color": "transparent",
+    "description": "",
+    "orientation": "any",
+    "background_color": "transparent",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": []
+}
