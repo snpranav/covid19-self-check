@@ -222,34 +222,24 @@
 
           <!-- One "tab" for each step in the form: -->
 
-          <div class="tab">
+          <div class="tab" id="intro-text">
             <div class="col-lg-12">
-              <h1 class="display-5">
-                ಕೋವಿಡ್ - 19 <br />
-                ಲಕ್ಷಣಗಳ ಪರೀಕ್ಷಕ
+              <h1 class="display-5 title">
               </h1>
-
               <hr />
 
               <div class="title-2">
-                <h4>
-                  ℹ️ ಈ ವೆಬ್ಸೈಟ್ ಅನ್ನು ಬಳಸಿ ನಿಮಗೆ ಕೊರೋನ ಸೋಂಕಿನ ಲಕ್ಷಣಗಳು ಇದೆಯೇ
-                  ಎಂದು ತಿಳಿದುಕೊಳ್ಳಬಹುದು.
+                <h4 class="description">
                 </h4>
               </div>
 
               <div class="title-2">
-                <h4>
-                  🤒 ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಆರೋಗ್ಯ ಲಕ್ಷಣದ ವಿವರದ ಮೇರೆಗೆ ನಿಮಗೆ ಕೊರೋನ
-                  ಸೋಂಕಿನ ಲಕ್ಷಣಗಳು ಇದೆಯೇ ಎಂದು ಈ ವೆಬ್ಸೈಟ್ ಮಾಹಿತಿ ಕೊಡುತ್ತದೆ.
+                <h4 class="description">
                 </h4>
               </div>
 
               <div class="title-2">
-                <h4>
-                  ☎️ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಸಮೀಪದ ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆಯನ್ನು ಸಂಪರ್ಕಿಸಿರಿ
-                  ಅಥವಾ ಉಚಿತ ಆರೋಗ್ಯ ಸಹಾಯವಾಣಿ <a href="tel:104"> 104 </a> ಕ್ಕೆ ಕರೆ
-                  ಮಾಡಿರಿ
+                <h4 class="description">
                 </h4>
 
                 <input style="display:none" type="radio" checked disabled />
@@ -257,181 +247,163 @@
             </div>
           </div>
 
-          <div class="tab">
+          <div class="tab" id="formpage-0">
             <div class="col-lg-12">
               <br />
-              <h1 class="title-1">
-                🤔 ಈ ಪರೀಕ್ಷೆಯನ್ನು ಯಾರಿಗೆ ಮಾಡುತ್ತಿದ್ದೀರಿ ?
+              <h1 class="title-1 question">
               </h1>
-              <p>
-                ಸೂಕ್ತವಾದುದನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.
+              <p class="question-description">
               </p>
 
               <hr />
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="participant"
                   value="self"
                   type="radio"
                   onclick="nextPrev(1)"
                 />
-                &ensp; ಸ್ವಯಂ ಪರೀಕ್ಷೆ
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="participant"
                   value="parents"
                   type="radio"
                   onclick="nextPrev(1)"
                 />
-                &ensp; ಪೋಷಕರಿಗೆ
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="participant"
                   value="spouse"
                   type="radio"
                   onclick="nextPrev(1)"
                 />
-                &ensp; ಪತ್ನಿಗೆ
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="participant"
                   value="children"
                   type="radio"
                   onclick="nextPrev(1)"
                 />
-                &ensp; ಮಕ್ಕಳಿಗೆ
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="participant"
                   value="other"
                   type="radio"
                   onclick="nextPrev(1)"
                 />
-                &ensp; ಇತರರಿಗೆ
               </label>
             </div>
           </div>
 
-          <div class="tab">
+          <div class="tab" id="formpage-1">
             <div class="col-lg-12">
               <br />
-              <h1 class="title-1">
-                ⚤ ಲಿಂಗ ನಮೂದಿಸಿ
+              <h1 class="title-1 question">
               </h1>
-              <p>
-                ಸೂಕ್ತವಾದುದನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.
+              <p class="question-description">
               </p>
 
               <hr />
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="gender"
                   value="male"
                   type="radio"
                   onclick="nextPrev(1)"
                 />
-                &ensp; ಗಂಡು
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="gender"
                   value="female"
                   type="radio"
                   onclick="nextPrev(1)"
                 />
-                &ensp; ಹೆಣ್ಣು
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="gender"
                   value="other"
                   type="radio"
                   onclick="nextPrev(1)"
                 />
-                &ensp; ಇತರೆ
               </label>
             </div>
           </div>
 
-          <div class="tab">
+          <div class="tab" id="formpage-2">
             <div class="col-lg-12">
               <br />
-              <h1 class="title-1">
-                💯 ವಯಸ್ಸನ್ನು ನಮೂದಿಸಿ
+              <h1 class="title-1 question">
               </h1>
-              <p>
-                ಸೂಕ್ತವಾದುದನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.
+              <p class="question-description">
               </p>
 
               <hr />
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="age"
                   value="12"
                   type="radio"
                   onclick="nextPrev(1)"
                 />
-                &ensp; 12 ವರ್ಷದ ಒಳಗೆ
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="age"
                   value="12-15"
                   type="radio"
                   onclick="nextPrev(1)"
                 />
-                &ensp; 12 ರಿಂದ 50 ವರ್ಷ ಒಳಗೆ
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="age"
                   value="51-60"
                   type="radio"
                   onclick="nextPrev(1)"
                 />
-                &ensp; 51 ರಿಂದ 60 ವರ್ಷ ಒಳಗೆ
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="age"
                   value="60"
                   type="radio"
                   onclick="nextPrev(1)"
                 />
-                &ensp; 60 ವರ್ಷ ಮೇಲ್ಪಟ್ಟು
               </label>
             </div>
           </div>
 
-          <div class="tab">
+          <div class="tab"  id="formpage-3">
             <div class="col-lg-12">
               <br />
-              <h1 class="title-1">
+              <h1 class="title-1 question">
                 💊 ನಿಮಗೆ ಈ ಆರೋಗ್ಯ ಸಮಸ್ಯೆಗಳು ಇವೆಯೇ ?
               </h1>
-              <p>
+              <p class="question-description">
                 ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಸೂಕ್ತವಾದ ಅಂಶಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಬಹುದು.
               </p>
 
               <hr />
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   id="health-reset"
                   name="pre_existing_conditions"
@@ -441,7 +413,7 @@
                 &ensp; ಈ ಕೆಳಗಿನ ಯಾವುದು ಇಲ್ಲ
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="pre_existing_conditions"
                   value="yes"
@@ -450,7 +422,7 @@
                 &ensp; ಅಸ್ತಮಾ
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="pre_existing_conditions"
                   value="yes"
@@ -459,7 +431,7 @@
                 &ensp; ಶ್ವಾಸಕೋಶದ ತೊಂದರೆ
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="pre_existing_conditions"
                   value="yes"
@@ -468,7 +440,7 @@
                 &ensp; ಸಕ್ಕರೆ ಕಾಯಿಲೆ
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="pre_existing_conditions"
                   value="yes"
@@ -477,7 +449,7 @@
                 &ensp; ಹೃದಯದ ತೊಂದರೆ
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="pre_existing_conditions"
                   value="yes"
@@ -486,7 +458,7 @@
                 &ensp; ರೋಗ ನಿರೋಧಕ ಶಕ್ತಿಯ ಕೊರತೆ
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="pre_existing_conditions"
                   value="yes"
@@ -497,19 +469,19 @@
             </div>
           </div>
 
-          <div class="tab">
+          <div class="tab" id="formpage-4">
             <div class="col-lg-12">
               <br />
-              <h1 class="title-1">
+              <h1 class="title-1 question">
                 🧳 ಕಳೆದ 60 ದಿನಗಳಲ್ಲಿ ನೀವು ಅಥವಾ ನಿಮ್ಮ ಕುಟುಂಬದ ಸದಸ್ಯರು ಈ ಕೆಳಗಿನ
                 ದೇಶಗಳಿಗೆ ಪ್ರಯಾಣ ಮಾಡಿದ್ದಾರಾ ?
               </h1>
-              <p>
+              <p class="question-description">
                 ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಸೂಕ್ತವಾದ ಅಂಶಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಬಹುದು.
               </p>
               <hr />
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   id="travel-reset"
                   name="travel"
@@ -519,69 +491,69 @@
                 &ensp; ಪ್ರಯಾಣ ಮಾಡಿಲ್ಲ
               </label>
 
-              <label class=" btn-c btn-default btn-lg primary">
+              <label class=" btn-c btn-default btn-lg primary option">
                 <input name="travel" value="yes" type="checkbox" /> &ensp; ಚೀನಾ
               </label>
 
-              <label class=" btn-c btn-default btn-lg primary">
+              <label class=" btn-c btn-default btn-lg primary option">
                 <input name="travel" value="yes" type="checkbox" /> &ensp;
                 ಅಮೇರಿಕಾ (USA)
               </label>
 
-              <label class=" btn-c btn-default btn-lg primary">
+              <label class=" btn-c btn-default btn-lg primary option">
                 <input name="travel" value="yes" type="checkbox" /> &ensp; ಇಟಲಿ
               </label>
 
-              <label class=" btn-c btn-default btn-lg primary">
+              <label class=" btn-c btn-default btn-lg primary option">
                 <input name="travel" value="yes" type="checkbox" /> &ensp;
                 ಸ್ಪೇನ್
               </label>
 
-              <label class=" btn-c btn-default btn-lg primary">
+              <label class=" btn-c btn-default btn-lg primary option">
                 <input name="travel" value="yes" type="checkbox" /> &ensp;
                 ಜರ್ಮನಿ
               </label>
 
-              <label class=" btn-c btn-default btn-lg primary">
+              <label class=" btn-c btn-default btn-lg primary option">
                 <input name="travel" value="yes" type="checkbox" /> &ensp;
                 ಫ್ರಾನ್ಸ್
               </label>
 
-              <label class=" btn-c btn-default btn-lg primary">
+              <label class=" btn-c btn-default btn-lg primary option">
                 <input name="travel" value="yes" type="checkbox" /> &ensp; ಇರಾನ್
               </label>
 
-              <label class=" btn-c btn-default btn-lg primary">
+              <label class=" btn-c btn-default btn-lg primary option">
                 <input name="travel" value="yes" type="checkbox" /> &ensp; ಯು.ಕೆ
                 (UK)
               </label>
 
-              <label class=" btn-c btn-default btn-lg primary">
+              <label class=" btn-c btn-default btn-lg primary option">
                 <input name="travel" value="yes" type="checkbox" /> &ensp; ದುಬೈ
               </label>
 
-              <label class=" btn-c btn-default btn-lg primary">
+              <label class=" btn-c btn-default btn-lg primary option">
                 <input name="travel" value="yes" type="checkbox" /> &ensp; ಇತರೆ
               </label>
             </div>
           </div>
 
-          <div class="tab">
+          <div class="tab"  id="formpage-5">
             <div class="col-lg-12">
               <br />
-              <h1 class="title-1">
+              <h1 class="title-1 question">
                 😷 ಕಳೆದ 40 ದಿನಗಳಲ್ಲಿ ನೀವು ಅಥವಾ ನಿಮ್ಮ ಕುಟುಂಬದ ಸದಸ್ಯರು ಭಾರತದಲ್ಲಿ
                 ಸಾರ್ವಜನಿಕ ಸಾರಿಗೆಯಲ್ಲಿ ಅಥವಾ ಸಾರ್ವಜನಿಕ ಸ್ಥಳಗಳಲ್ಲಿ ಪ್ರಯಾಣಿಸುವಾಗ
                 ಕೆಮ್ಮು ನೆಗಡಿ ಜ್ವರ ಮತ್ತು ಉಸಿರಾಟದ ತೊಂದರೆ ಇರುವವರ ಸಂಪರ್ಕ ಮಾಡಿದ್ದಾರಾ
                 ?
               </h1>
-              <p>
+              <p class="question-description">
                 ಸೂಕ್ತವಾದುದನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.
               </p>
 
               <hr />
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="internal_travel_contact"
                   value="yes"
@@ -591,7 +563,7 @@
                 &ensp; ಹೌದು
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="internal_travel_contact"
                   value="no"
@@ -601,7 +573,7 @@
                 &ensp; ಇಲ್ಲ
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="internal_travel_contact"
                   value="no"
@@ -613,20 +585,20 @@
             </div>
           </div>
 
-          <div class="tab">
+          <div class="tab" id="formpage-6">
             <div class="col-lg-12">
               <br />
-              <h1 class="title-1">
+              <h1 class="title-1 question">
                 ❌ ಕಳೆದ 40 ದಿನಗಳಲ್ಲಿ ನೀವು ಅಥವಾ ನಿಮ್ಮ ಕುಟುಂಬದ ಸದಸ್ಯರು COVID 19
                 ಖಚಿತ ಪ್ರಕರಣದ ರೋಗಿಯ ಜೊತೆ ಸಂಪರ್ಕ ಮಾಡಿದ್ದಾರಾ ?
               </h1>
-              <p>
+              <p class="question-description">
                 ಸೂಕ್ತವಾದುದನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.
               </p>
 
               <hr />
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="covid_confirm_relation"
                   value="yes"
@@ -636,7 +608,7 @@
                 &ensp; ಹೌದು
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="covid_confirm_relation"
                   value="no"
@@ -648,18 +620,18 @@
             </div>
           </div>
 
-          <div class="tab">
+          <div class="tab"  id="formpage-7">
             <div class="col-lg-12">
               <br />
-              <h1 class="title-1">
+              <h1 class="title-1 question">
                 🤒 ನಿಮಗೆ ಜ್ವರ ಇದೆಯೇ?
               </h1>
-              <p>
+              <p class="question-description">
                 ಸೂಕ್ತವಾದುದನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.
               </p>
               <hr />
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="fever"
                   value="yes"
@@ -669,7 +641,7 @@
                 &ensp; ಹೌದು
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="fever"
                   value="no"
@@ -681,19 +653,19 @@
             </div>
           </div>
 
-          <div class="tab">
+          <div class="tab"  id="formpage-8">
             <div class="col-lg-12">
               <br />
-              <h1 class="title-1">
+              <h1 class="title-1 question">
                 🤯 ನಿಮಗೆ ತಲೆನೋವು ಇದೆಯೇ?
               </h1>
-              <p>
+              <p class="question-description">
                 ಸೂಕ್ತವಾದುದನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.
               </p>
 
               <hr />
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="headache"
                   value="yes"
@@ -703,7 +675,7 @@
                 &ensp; ಹೌದು
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="headache"
                   value="no"
@@ -715,18 +687,18 @@
             </div>
           </div>
 
-          <div class="tab">
+          <div class="tab"  id="formpage-9">
             <div class="col-lg-12">
               <br />
-              <h1 class="title-1">
+              <h1 class="title-1 question">
                 😷 ನಿಮಗೆ ಕೆಮ್ಮು ಇದೆಯೇ?
               </h1>
-              <p>
+              <p class="question-description">
                 ಸೂಕ್ತವಾದುದನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.
               </p>
               <hr />
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="cough"
                   value="yes"
@@ -736,7 +708,7 @@
                 &ensp; ಹೌದು
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="cough"
                   value="no"
@@ -748,18 +720,18 @@
             </div>
           </div>
 
-          <div class="tab">
+          <div class="tab" id="formpage-10">
             <div class="col-lg-12">
               <br />
-              <h1 class="title-1">
+              <h1 class="title-1 question">
                 😰 ನಿಮಗೆ ಶೀತ ಆಗಿದಿಯೇ ?
               </h1>
-              <p>
+              <p class="question-description">
                 ಸೂಕ್ತವಾದುದನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.
               </p>
               <hr />
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="cold"
                   value="yes"
@@ -769,7 +741,7 @@
                 &ensp; ಹೌದು
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="cold"
                   value="no"
@@ -781,19 +753,19 @@
             </div>
           </div>
 
-          <div class="tab">
+          <div class="tab" id="formpage-11">
             <div class="col-lg-12">
               <br />
-              <h1 class="title-1">
+              <h1 class="title-1  question">
                 😫 ನಿಮಗೆ ಉಸಿರಾಟದ ತೊಂದರೆ ಇದೆಯೇ?
               </h1>
-              <p>
+              <p class="question-description">
                 ಸೂಕ್ತವಾದುದನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.
               </p>
 
               <hr />
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="breathing_disorders"
                   value="yes"
@@ -803,7 +775,7 @@
                 &ensp; ಹೌದು
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input
                   name="breathing_disorders"
                   value="no"
@@ -815,24 +787,24 @@
             </div>
           </div>
 
-          <div class="tab">
+          <div class="tab" id="formpage-12">
             <div class="col-lg-12">
               <br />
-              <h1 class="title-1">
+              <h1 class="title-1 question">
                 🗣 ನಿಮಗೆ ಮಾತನಾಡಲು ಕಷ್ಟವಾಗುತ್ತಿದೆಯೇ (ಗಂಟಲು ನೋವು)?
               </h1>
-              <p>
+              <p class="question-description">
                 ಸೂಕ್ತವಾದುದನ್ನು ಆಯ್ಕೆ ಮಾಡಿ.
               </p>
 
               <hr />
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input name="speaking_disorders" value="yes" type="radio" />
                 &ensp; ಹೌದು
               </label>
 
-              <label class=" btn btn-default btn-lg primary">
+              <label class=" btn btn-default btn-lg primary option">
                 <input name="speaking_disorders" value="no" type="radio" />
                 &ensp; ಇಲ್ಲ
               </label>
@@ -1040,6 +1012,9 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+
+    <script src="./static/json.js"></script>
 
     <script>
       var form = document.querySelector(".pageclip-form");
@@ -1326,7 +1301,7 @@
     </script>
 
 
-<script>
+<!-- <script>
 
   if('serviceWorker' in navigator){
     navigator.serviceWorker.register('/sw.js')
@@ -1336,7 +1311,7 @@
   
   
   
-  </script>
+  </script> -->
 
   </body>
 </html>
