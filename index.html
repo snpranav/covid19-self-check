@@ -168,9 +168,8 @@
           <!-- FORM TITLE -->
 
           <div class="col-lg-12">
-            <p>
-              &copy; 2020, COVID-19 SYMPTOM CHECKER IN ಕನ್ನಡ BY
-              <a target="_blank" href="https://g.co/kgs/qJ1ZfR">SUHAIL CS.</a>
+            <p style="color:red; font-weight:bold">
+              PLEASE USE CHROME OR FIREFOR BROWSER.
             </p>
 
             <button
@@ -401,7 +400,7 @@
               <label class=" btn btn-default btn-lg primary">
                 <input
                   id="health-reset"
-                  name="pre-existing-conditions"
+                  name="pre_existing_conditions"
                   value="no"
                   type="checkbox"
                 />
@@ -410,7 +409,7 @@
 
               <label class=" btn btn-default btn-lg primary">
                 <input
-                  name="pre-existing-conditions"
+                  name="pre_existing_conditions"
                   value="yes"
                   type="checkbox"
                 />
@@ -419,7 +418,7 @@
 
               <label class=" btn btn-default btn-lg primary">
                 <input
-                  name="pre-existing-conditions"
+                  name="pre_existing_conditions"
                   value="yes"
                   type="checkbox"
                 />
@@ -428,7 +427,7 @@
 
               <label class=" btn btn-default btn-lg primary">
                 <input
-                  name="pre-existing-conditions"
+                  name="pre_existing_conditions"
                   value="yes"
                   type="checkbox"
                 />
@@ -437,7 +436,7 @@
 
               <label class=" btn btn-default btn-lg primary">
                 <input
-                  name="pre-existing-conditions"
+                  name="pre_existing_conditions"
                   value="yes"
                   type="checkbox"
                 />
@@ -446,7 +445,7 @@
 
               <label class=" btn btn-default btn-lg primary">
                 <input
-                  name="pre-existing-conditions"
+                  name="pre_existing_conditions"
                   value="yes"
                   type="checkbox"
                 />
@@ -455,7 +454,7 @@
 
               <label class=" btn btn-default btn-lg primary">
                 <input
-                  name="pre-existing-conditions"
+                  name="pre_existing_conditions"
                   value="yes"
                   type="checkbox"
                 />
@@ -550,7 +549,7 @@
 
               <label class=" btn btn-default btn-lg primary">
                 <input
-                  name="internal-travel-contact"
+                  name="internal_travel_contact"
                   value="yes"
                   type="radio"
                   onclick="nextPrev(1)"
@@ -560,7 +559,7 @@
 
               <label class=" btn btn-default btn-lg primary">
                 <input
-                  name="internal-travel-contact"
+                  name="internal_travel_contact"
                   value="no"
                   type="radio"
                   onclick="nextPrev(1)"
@@ -570,7 +569,7 @@
 
               <label class=" btn btn-default btn-lg primary">
                 <input
-                  name="internal-travel-contact"
+                  name="internal_travel_contact"
                   value="no"
                   type="radio"
                   onclick="nextPrev(1)"
@@ -595,7 +594,7 @@
 
               <label class=" btn btn-default btn-lg primary">
                 <input
-                  name="covid-confirm-relation"
+                  name="covid_confirm_relation"
                   value="yes"
                   type="radio"
                   onclick="nextPrev(1)"
@@ -605,7 +604,7 @@
 
               <label class=" btn btn-default btn-lg primary">
                 <input
-                  name="covid-confirm-relation"
+                  name="covid_confirm_relation"
                   value="no"
                   type="radio"
                   onclick="nextPrev(1)"
@@ -762,7 +761,7 @@
 
               <label class=" btn btn-default btn-lg primary">
                 <input
-                  name="breathing-disorders"
+                  name="breathing_disorders"
                   value="yes"
                   type="radio"
                   onclick="nextPrev(1)"
@@ -772,7 +771,7 @@
 
               <label class=" btn btn-default btn-lg primary">
                 <input
-                  name="breathing-disorders"
+                  name="breathing_disorders"
                   value="no"
                   type="radio"
                   onclick="nextPrev(1)"
@@ -795,12 +794,12 @@
               <hr />
 
               <label class=" btn btn-default btn-lg primary">
-                <input name="speaking-disorders" value="yes" type="radio" />
+                <input name="speaking_disorders" value="yes" type="radio" />
                 &ensp; ಹೌದು
               </label>
 
               <label class=" btn btn-default btn-lg primary">
-                <input name="speaking-disorders" value="no" type="radio" />
+                <input name="speaking_disorders" value="no" type="radio" />
                 &ensp; ಇಲ್ಲ
               </label>
             </div>
@@ -966,6 +965,14 @@
             <span class="step"></span>
             <span class="step"></span>
           </div>
+
+          <div class="col-lg-12">
+            <br /><br />
+            <p>
+              &copy; 2020, COVID-19 SYMPTOM CHECKER IN ಕನ್ನಡ BY
+              <a target="_blank" href="https://g.co/kgs/qJ1ZfR">SUHAIL CS.</a>
+            </p>
+          </div>
         </form>
       </div>
     </div>
@@ -1000,33 +1007,43 @@
 
     <script type="text/javascript">
       function covid() {
-        var data = $("form").serializeArray();
+        var data = $("form")
+          .serialize()
+          .split("&");
+        console.log(data);
+        var obj = {};
+        for (var key in data) {
+          console.log(data[key]);
+          obj[data[key].split("=")[0]] = data[key].split("=")[1];
+        }
 
-        var participant = data["0"].value;
+        console.log(obj);
 
-        var gender = data["1"].value;
+        var participant = obj.participant;
 
-        var age = data["2"].value;
+        var gender = obj.gender;
 
-        var ped = data["3"].value;
+        var age = obj.age;
 
-        var tr = data["4"].value;
+        var ped = obj.pre_extisting_disorders;
 
-        var ic = data["5"].value;
+        var tr = obj.travel;
 
-        var rl = data["6"].value;
+        var ic = obj.internal_travel_contact;
 
-        var fever = data["7"].value;
+        var rl = obj.covid_confirm_relation;
 
-        var hdc = data["8"].value;
+        var fever = obj.fever;
 
-        var cough = data["9"].value;
+        var hdc = obj.hdc;
 
-        var cold = data["10"].value;
+        var cough = obj.cough;
 
-        var bc = data["11"].value;
+        var cold = obj.cold;
 
-        var tp = data["12"].value;
+        var bc = obj.breathing_congestion;
+
+        var tp = obj.speaking_disorder;
 
         var st = 0;
 
@@ -1191,7 +1208,7 @@
 
         /* CHECKBOX HIGHLIGHTS */
 
-        $('input[name="pre-existing-conditions"]').click(function() {
+        $('input[name="pre_existing_conditions"]').click(function() {
           if ($(this).attr("id") !== "health-reset") {
             $(this)
               .parent()
@@ -1206,7 +1223,7 @@
           }
 
           if ($(this).attr("id") == "health-reset") {
-            $('input[name="pre-existing-conditions"]')
+            $('input[name="pre_existing_conditions"]')
               .prop("checked", false)
               .parent()
               .removeClass("checked");
