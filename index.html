@@ -1067,7 +1067,7 @@
 
         var st = 0;
 
-        $("#pdo").val(st);
+   
         
 
         if (
@@ -1088,6 +1088,8 @@
         } else {
           st = 3;
         }
+
+        $("#pdo").val(st);
 
         if (st == "1") {
           $("#hr").css("display", "block");
@@ -1138,8 +1140,9 @@
           document.getElementById("nextBtn").innerHTML = "ಮುಂದೆ";
         }
         if (n == x.length - 1) {
-          covid();
           
+          covid();
+
           document.getElementById("nextBtn").style.display = "none";
           document.getElementById("nextBtn").type = "submit";
           eventFire(document.getElementById("nextBtn"), "click");
