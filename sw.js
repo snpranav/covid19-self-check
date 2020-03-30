@@ -1,4 +1,4 @@
-const staticCacheName = 'site-static-v1-covid';
+const staticCacheName = '63r2364274';
 
 const assets = [
   '/',
