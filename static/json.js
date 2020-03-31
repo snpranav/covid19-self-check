@@ -1,30 +1,50 @@
 $(document).ready(function() {
 
-    // Pulling app-content
+    // Pulling dynamic app-content
     let submitButtonText;
-    // let radioButtonCharacter = ``
+    let radioButtonCharacter = ``;
     $.getJSON(`http://localhost:8080/static/${language}.json`, function(data) {
         $.each(data["app-content"], function(key, val) {
             $.each(val, function(className, classValues) {
                 $.each(classValues, function(textKey, textValue) {
                     if(className===".option") {
                         $.each(textValue, function(optionKey, optionValue) {
-                            // optionValue = radioButtonCharacter + optionValue;
-                            $(`${key} #formpage-${textKey} ${className}`)[optionKey].append(optionValue);
+                            if(optionKey < $(`${key} #formpage-${textKey} ${className}`).length) {
+                                try {
+                                    optionValue = radioButtonCharacter + optionValue;
+                                    $(`${key} #formpage-${textKey} ${className}`)[optionKey].append(optionValue);
+                                } catch(err) {
+                                    console.warn(err);
+                                }
+                            }
                         });
+                    } else if(key==="#intro-text") {
+                            if(textKey < $(`${key} ${className}`).length) {
+                                $(`${key} ${className}`)[textKey].innerHTML += textValue;
+                            } else {
+                                $(`${key} ${className}`).parent().eq(textKey-1).clone().appendTo($(`${key} ${className}`).parent().eq(textKey-1));
+                                $(`${key} ${className}`)[textKey].innerHTML = textValue;
+                            }
                     } else {
-                        $(`${key} ${className}`)[textKey].innerHTML += textValue;
+                        try {
+                            $(`${key} ${className}`)[textKey].innerHTML += textValue;
+                        } catch (err) {
+                            console.warn(err);
+                        }
                     }
                 });
             });
         });
 
 
-        // Pulling title
-        document.title = data["title"] + " | " + document.title;
-
-        $("#restart-btn").innerHTML = data["restart-btn"]
-
-        submitButtonText = data["submit-btn"]
+        // Pulling Static Elements
+        let staticElements = data["static"];
+        try {
+            document.title = staticElements["title"] + " | " + document.title;
+            $("#restart-btn").innerHTML = staticElements["restart-btn"];
+            submitButtonText = staticElements["submit-btn"];
+        } catch (err) {
+            console.warn(err);
+        }
     });
 });
