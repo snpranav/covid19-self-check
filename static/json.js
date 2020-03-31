@@ -2,7 +2,7 @@ $(function() {
 
     // Pulling app-content
     let radioButtonCharacter = `&ensp; `
-    $.getJSON('http://selfcheck.app/static/kannada.json', function(data) {
+    $.getJSON(`http://localhost:8080/static/${language}.json`, function(data) {
         $.each(data["app-content"], function(key, val) {
             $.each(val, function(className, classValues) {
                 $.each(classValues, function(textKey, textValue) {
