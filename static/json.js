@@ -2,15 +2,15 @@ $(document).ready(function() {
 
     // Pulling app-content
     let submitButtonText;
-    let radioButtonCharacter = `&ensp; `
+    // let radioButtonCharacter = ``
     $.getJSON(`http://localhost:8080/static/${language}.json`, function(data) {
         $.each(data["app-content"], function(key, val) {
             $.each(val, function(className, classValues) {
                 $.each(classValues, function(textKey, textValue) {
                     if(className===".option") {
                         $.each(textValue, function(optionKey, optionValue) {
-                            optionValue = radioButtonCharacter + optionValue;
-                            $(`${key} #formpage-${textKey} input.parent()`)[optionKey].innerHTML += optionValue;
+                            // optionValue = radioButtonCharacter + optionValue;
+                            $(`${key} #formpage-${textKey} ${className}`)[optionKey].append(optionValue);
                         });
                     } else {
                         $(`${key} ${className}`)[textKey].innerHTML += textValue;
