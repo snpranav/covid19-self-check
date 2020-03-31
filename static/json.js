@@ -1,6 +1,6 @@
 $(function() {
-    radioButtonCharacter = `&ensp; `
-    $.getJSON('http://localhost:8080/static/kannada.json', function(data) {
+    let radioButtonCharacter = '&ensp; ';
+    $.getJSON('https://covid19-self-check.glitch.me/static/kannada.json', function(data) {
         $.each(data, function(key, val) {
             $.each(val, function(className, classValues) {
                 $.each(classValues, function(textKey, textValue) {

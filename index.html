@@ -30,7 +30,7 @@
 
 
 
-    <title>ಕೊರೋನ ಲಕ್ಷಣಗಳ ಪರೀಕ್ಷಕ | COVID-19 SYMPTOM DIAGNOSTIC APP BY SUHAIL CS</title>
+    <title>COVID-19 SYMPTOM DIAGNOSIS APP</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8" />
@@ -199,9 +199,7 @@
           <!-- FORM TITLE -->
 
           <div class="col-lg-12">
-            <p style="color:#CCC">
-              V1.02-30 March 2020
-            </p>
+          
             <p style="color:red; font-weight:bold">
               PLEASE USE CHROME OR FIREFOX BROWSER.
             </p>
@@ -905,15 +903,21 @@
 
           <div class="col-lg-12">
             <br /><br />
+            <hr>
+            
             <p>
               &copy; 2020, COVID-19 SYMPTOM CHECKER IN ಕನ್ನಡ BY
-              <a target="_blank" href="https://g.co/kgs/qJ1ZfR">SUHAIL CS.</a>
+              <a target="_blank" href="https://g.co/kgs/qJ1ZfR">SUHAIL CS.</a> &amp; The <a href="https://github.com/covidselfcheck/covid19-self-check">covidselfcheck/covid19-self-check</a> Project.
 
               <br><br>
 
               Supported by <img src="https://res.cloudinary.com/db0oijipf/image/upload/v1584367464/favicon/android-icon-36x36_e3ohsy.png" width="25"> <a href="https://unboxrobotics.com">Unbox Robotics</a>
 
               <p><a href="terms.html">Privacy &amp; Data Policy </a> </p> 
+            
+              <p style="color:#CCC">
+              V1.03-30 March 2020 with SN Pranav
+            </p>
             </p>
           </div>
         </form>
@@ -941,7 +945,7 @@
     ></script>
 
 
-    <script src="./static/json.js"></script>
+
 
     <script>
       var form = document.querySelector(".pageclip-form");
@@ -950,295 +954,23 @@
         successTemplate: "<span></span>"
       });
     </script>
-
-    <script type="text/javascript">
-      function covid() {
-        var data = $("form")
-          .serialize()
-          .split("&");
-        console.log(data);
-        var obj = {};
-        for (var key in data) {
-          console.log(data[key]);
-          obj[data[key].split("=")[0]] = data[key].split("=")[1];
-        }
-
-        console.log(obj);
-
-        var participant = obj.participant;
-
-        var gender = obj.gender;
-
-        var age = obj.age;
-
-        var ped = obj.pre_extisting_disorders;
-
-        var tr = obj.travel;
-
-        var ic = obj.internal_travel_contact;
-
-        var rl = obj.covid_confirm_relation;
-
-        var fever = obj.fever;
-
-        var hdc = obj.hdc;
-
-        var cough = obj.cough;
-
-        var cold = obj.cold;
-
-        var bc = obj.breathing_congestion;
-
-        var tp = obj.speaking_disorder;
-
-        var st = 0;
-
+  
    
-        
+    <script src="./static/json.js"></script>
 
-        if (
-          tr == "yes" ||
-          ic == "yes" ||
-          rl == "yes" ||
-          (fever == "yes" && cough == "yes") ||
-          (fever == "yes" && cough == "yes" && bc == "yes" && ped == "yes")
-        ) {
-          st = 1;
-        } else if (
-          fever == "yes" ||
-          cough == "yes" ||
-          cold == "yes" ||
-          hdc == "yes"
-        ) {
-          st = 2;
-        } else {
-          st = 3;
-        }
-
-        $("#pdo").val(st);
-
-        if (st == "1") {
-          $("#hr").css("display", "block");
-        }
-
-        if (st == "2") {
-          $("#mr").css("display", "block");
-        }
-
-        if (st == "3") {
-          $("#nr").css("display", "block");
-        }
-      }
-    </script>
-
-    <script>
-      function eventFire(el, etype) {
-        if (el.fireEvent) {
-          el.fireEvent("on" + etype);
-        } else {
-          var evObj = document.createEvent("Events");
-          evObj.initEvent(etype, true, false);
-          el.dispatchEvent(evObj);
-        }
-      }
-
-      function triggerEvent(elem, event) {
-        var clickEvent = new Event(event); // Create the event.
-        elem.dispatchEvent(clickEvent); // Dispatch the event.
-      }
-
-      var currentTab = 0; // Current tab is set to be the first tab (0)
-      showTab(currentTab); // Display the current tab
-
-      function showTab(n) {
-        // This function will display the specified tab of the form ...
-        var x = document.getElementsByClassName("tab");
-        x[n].style.display = "block";
-        // ... and fix the Previous/Next buttons:
-        if (n == 0) {
-          document.getElementById("prevBtn").style.display = "none";
-        } else {
-          document.getElementById("prevBtn").style.display = "inline";
-        }
-        if (n == x.length - 2) {
-          document.getElementById("nextBtn").innerHTML = "ಫಲಿತಾಂಶ ತೋರಿಸು ";
-        } else {
-          document.getElementById("nextBtn").innerHTML = "ಮುಂದೆ";
-        }
-        if (n == x.length - 1) {
-          
-          covid();
-
-          document.getElementById("nextBtn").style.display = "none";
-          document.getElementById("nextBtn").type = "submit";
-          eventFire(document.getElementById("nextBtn"), "click");
-          document.getElementById("prevBtn").style.display = "none";
-
-          document
-            .getElementById("prevBtn")
-            .setAttribute("onclick", "location.reload();");
-
-         
-        }
-
-        // ... and run a function that displays the correct step indicator:
-        fixStepIndicator(n);
-      }
-
-      function nextPrev(n) {
-        // This function will figure out which tab to display
-        var x = document.getElementsByClassName("tab");
-        // Exit the function if any field in the current tab is invalid:
-        if (n == 1 && !validateForm()) return false;
-        // Hide the current tab:
-        x[currentTab].style.display = "none";
-        // Increase or decrease the current tab by 1:
-        currentTab = currentTab + n;
-        // if you have reached the end of the form... :
-        if (currentTab >= x.length) {
-          return false;
-        }
-        // Otherwise, display the correct tab:
-        showTab(currentTab);
-      }
-
-      function validateForm() {
-        var x,
-          y,
-          i,
-          valid = true;
-        x = document.getElementsByClassName("tab");
-        y = x[currentTab].getElementsByTagName("input");
-        z = x[currentTab].querySelector("h1");
-
-        // A loop that checks every input field in the current tab:
-        for (var i = 0; i < y.length; i++) {
-          if (y[i].checked) {
-            z.style.color = "black";
-            document.getElementById("nextBtn").disabled = false;
-            return true;
-          } else {
-            valid = false;
-            z.style.color = "red";
-          }
-        }
-
-        // If the valid status is true, mark the step as finished and valid:
-        if (valid) {
-          document.getElementsByClassName("step")[currentTab].className +=
-            " finish";
-        }
-        return valid; // return the valid status
-      }
-
-      function fixStepIndicator(n) {
-        // This function removes the "active" class of all steps...
-        var i,
-          x = document.getElementsByClassName("step");
-        for (i = 0; i < x.length; i++) {
-          x[i].className = x[i].className.replace(" active", "");
-        }
-        //... and adds the "active" class to the current step:
-      }
-    </script>
-
-    <script>
-      $(document).ready(function() {
-        /* HIGHLIGHT AND SELECT ONE RADIO ONLY */
-
-        $('input[type="radio"]').click(function() {
-          $('input[type="radio"]').each(function() {
-            if ($(this).is(":checked")) {
-              $(this)
-                .parent()
-                .addClass("checked");
-            } else {
-              $(this)
-                .parent()
-                .removeClass("checked");
-            }
-          });
-        });
-
-        /* CHECKBOX HIGHLIGHTS */
-
-        $('input[name="pre_existing_conditions"]').click(function() {
-          if ($(this).attr("id") !== "health-reset") {
-            $(this)
-              .parent()
-              .addClass("checked");
-
-            if ($('input[id="health-reset"]').is(":checked")) {
-              $('input[id="health-reset"]')
-                .prop("checked", false)
-                .parent()
-                .removeClass("checked");
-            }
-          }
-
-          if ($(this).attr("id") == "health-reset") {
-            $('input[name="pre_existing_conditions"]')
-              .prop("checked", false)
-              .parent()
-              .removeClass("checked");
-
-            $(this)
-              .prop("checked", true)
-              .parent()
-              .addClass("checked");
-          }
-        });
-
-        $("input:checkbox").change(function() {
-          var ischecked = $(this).is(":checked");
-          if (!ischecked) {
-            $(this)
-              .parent()
-              .removeClass("checked");
-          }
-        });
-
-        $('input[name="travel"]').click(function() {
-          if ($(this).attr("id") !== "travel-reset") {
-            $(this)
-              .parent()
-              .addClass("checked");
-
-            if ($('input[id="travel-reset"]').is(":checked")) {
-              $('input[id="travel-reset"]')
-                .prop("checked", false)
-                .parent()
-                .removeClass("checked");
-            }
-          }
-
-          if ($(this).attr("id") == "travel-reset") {
-            $('input[name="travel"]')
-              .prop("checked", false)
-              .parent()
-              .removeClass("checked");
-
-            $(this)
-              .prop("checked", true)
-              .parent()
-              .addClass("checked");
-          }
-        });
-      });
-    </script>
+    <script src="covid.js" type="text/javascript"></script>
+    <script src="ui.js" type="text/javascript"></script>
+    <script src="ui-val.js" type="text/javascript"></script>
 
 
-<!-- <script>
+<script>
 
   if('serviceWorker' in navigator){
     navigator.serviceWorker.register('/sw.js')
       .then(reg => console.log('service worker registered'))
       .catch(err => console.log('service worker not registered', err));
   }
-  
-  
-  
-  </script> -->
-
+  </script>
+     
   </body>
 </html>
