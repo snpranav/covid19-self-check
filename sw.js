@@ -1,4 +1,4 @@
-const staticCacheName = 'v15covid192020';
+const staticCacheName = 'v15covid192020new';
 
 
 const assets = [
@@ -8,12 +8,7 @@ const assets = [
   '/manifest.json',
   '/js/jq.js',
   '/js/bootstrap.min.js',
-  '/js/covid.js',
-  '/js/ui-val.js',
-  '/js/ui.js',
-  '/static/json.js',
-  '/static/kannada.json',
-  'css/bootstrap.min.css',
+  '/css/bootstrap.min.css',
   'https://fonts.googleapis.com/css?family=Roboto&display=swap',
 ];
 // install event
