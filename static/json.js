@@ -5,15 +5,13 @@ $(function() {
             $.each(val, function(className, classValues) {
                 $.each(classValues, function(textKey, textValue) {
                     if(className===".option") {
-                        let sum = 0;
                         $.each(textValue, function(optionKey, optionValue) {
                             optionValue = radioButtonCharacter + optionValue;
                             $(`${key} #formpage-${textKey} ${className}`)[optionKey].innerHTML += optionValue;
-                            console.log(optionValue);
                         });
+                    } else {
+                        $(`${key} ${className}`)[textKey].innerHTML += textValue;
                     }
-                    $(`${key} ${className}`)[textKey].innerHTML += textValue;
-                    console.log($(`${key} ${className}`)[textKey].innerHTML)
                 });
             });
         });
