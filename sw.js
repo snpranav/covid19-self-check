@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const staticCacheName = 'covid-1.4';
+=======
+const staticCacheName = '543663r236sh73785636373784274';
+>>>>>>> parent of c3ccef2... added terms and data policy
 
 const assets = [
   '/',
