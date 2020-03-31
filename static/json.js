@@ -1,4 +1,4 @@
-$(function() {
+$(document).ready(function() {
 
     // Pulling app-content
     let submitButtonText;
@@ -10,7 +10,7 @@ $(function() {
                     if(className===".option") {
                         $.each(textValue, function(optionKey, optionValue) {
                             optionValue = radioButtonCharacter + optionValue;
-                            $(`${key} #formpage-${textKey} ${className}`)[optionKey].innerHTML += optionValue;
+                            $(`${key} #formpage-${textKey} input.parent()`)[optionKey].innerHTML += optionValue;
                         });
                     } else {
                         $(`${key} ${className}`)[textKey].innerHTML += textValue;
