@@ -1,4 +1,4 @@
-const staticCacheName = '543688sgsh63r236sh73785636373784274';
+const staticCacheName = 'covid-1.4';
 
 const assets = [
   '/',
