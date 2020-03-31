@@ -1,4 +1,4 @@
-const staticCacheName = 'v15covid23u3u192020new';
+const staticCacheName = 'v16covid23u3u192020new';
 
 
 const assets = [
