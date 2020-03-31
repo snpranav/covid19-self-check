@@ -1094,21 +1094,16 @@
    
         
 
-        if (
-          tr == "yes" ||
-          ic == "yes" ||
-          rl == "yes" ||
-          (fever == "yes" && cough == "yes") ||
-          (fever == "yes" && cough == "yes" && bc == "yes" && ped == "yes")
+        if ((tr == "yes" && ic == "yes"  && rl == "yes" &&  fever == "yes" && cough == "yes" && cold == "yes") || 
+            (fever == "yes" && cough == "yes" && tr == "yes" && ic == "yes") ||
+              (fever == "yes" && cough == "yes" && cold == "yes" && tr == "yes" && ic == "yes") ||
+              (tr == "yes" && rl == "yes")
         ) {
           st = 1;
         } else if (
-          fever == "yes" ||
-          cough == "yes" ||
-          cold == "yes" ||
-          hdc == "yes"
+          (fever == "yes" && cough == "yes" &&  cold == "yes" && ic == "no") || ("yes" && cough == "yes" &&  cold == "yes" && ped == "yes")
         ) {
-          st = 2;
+          st = 3;
         } else {
           st = 3;
         }
