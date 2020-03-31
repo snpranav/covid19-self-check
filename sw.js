@@ -7,6 +7,11 @@ const assets = [
   '/manifest.json',
   '/js/jq.js',
   '/js/bootstrap.min.js',
+  '/js/covid.js',
+  '/js/ui-val.js',
+  '/js/ui.js',
+  '/static/json.js',
+  '/static/kannada.json',
   'css/bootstrap.min.css',
   'https://fonts.googleapis.com/css?family=Roboto&display=swap',
 ];
