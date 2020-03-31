@@ -1,7 +1,9 @@
 $(function() {
-    let radioButtonCharacter = '&ensp; ';
-    $.getJSON('https://covid19-self-check.glitch.me/static/kannada.json', function(data) {
-        $.each(data, function(key, val) {
+
+    // Pulling app-content
+    let radioButtonCharacter = `&ensp; `
+    $.getJSON('http://selfcheck.app/static/kannada.json', function(data) {
+        $.each(data["app-content"], function(key, val) {
             $.each(val, function(className, classValues) {
                 $.each(classValues, function(textKey, textValue) {
                     if(className===".option") {
@@ -15,5 +17,9 @@ $(function() {
                 });
             });
         });
+
+
+        // Pulling title
+        document.title = data["title"] + " | " + document.title;
     });
 });
