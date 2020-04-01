@@ -1,3 +1,5 @@
+var submitButtonText;
+
 $(document).ready(function() {
     let language;
     let queryString = window.location.search;
@@ -16,7 +18,7 @@ $(document).ready(function() {
     }).then(() => {
     // Pulling dynamic app-content
         let submitButtonText;
-        let radioButtonCharacter = ``;
+        let radioButtonCharacter = "&ensp; ";
         if(language==undefined) {
             language = "kannada";
         }
@@ -30,7 +32,7 @@ $(document).ready(function() {
                                 if(optionKey < $(`${key} #formpage-${textKey} ${className}`).length) {
                                     try {
                                         optionValue = radioButtonCharacter + optionValue;
-                                        $(`${key} #formpage-${textKey} ${className}`)[optionKey].append(optionValue);
+                                        $(`${key} #formpage-${textKey} ${className}`).eq(optionKey).append(optionValue);
                                     } catch(err) {
                                         console.warn(err);
                                     }
