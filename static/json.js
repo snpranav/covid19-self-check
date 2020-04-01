@@ -5,6 +5,7 @@ $(document).ready(function() {
     let lang = urlParams.get('lang');
 
     new Promise((resolve, reject) => {
+        NProgress.start();
         return fetch(`./static/${lang}.json`).then(response => {
             if(response.status==200) {
                 language = lang;
@@ -74,6 +75,8 @@ $(document).ready(function() {
                 console.warn(err);
             }
         });
+    }).then(() => {
+        NProgress.done();
     });
 });
 
