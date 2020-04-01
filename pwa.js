@@ -9,6 +9,9 @@ const assets = [
   '/js/jq.js',
   '/js/bootstrap.min.js',
   '/css/bootstrap.min.css',
+  '/credits.html',
+  '/terms.html',
+  '/schema.pdf',
   'https://fonts.googleapis.com/css?family=Roboto&display=swap',
 ];
 
