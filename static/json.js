@@ -15,11 +15,9 @@ $(document).ready(function() {
         })
     }).then(() => {
     // Pulling dynamic app-content
-    console.log(language);
         let submitButtonText;
         let radioButtonCharacter = ``;
         if(language==undefined) {
-            console.log(language);
             language = "kannada";
         }
 
