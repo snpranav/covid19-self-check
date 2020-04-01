@@ -112,7 +112,7 @@
       ".bad-outcome-title": {
         "0": "📋 Results",
         "1": "❗ High Risk of COVID-19.",
-        "2": "This is not Medical Advice! Consult Your Local Doctor For Accurate Medical Diagnosis."
+        "2": "This is not Medical Advice. Consult Your Local Doctor For Accurate Medical Diagnosis."
       },
       ".bad-next-steps": {
         "0": "Recommended Next Steps",
@@ -123,7 +123,7 @@
       },
       ".good-outcome-title": {
         "0": "✅ Low Risk of COVID-19.",
-        "1": "This is not Medical Advice! Consult Your Local Doctor For Accurate Medical Diagnosis."
+        "1": "This is not Medical Advice. Consult Your Local Doctor For Accurate Medical Diagnosis."
       },
       ".good-next-steps": {
         "0": "Recommended Next Steps",
