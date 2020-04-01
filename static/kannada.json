@@ -18,8 +18,12 @@
         
 =======
                 "2": "☎️ ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಸಮೀಪದ ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆಯನ್ನು ಸಂಪರ್ಕಿಸಿರಿ ಅಥವಾ ಉಚಿತ ಆರೋಗ್ಯ ಸಹಾಯವಾಣಿ <a href=\"tel:104\"> 104 </a> ಕ್ಕೆ ಕರೆ ಮಾಡಿರಿ",
+<<<<<<< HEAD
                "3": "<img src=\"w.webp\" width=\"30\"> ನಮ್ಮ ವಾಟ್ಸಪ್ ಗ್ರೂಪಿಗೆ ಸೇರಲು <a target=\"_blank\" href=\"https://chat.whatsapp.com/CrixgcfCCfx8iNaPe1VM2V/\"> ಇಲ್ಲಿ ಒತ್ತಿ  </a>"
 >>>>>>> parent of e66ce2f... update
+=======
+               "3": "<img src=\"w.webp\" width=\"30\"> ನಮ್ಮ ವಾಟ್ಸಪ್ಪ್ ಗ್ರೂಪಿಗೆ ಸೇರಲು <a target=\"_blank\" href=\"https://chat.whatsapp.com/CrixgcfCCfx8iNaPe1VM2V/\"> ಇಲ್ಲಿ ಒತ್ತಿ  </a>"
+>>>>>>> parent of 3db6d2d... v3
             }
         },
         "#regForm": {
