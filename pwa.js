@@ -1,5 +1,5 @@
 
-const staticCacheName = 'v5';
+const staticCacheName = 'Av3';
 
 
 const assets = [
