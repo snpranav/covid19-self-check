@@ -815,22 +815,22 @@
     <!-- Optional JavaScript -->
 
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    
+    
+     <script src="./js/jq.js"></script>
+    
+    
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      crossorigin="anonymous"
-    ></script>
+ 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
       integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
+    
+     
+     <script src="./js/bootstrap.min.js"></script>
+ 
 
     <script src="./static/json.js"></script>
     <script src="./js/ui.js"></script>
@@ -880,34 +880,28 @@
 
         var cold = obj.cold;
 
-        var bc = obj.breathing_congestion;
+        var bc = obj.breathing_disorders;
 
         var tp = obj.speaking_disorder;
 
         var st = 0;
 
-        if (rl == "yes") {
+        if (rl == "yes") {st = 1;} 
+        else if ((tr == "yes" || rl == "yes") && (fever == "yes" || cough == "yes"|| cold == "yes" || bc == "yes" || tp == "yes")) 
+        {
           st = 1;
-        } else if (
-          (tr == "yes" || rl == "yes") &&
-          (fever == "yes" || cold == "yes" || bc == "yes" || tp == "yes")
-        ) {
+        } 
+        
+        else if ( ((fever=="yes" || cold == "yes" || tp == "yes") || (fever == "yes" && cold == "yes" && tp == "yes")) && (cough=="yes" || bc == "yes"))
+         {
           st = 1;
-        } else if (
-          (fever == "yes" || cold == "yes" || tp == "yes") &&
-          bc == "yes"
-        ) {
-          st = 1;
-        } else if (
-          (fever == "yes" || cold == "yes" || hdc == "yes" || tp == "yes") &&
-          bc == "no"
-        ) {
-          st = 3;
-        } else if (
+        } 
+        
+        else if (
           fever == "yes" ||
           cold == "yes" ||
           hdc == "yes" ||
-          (tp == "yes" && (ped == "yes" && bc == "no"))
+          tp == "yes"
         ) {
           st = 3;
         } else {
@@ -928,17 +922,9 @@
       }
     </script>
 
-    <!-- 
-<script>
 
-  if('serviceWorker' in navigator){
-    navigator.serviceWorker.register('/sw.js')
-      .then(reg => console.log('service worker registered'))
-      .catch(err => console.log('service worker not registered', err));
-  }
   
   
-  
-  </script> -->
+
   </body>
 </html>
