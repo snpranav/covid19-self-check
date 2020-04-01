@@ -5,6 +5,7 @@ $(document).ready(function() {
     let lang = urlParams.get('lang');
 
     new Promise((resolve, reject) => {
+        NProgress.start();
         return fetch(`./static/${lang}.json`).then(response => {
             if(response.status==200) {
                 language = lang;
@@ -37,6 +38,7 @@ $(document).ready(function() {
                                 }
                             });
                         } else if(key==="#intro-text") {
+                            try {
                                 if(textKey < $(`${key} ${className}`).length) {
                                     $(`${key} ${className}`)[textKey].innerHTML += textValue;
                                 } else {
@@ -45,6 +47,20 @@ $(document).ready(function() {
                                         $(`${key} ${className}`)[textKey].innerHTML = textValue;
                                     }
                                 }
+                            } catch (err) {
+                                console.warn(err);
+                            }
+                        } else if([".bad-outcome-title", ".bad-next-steps", ".ok-outcome-title", ".ok-next-steps", ".good-outcome-title", ".good-next-steps"].includes(className)) {
+                            try {
+                                if(textKey < $(`${key} ${className}`).length) {
+                                    $(`${key} ${className}`)[textKey].innerHTML += textValue;
+                                } else {
+                                    $(`${key} ${className}`).eq(textKey-1).clone().appendTo($(`${key} ${className}`).eq(textKey-1));
+                                    $(`${key} ${className}`)[textKey].innerHTML = textValue;
+                                }
+                            } catch (err) {
+                                console.warn(err);
+                            }
                         } else {
                             try {
                                 $(`${key} ${className}`)[textKey].innerHTML += textValue;
@@ -67,6 +83,8 @@ $(document).ready(function() {
                 console.warn(err);
             }
         });
+    }).then(() => {
+        NProgress.done();
     });
 });
 

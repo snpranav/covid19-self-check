@@ -77,6 +77,19 @@
       rel="stylesheet"
     />
 
+    <!-- Preloader -->
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    <link href="https://unpkg.com/nprogress@0.2.0/nprogress.css" rel="stylesheet">
+
+    <!-- Manually starting preloader because no JSON overhead -->
+    <script>
+      try {
+        NProgress.start();
+      } catch (err) {
+        console.warn(err);
+      }
+    </script>
+
     <style type="text/css">
             body {
            font-family: 'Cabin', sans-serif;
@@ -345,5 +358,13 @@
               });
              });
     </script>
+  <!-- Ending Preloader -->
+  <script>
+    try {
+      NProgress.done();
+    } catch(err) {
+      console.warn(err);
+    }
+  </script>
   </body>
 </html>
