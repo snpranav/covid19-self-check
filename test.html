@@ -941,19 +941,39 @@
 
         var st = 0;
 
-if ((tr == "yes" && ic == "yes"  && rl == "yes" &&  fever == "yes" && cough == "yes" && cold == "yes") || (fever == "yes" && cough == "yes" && tr == "yes" && ic == "yes") || (fever == "yes" && cough == "yes" && cold == "yes" && tr == "yes" && ic == "yes") || (tr == "yes" && rl == "yes") || (fever == "yes" && cough == "yes" && cold == "yes" && tr == "yes" && bc == "yes") || (fever == "yes" && cough == "yes" && cold == "yes" && bc == "yes" || tr == "yes" && fever == "yes" || tr == "yes" && cough == "yes" || tr == "yes" && cold == "yes" )
-        ) 
-        {
-          st = 1;
-        }
-        else if (
-          (fever == "yes" && cough == "yes" &&  cold == "yes" && ic == "no") || ("yes" && cough == "yes" &&  cold == "yes" && ped == "yes")
-        ) {
-          st = 3;
-        } else {
-          st = 3;
-        }
-      
+   
+        var st = 0;
+
+if (
+  tr == "yes" ||
+  rl == "yes" && fever == "yes" ||
+  cold == "yes" ||
+  bc == "yes" ||
+  tp == "yes"
+) {
+  st = 1;
+} else if (
+  fever == "yes" ||
+  cold == "yes" ||
+  (tp == "yes" && bc == "yes")
+) {
+  st = 1;
+} else if (
+  fever == "yes" ||
+  cold == "yes" ||
+  hdc == "yes" ||
+  (tp == "yes" && bc == "no")
+) {
+  st = 3;
+} else if (
+  fever == "yes" ||
+  cold == "yes" ||
+  hdc == "yes" ||
+  (tp == "yes" && ped == "yes" && bc == "no")
+) {
+  st = 3;
+} else {
+  st = 3;
 } 
 
         $("#pdo").val(st);

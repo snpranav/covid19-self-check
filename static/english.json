@@ -24,14 +24,14 @@
                 "2": "💯 How young is the test taker?",
                 "3": "💊 Do you have any pre-existing health conditions?",
                 "4": "🧳 Have you travelled Internationally in the past 45days?",
-                "5": "😷 Have you come across someone who was suffering from flu cold cough like symptoms in the past 45days?",
+                "5": "😷 Have you come across someone who was suffering from flu, cold, and cough like symptoms in the past 45days?",
                 "6": "❌ Have you come in contact with a person who is tested positive for COVID-19?",
                 "7": "🤒 Do you have fever?",
                 "8": "🤯 Do you suffer from a headache?",
-                "9": "😷 Do you cough often?",
-                "10": "😰 Are you feeling cold?",
-                "11": "😫 Are you feeling tired Or Having difficulty to breathe?",
-                "12": "🗣 Have you got throat pain?"
+                "9": "😷 Do you dry cough often?",
+                "10": "😰 Are you having Chills?",
+                "11": "😫 Are you having difficulty in breathing?",
+                "12": "🗣 Have you got throat pain or other difficulties?"
             },
             ".question-description": {
                 "0": "Choose One Option.",
