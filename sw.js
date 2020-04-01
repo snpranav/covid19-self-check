@@ -1,5 +1,5 @@
 
-const staticCacheName = 'v3';
+const staticCacheName = 'v5';
 
 
 const assets = [
@@ -11,7 +11,6 @@ const assets = [
   '/css/bootstrap.min.css',
   'https://fonts.googleapis.com/css?family=Roboto&display=swap',
 ];
-
 
 
 self.addEventListener('activate', function(event) {
