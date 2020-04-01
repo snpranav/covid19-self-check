@@ -1,9 +1,10 @@
-const staticCacheName = 'v16covid23u3u192020new';
+const staticCacheName = 'covidselfcheck_april1';
 
 
 const assets = [
   '/',
   '/index.html',
+  '/test.html',
   '/sw.js',
   '/manifest.json',
   '/js/jq.js',

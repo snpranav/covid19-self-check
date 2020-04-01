@@ -46,10 +46,6 @@
           eventFire(document.getElementById("nextBtn"), "click");
           document.getElementById("prevBtn").style.display = "none";
 
-          document
-            .getElementById("prevBtn")
-            .setAttribute("onclick", "location.reload();");
-
          
         }
 

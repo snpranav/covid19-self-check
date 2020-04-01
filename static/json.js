@@ -63,7 +63,7 @@ $(document).ready(function() {
             let staticElements = data["static"];
             try {
                 document.title = staticElements["title"] + " | " + document.title;
-                $("#restart-btn").innerHTML = staticElements["restart-btn"];
+                $("#restart-btn").eq(0).append(staticElements["restart-btn"]);
                 assignSubmitButtonText(staticElements["submit-btn"]);
             } catch (err) {
                 console.warn(err);

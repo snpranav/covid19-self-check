@@ -7,13 +7,14 @@
     "app-content": {
         "#intro-text": {
             ".title": {
-                "0": "COVID-19 Symptom Diagnostic App."
+                "0": "👉 Click Here To Change Language.",
+                "1": "COVID-19 Symptom Diagnostic App."
             },
             ".description": {
                 "0": "ℹ️ covidselfcheck.app allows you to self diagnose for COVID-19 symptoms with few clicks!",
                 "1": "🤒 The site assesses your current health markers and predicts the likeliness of your COVID-19 infection.",
-                "2": "☎️ For FAQ's and Helpline Number visit our helpline page.",
-                "3": "💬 You can join our Official WhatsApp Community."
+                "2": "☎️ <a target=\"_blank\" href=\"https://www.mohfw.gov.in/\"> Click Here </a> For FAQ's and Helpline Numbers.",
+                "3": "💬 <a target=\"_blank\" href=\"https://chat.whatsapp.com/CrixgcfCCfx8iNaPe1VM2V/\"> Click Here </a> to join our Official WhatsApp Community."
             }
         },
         "#regForm": {
@@ -29,7 +30,7 @@
                 "8": "🤯 Do you suffer from a headache?",
                 "9": "😷 Do you cough often?",
                 "10": "😰 Are you feeling cold?",
-                "11": "😫 Are you feeling tired & difficulty to breathe?",
+                "11": "😫 Are you feeling tired Or Having difficulty to breathe?",
                 "12": "🗣 Have you got throat pain?"
             },
             ".question-description": {
@@ -58,7 +59,7 @@
                 "1": {
                     "0": "Male",
                     "1": "Female",
-                    "2": "LGBTQ"
+                    "2": "Others"
                 },
                 "2": {
                     "0": "Under 12 Years",
@@ -73,7 +74,7 @@
                     "3": "Diabetes",
                     "4": "Heart Diseases",
                     "5": "Immuno Deficiency Disorder",
-                    "6": "Pregnent ?"
+                    "6": "Pregnant ?"
                 },
                 "4": {
                     "0": "None of the Below",
@@ -124,15 +125,15 @@
             },
             ".bad-outcome-title": {
                 "0": "📋 Results",
-                "1": "❌ Highly Probability of COVID-19 ",
-                "2": "Consult Your Local Doctor For Accurate Medical Diagnosis"
+                "1": "❌ High Risk of COVID-19.",
+                "2": "This is not Medical Advice! Consult Your Local Doctor For Accurate Medical Diagnosis."
             },
             ".bad-next-steps": {
-                "0": "ಮುಂದಿನ ಕ್ರಮಗಳು",
-                "1": "1. ಕೂಡಲೇ ಸಮೀಪದ ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆಯನ್ನು ಸಂಪರ್ಕಿಸಿರಿ ಅಥವಾ ಉಚಿತ ಆರೋಗ್ಯ ಸಹಾಯವಾಣಿ <a href=\"tel:104\">104</a> ಕ್ಕೆ ಕರೆ ಮಾಡಿರಿ",
-                "2": "2. ಸಾಮಾಜಿಕ ಅಂತರವನ್ನು ಕಾಯ್ದುಕೊಳ್ಳಿ.",
-                "3": "3. ಮುಖಕ್ಕೆ ಮಾಸ್ಕ್ ಅಥವಾ ಕರವಸ್ತ್ರವನ್ನು ಬಳಸಿರಿ.",
-                "4": "4. ಕೇಂದ್ರ ಆರೋಗ್ಯ ಇಲಾಖೆಯ ಜಾಲತಾಣ <a href=\"https://www.mygov.in/covid-19\"> COVID-19 MyGov</a> ಹೆಚ್ಚು ಮಾಹಿತಿ ಪಡೆಯಿರಿ."
+                "0": "Recommended Next Steps",
+                "1": "1. Regularly and thoroughly clean your hands with an alcoholbased hand rub or wash them with soap and water. ",
+                "2": "2. Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing. ",
+                "3": "3. Avoid touching eyes, nose and mouth. ",
+                "4": "4. Visit the Official Ministry Website <a target=\"_blank\" href=\"https://www.mohfw.gov.in/\"> COVID-19 MyGov</a> for More Information."
             },
             ".ok-outcome-title": {
                 "0": "⚠️ ಕೋವಿಡ್ - 19 ಸೋಂಕು ಸಾಧ್ಯತೆ",
@@ -146,15 +147,15 @@
                 "4": "4. ಕೇಂದ್ರ ಆರೋಗ್ಯ ಇಲಾಖೆಯ ಜಾಲತಾಣ <a href=\"https://www.mygov.in/covid-19\"> COVID-19 MyGov</a> ಹೆಚ್ಚು ಮಾಹಿತಿ ಪಡೆಯಿರಿ."
             },
             ".good-outcome-title": {
-                "0": "✅ Low Probability of COVID-19 Infection",
-                "1": "Consult Your Local Doctor For Accurate Medical Diagnosis."
+                "0": "✅ Low Risk of COVID-19.",
+                "1": "This is not Medical Advice! Consult Your Local Doctor For Accurate Medical Diagnosis."
             },
             ".good-next-steps": {
-                "0": "ಮುಂದಿನ ಕ್ರಮಗಳು",
-                "1": "1. ಕೂಡಲೇ ಸಮೀಪದ ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆಯನ್ನು ಸಂಪರ್ಕಿಸಿರಿ ಅಥವಾ ಉಚಿತ ಆರೋಗ್ಯ ಸಹಾಯವಾಣಿ <a href=\"tel:104\">104</a> ಕ್ಕೆ ಕರೆ ಮಾಡಿರಿ",
-                "2": "2. ಸಾಮಾಜಿಕ ಅಂತರವನ್ನು ಕಾಯ್ದುಕೊಳ್ಳಿ.",
-                "3": "3. ಮುಖಕ್ಕೆ ಮಾಸ್ಕ್ ಅಥವಾ ಕರವಸ್ತ್ರವನ್ನು ಬಳಸಿರಿ.",
-                "4": "4. ಕೇಂದ್ರ ಆರೋಗ್ಯ ಇಲಾಖೆಯ ಜಾಲತಾಣ <a href=\"https://www.mygov.in/covid-19\"> COVID-19 MyGov</a> ಹೆಚ್ಚು ಮಾಹಿತಿ ಪಡೆಯಿರಿ."
+                "0": "Recommended Next Steps",
+                "1": "1. Regularly and thoroughly clean your hands with an alcoholbased hand rub or wash them with soap and water. ",
+                "2": "2. Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing. ",
+                "3": "3. Avoid touching eyes, nose and mouth. ",
+                "4": "4. Visit the Official Ministry Website <a target=\"_blank\" href=\"https://www.mohfw.gov.in/\"> COVID-19 MyGov</a> for More Information."
             },
             ".btn-covid": {
                 "0": "Next"
