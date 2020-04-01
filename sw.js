@@ -1,17 +1,36 @@
-const staticCacheName = 'covidselfcheck_april1';
+
+const staticCacheName = 'v4.0';
 
 
 const assets = [
-  '/',
   '/index.html',
   '/test.html',
-  '/sw.js',
   '/manifest.json',
   '/js/jq.js',
   '/js/bootstrap.min.js',
   '/css/bootstrap.min.css',
   'https://fonts.googleapis.com/css?family=Roboto&display=swap',
 ];
+
+
+
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          // Return true if you want to remove this cache,
+          // but remember that caches are shared across
+          // the whole origin
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
+});
+
+
 // install event
 self.addEventListener('install', evt => {
   evt.waitUntil(
@@ -20,6 +39,9 @@ self.addEventListener('install', evt => {
       cache.addAll(assets);
     })
   );
+
+self.skipWaiting();
+
 });
 // activate event
 self.addEventListener('activate', evt => {
