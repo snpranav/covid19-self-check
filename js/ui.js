@@ -33,6 +33,10 @@
           if(submitButtonText!=undefined || submitButtonText!=null) {
             document.getElementById("nextBtn").innerHTML = submitButtonText;
           }
+        } else {
+          if(nextButton!=undefined || nextButton!=null) {
+            document.getElementById("nextBtn").innerHTML = nextButton;
+          }
         }
         
         

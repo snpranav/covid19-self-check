@@ -1,5 +1,3 @@
-var submitButtonText;
-
 $(document).ready(function() {
     let language;
     let queryString = window.location.search;
@@ -64,7 +62,8 @@ $(document).ready(function() {
             try {
                 document.title = staticElements["title"] + " | " + document.title;
                 $("#restart-btn").eq(0).append(staticElements["restart-btn"]);
-                assignSubmitButtonText(staticElements["submit-btn"]);
+                console.log(staticElements["prevBtn"])
+                assignButtonText(staticElements["submit-btn"], data["app-content"]["#regForm"][".btn-covid"][0]);
             } catch (err) {
                 console.warn(err);
             }
@@ -72,6 +71,10 @@ $(document).ready(function() {
     });
 });
 
-function assignSubmitButtonText(sbt) {
+var submitButtonText;
+var nextButton
+
+function assignButtonText(sbt, nbt) {
     submitButtonText = sbt;
+    nextButton = nbt;
 }
