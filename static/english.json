@@ -1,5 +1,9 @@
 {
-    "title": "COVID-19 Symptom Diagnostic App | COVIDSELFCHECK.APP",
+    "static": {
+        "title": "COVID-19 Symptom Diagnostic App | COVIDSELFCHECK.APP",
+        "submit-btn": "Show My Results ",
+        "restart-btn": "Restart"
+    },
     "app-content": {
         "#intro-text": {
             ".title": {
@@ -159,6 +163,5 @@
                 "0": "&lt; Back"
             }
         }
-    },
-    "submit-btn": "Show My Results "
+    }
 }

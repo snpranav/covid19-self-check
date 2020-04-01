@@ -30,7 +30,9 @@
         //last screen
         
         if (n == x.length - 2) {
-          document.getElementById("nextBtn").innerHTML = "ಫಲಿತಾಂಶ ತೋರಿಸು ";
+          if(submitButtonText!=undefined || submitButtonText!=null) {
+            document.getElementById("nextBtn").innerHTML = submitButtonText;
+          }
         }
         
         
