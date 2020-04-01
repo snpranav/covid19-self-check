@@ -64,10 +64,14 @@ $(document).ready(function() {
             try {
                 document.title = staticElements["title"] + " | " + document.title;
                 $("#restart-btn").innerHTML = staticElements["restart-btn"];
-                submitButtonText = staticElements["submit-btn"];
+                assignSubmitButtonText(staticElements["submit-btn"]);
             } catch (err) {
                 console.warn(err);
             }
         });
     });
 });
+
+function assignSubmitButtonText(sbt) {
+    submitButtonText = sbt;
+}
