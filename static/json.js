@@ -45,6 +45,13 @@ $(document).ready(function() {
                                         $(`${key} ${className}`)[textKey].innerHTML = textValue;
                                     }
                                 }
+                        } else if([".bad-outcome-title", ".bad-next-steps", ".ok-outcome-title", ".ok-next-steps", ".good-outcome-title", ".good-next-steps", ".btn-covid", "#prevBtn"].includes(className)) {
+                            if(textKey < $(`${key} ${className}`).length) {
+                                $(`${key} ${className}`)[textKey].innerHTML += textValue;
+                            } else {
+                                $(`${key} ${className}`).eq(textKey-1).clone().appendTo($(`${key} ${className}`).eq(textKey-1));
+                                $(`${key} ${className}`)[textKey].innerHTML = textValue;
+                            }
                         } else {
                             try {
                                 $(`${key} ${className}`)[textKey].innerHTML += textValue;
