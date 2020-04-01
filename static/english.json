@@ -1,168 +1,143 @@
 {
-    "static": {
-        "title": "COVID-19 Symptom Diagnostic App | COVIDSELFCHECK.APP",
-        "submit-btn": "Show My Results ",
-        "restart-btn": "Restart"
+  "static": {
+    "title": "COVID-19 Symptom Diagnostic App | COVIDSELFCHECK.APP",
+    "submit-btn": "Get My Results ",
+    "restart-btn": "Restart"
+  },
+  "app-content": {
+    "#intro-text": {
+      ".title": {
+        "0": "👉 Click Here To Change Language.",
+        "1": "COVID-19 Symptom Diagnostic App."
+      },
+      ".description": {
+        "0": "ℹ️ covidselfcheck.app allows you to self diagnose for COVID-19 symptoms with few clicks!",
+        "1": "🤒 The site assesses your current health markers and predicts the likeliness of your COVID-19 infection.",
+        "2": "☎️ <a target=\"_blank\" href=\"https://www.mohfw.gov.in/\"> Click Here </a> For FAQ's and Helpline Numbers.",
+        "3": "<img src=\"w.webp\" width=\"30\">  <a target=\"_blank\" href=\"https://chat.whatsapp.com/CrixgcfCCfx8iNaPe1VM2V/\"> Click Here </a> to join our Official WhatsApp Community."
+      }
     },
-    "app-content": {
-        "#intro-text": {
-            ".title": {
-                "0": "👉 Click Here To Change Language.",
-                "1": "COVID-19 Symptom Diagnostic App."
-            },
-            ".description": {
-                "0": "ℹ️ covidselfcheck.app allows you to self diagnose for COVID-19 symptoms with few clicks!",
-                "1": "🤒 The site assesses your current health markers and predicts the likeliness of your COVID-19 infection.",
-                "2": "☎️ <a target=\"_blank\" href=\"https://www.mohfw.gov.in/\"> Click Here </a> For FAQ's and Helpline Numbers.",
-                "3": "💬 <a target=\"_blank\" href=\"https://chat.whatsapp.com/CrixgcfCCfx8iNaPe1VM2V/\"> Click Here </a> to join our Official WhatsApp Community."
-            }
+    "#regForm": {
+      ".question": {
+        "0": "🤔 For whom are you taking the test?",
+        "1": "⚤  What is your gender?",
+        "2": "💯 How young is the test taker?",
+        "3": "💊 Do you have any pre-existing health conditions like Asthma, Lung Disorders, Diabetes, and Heart Diseases?",
+        "4": "🧳 Have you travelled Internationally in the past 45days?",
+        "5": "😷 Have you come across someone who was suffering from flu cold cough like symptoms in the past 45days?",
+        "6": "❌ Have you come in contact with a person who is tested positive for COVID-19?",
+        "7": "🤒 Do you have fever?",
+        "8": "🤯 Do you suffer from a headache?",
+        "9": "😷 Do you dry cough often?",
+        "10": "😰 Are you feeling chills?",
+        "11": "😫 Are you feeling tired Or Having difficulty breathing?",
+        "12": "🗣 Do you get throat pain?"
+      },
+      ".question-description": {
+        "0": "Choose One Option.",
+        "1": "Choose One Option.",
+        "2": "Choose One Option.",
+        "3": "Choose One Option.",
+        "4": "Choose One Option.",
+        "5": "Choose One Option.",
+        "6": "Choose One Option.",
+        "7": "Choose One Option.",
+        "8": "Choose One Option.",
+        "9": "Choose One Option.",
+        "10": "Choose One Option.",
+        "11": "Choose One Option.",
+        "12": "Choose One Option."
+      },
+      ".option": {
+        "0": {
+          "0": "Myself",
+          "1": "Parents",
+          "2": "Spouse",
+          "3": "Children",
+          "4": "Others"
         },
-        "#regForm": {
-            ".question": {
-                "0": "🤔 For whom are you taking the test?",
-                "1": "⚤  What is your gender?",
-                "2": "💯 How young is the test taker?",
-                "3": "💊 Do you have any pre-existing health conditions?",
-                "4": "🧳 Have you travelled Internationally in the past 45days?",
-                "5": "😷 Have you come across someone who was suffering from flu, cold, and cough like symptoms in the past 45days?",
-                "6": "❌ Have you come in contact with a person who is tested positive for COVID-19?",
-                "7": "🤒 Do you have fever?",
-                "8": "🤯 Do you suffer from a headache?",
-                "9": "😷 Do you dry cough often?",
-                "10": "😰 Are you having Chills?",
-                "11": "😫 Are you having difficulty in breathing?",
-                "12": "🗣 Have you got throat pain or other difficulties?"
-            },
-            ".question-description": {
-                "0": "Choose One Option.",
-                "1": "Choose One Option.",
-                "2": "Choose One Option.",
-                "3": "Choose One Option.",
-                "4": "Choose One or More Options Accordinly",
-                "5": "Choose One or More Options Accordinly",
-                "6": "Choose One Option.",
-                "7": "Choose One Option.",
-                "8": "Choose One Option.",
-                "9": "Choose One Option.",
-                "10": "Choose One Option.",
-                "11": "Choose One Option.",
-                "12": "Choose One Option."
-            },
-            ".option": {
-                "0": {
-                    "0": "Myself",
-                    "1": "Parents",
-                    "2": "Spouse",
-                    "3": "Children",
-                    "4": "Others"
-                },
-                "1": {
-                    "0": "Male",
-                    "1": "Female",
-                    "2": "Others"
-                },
-                "2": {
-                    "0": "Under 12 Years",
-                    "1": "12 - 50 Years",
-                    "2": "50 - 60 Years",
-                    "3": "60 and Above "
-                },
-                "3": {
-                    "0": "None of the Below",
-                    "1": "Asthama",
-                    "2": "Lung Disorders",
-                    "3": "Diabetes",
-                    "4": "Heart Diseases",
-                    "5": "Immuno Deficiency Disorder",
-                    "6": "Pregnant ?"
-                },
-                "4": {
-                    "0": "None of the Below",
-                    "1": "China",
-                    "2": "The United States",
-                    "3": "Italy",
-                    "4": "Spain",
-                    "5": "Germany",
-                    "6": "France",
-                    "7": "Iran",
-                    "8": "United Kingdom",
-                    "9": "Dubai",
-                    "10": "Others"
-                },
-                "5": {
-                    "0": "Yes",
-                    "1": "No",
-                    "2": "I'm not sure"
-                },
-                "6": {
-                    "0": "Yes",
-                    "1": "No"
-                },
-                "7": {
-                    "0": "Yes",
-                    "1": "No"
-                },
-                "8": {
-                   "0": "Yes",
-                    "1": "No"
-                },
-                "9": {
-                   "0": "Yes",
-                    "1": "No"
-                },
-                "10": {
-                    "0": "Yes",
-                    "1": "No"
-                },
-                "11": {
-                   "0": "Yes",
-                    "1": "No"
-                },
-                "12": {
-                   "0": "Yes",
-                    "1": "No"
-                }
-            },
-            ".bad-outcome-title": {
-                "0": "📋 Results",
-                "1": "❌ High Risk of COVID-19.",
-                "2": "This is not Medical Advice! Consult Your Local Doctor For Accurate Medical Diagnosis."
-            },
-            ".bad-next-steps": {
-                "0": "Recommended Next Steps",
-                "1": "1. Regularly and thoroughly clean your hands with an alcoholbased hand rub or wash them with soap and water. ",
-                "2": "2. Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing. ",
-                "3": "3. Avoid touching eyes, nose and mouth. ",
-                "4": "4. Visit the Official Ministry Website <a target=\"_blank\" href=\"https://www.mohfw.gov.in/\"> COVID-19 MyGov</a> for More Information."
-            },
-            ".ok-outcome-title": {
-                "0": "⚠️ ಕೋವಿಡ್ - 19 ಸೋಂಕು ಸಾಧ್ಯತೆ",
-                "1": "ವೈದ್ಯರ ಸಲಹೆ ಪಡೆಯಿರಿ ಮತ್ತು ಖಚಿತ ಪಡಿಸಿಕೊಳ್ಳಿರಿ."
-            },
-            ".ok-next-steps": {
-                "0": "ಮುಂದಿನ ಕ್ರಮಗಳು",
-                "1": "1. ಕೂಡಲೇ ಸಮೀಪದ ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆಯನ್ನು ಸಂಪರ್ಕಿಸಿರಿ ಅಥವಾ ಉಚಿತ ಆರೋಗ್ಯ ಸಹಾಯವಾಣಿ <a href=\"tel:104\">104</a> ಕ್ಕೆ ಕರೆ ಮಾಡಿರಿ",
-                "2": "2. ಸಾಮಾಜಿಕ ಅಂತರವನ್ನು ಕಾಯ್ದುಕೊಳ್ಳಿ.",
-                "3": "3. ಮುಖಕ್ಕೆ ಮಾಸ್ಕ್ ಅಥವಾ ಕರವಸ್ತ್ರವನ್ನು ಬಳಸಿರಿ.",
-                "4": "4. ಕೇಂದ್ರ ಆರೋಗ್ಯ ಇಲಾಖೆಯ ಜಾಲತಾಣ <a href=\"https://www.mygov.in/covid-19\"> COVID-19 MyGov</a> ಹೆಚ್ಚು ಮಾಹಿತಿ ಪಡೆಯಿರಿ."
-            },
-            ".good-outcome-title": {
-                "0": "✅ Low Risk of COVID-19.",
-                "1": "This is not Medical Advice! Consult Your Local Doctor For Accurate Medical Diagnosis."
-            },
-            ".good-next-steps": {
-                "0": "Recommended Next Steps",
-                "1": "1. Regularly and thoroughly clean your hands with an alcoholbased hand rub or wash them with soap and water. ",
-                "2": "2. Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing. ",
-                "3": "3. Avoid touching eyes, nose and mouth. ",
-                "4": "4. Visit the Official Ministry Website <a target=\"_blank\" href=\"https://www.mohfw.gov.in/\"> COVID-19 MyGov</a> for More Information."
-            },
-            ".btn-covid": {
-                "0": "Next"
-            },
-            "#prevBtn": {
-                "0": "&lt; Back"
-            }
+        "1": {
+          "0": "Male",
+          "1": "Female",
+          "2": "Others"
+        },
+        "2": {
+          "0": "Under 12 Years",
+          "1": "12 - 50 Years",
+          "2": "50 - 60 Years",
+          "3": "60 and Above "
+        },
+        "3": {
+          "0": "Yes",
+          "1": "No"
+        },
+        "4": {
+          "0": "Yes",
+          "1": "No"
+        },
+        "5": {
+          "0": "Yes",
+          "1": "No",
+          "2": "I'm not sure"
+        },
+        "6": {
+          "0": "Yes",
+          "1": "No"
+        },
+        "7": {
+          "0": "Yes",
+          "1": "No"
+        },
+        "8": {
+          "0": "Yes",
+          "1": "No"
+        },
+        "9": {
+          "0": "Yes",
+          "1": "No"
+        },
+        "10": {
+          "0": "Yes",
+          "1": "No"
+        },
+        "11": {
+          "0": "Yes",
+          "1": "No"
+        },
+        "12": {
+          "0": "Yes",
+          "1": "No"
         }
+      },
+      ".bad-outcome-title": {
+        "0": "📋 Results",
+        "1": "❗ High Risk of COVID-19.",
+        "2": "This is not Medical Advice! Consult Your Local Doctor For Accurate Medical Diagnosis."
+      },
+      ".bad-next-steps": {
+        "0": "Recommended Next Steps",
+        "1": "1. Immediately call the National Helpline <a target=\"_blank\" href=\"tel:+91-11-23978046\"> +91-11-23978046</a> for help.",
+        "2": "2. Regularly and thoroughly clean your hands with an alcoholbased hand rub or wash them with soap and water. ",
+        "3": "3. Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing. ",
+        "4": "4. Avoid touching eyes, nose and mouth. "
+      },
+      ".good-outcome-title": {
+        "0": "✅ Low Risk of COVID-19.",
+        "1": "This is not Medical Advice! Consult Your Local Doctor For Accurate Medical Diagnosis."
+      },
+      ".good-next-steps": {
+        "0": "Recommended Next Steps",
+        "1": "1. Regularly and thoroughly clean your hands with an alcoholbased hand rub or wash them with soap and water. ",
+        "2": "2. Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing. ",
+        "3": "3. Avoid touching eyes, nose and mouth. ",
+        "4": "4. Visit the Official Ministry Website <a target=\"_blank\" href=\"https://www.mohfw.gov.in/\"> COVID-19 MyGov</a> for More Information."
+      },
+      ".btn-covid": {
+        "0": "Next"
+      },
+      "#prevBtn": {
+        "0": "&lt; Back"
+      }
     }
+  }
 }
