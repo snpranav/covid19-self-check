@@ -50,14 +50,12 @@ $(document).ready(function() {
                             } catch (err) {
                                 console.warn(err);
                             }
-                        } else if([".bad-outcome-title", ".bad-next-steps", ".ok-outcome-title", ".ok-next-steps", ".good-outcome-title", ".good-next-steps", ".btn-covid", "#prevBtn"].includes(className)) {
+                        } else if([".bad-outcome-title", ".bad-next-steps", ".ok-outcome-title", ".ok-next-steps", ".good-outcome-title", ".good-next-steps"].includes(className)) {
                             try {
                                 if(textKey < $(`${key} ${className}`).length) {
-                                    console.log($(`${key} ${className}`).length);
                                     $(`${key} ${className}`)[textKey].innerHTML += textValue;
                                 } else {
                                     $(`${key} ${className}`).eq(textKey-1).clone().appendTo($(`${key} ${className}`).eq(textKey-1));
-                                    console.log($(`${key} ${className}`)[textKey].innerHTML);
                                     $(`${key} ${className}`)[textKey].innerHTML = textValue;
                                 }
                             } catch (err) {
