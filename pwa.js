@@ -1,5 +1,5 @@
 
-const staticCacheName = 'Av3.0.0';
+const staticCacheName = 'Av3.0.1';
 
 
 const assets = [
@@ -13,6 +13,8 @@ const assets = [
   '/terms.html',
   '/schema.pdf',
   'https://fonts.googleapis.com/css?family=Roboto&display=swap',
+  'https://unpkg.com/nprogress@0.2.0/nprogress.js',
+  'https://unpkg.com/nprogress@0.2.0/nprogress.css'
 ];
 
 
