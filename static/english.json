@@ -8,11 +8,11 @@
     "#intro-text": {
       ".title": {
         "0": "👉 Click Here To Change Language.",
-        "1": "COVID-19 Symptom Diagnostic App."
+        "1": "COVID-19 Symptoms Checker."
       },
       ".description": {
-        "0": "ℹ️ covidselfcheck.app allows you to self diagnose for COVID-19 symptoms with few clicks!",
-        "1": "🤒 The site assesses your current health markers and predicts the likeliness of your COVID-19 infection."
+        "0": "ℹ️ covidselfcheck.app allows you to self assess for COVID-19 symptoms with a few clicks!",
+        "1": "🤒 Using basic health markers, covidselfcheck.app allows you to find out if a person might have been exposed to Covid-19."
       }
     },
     "#regForm": {
@@ -114,11 +114,11 @@
       },
       ".bad-next-steps": {
         "0": "Recommended Next Steps",
-        "1": "1. Immediately call the National Helpline <a target=\"_blank\" href=\"tel:+91-11-23978046\"> +91-11-23978046</a> for help.",
-        "2": "2. Regularly and thoroughly clean your hands with an alcoholbased hand rub or wash them with soap and water. ",
+        "1": "1. Please call the National Helpline at <a target=\"_blank\" href=\"tel:+91-11-23978046\"> +91-11-23978046</a> for Information",
+        "2": "2. Regularly and thoroughly clean your hands with an alcohol based hand sanitizer or wash your hands with soap and water. ",
         "3": "3. Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing. ",
         "4": "4. Avoid touching eyes, nose and mouth. ",
-        "5": "5. <img src=\"w.webp\" width=\"30\">  <a target=\"_blank\" href=\"https://chat.whatsapp.com/CrixgcfCCfx8iNaPe1VM2V/\"> Click Here </a> to join our Official WhatsApp Community."
+        "5": "5. <img src=\"w.webp\" width=\"30\">  <a target=\"_blank\" href=\"https://chat.whatsapp.com/CrixgcfCCfx8iNaPe1VM2V/\"> Click Here </a> to join our WhatsApp Community to provide feedback on the app."
       },
       ".good-outcome-title": {
         "0": "✅ Low Risk of COVID-19.",
@@ -126,11 +126,11 @@
       },
       ".good-next-steps": {
         "0": "Recommended Next Steps",
-        "1": "1. Regularly and thoroughly clean your hands with an alcoholbased hand rub or wash them with soap and water. ",
+        "1": "1. Regularly and thoroughly clean your hands with an alcohol based hand sanitizer or wash your hands with soap and water. ",
         "2": "2. Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing. ",
         "3": "3. Avoid touching eyes, nose and mouth. ",
         "4": "4. Visit the Official Ministry Website <a target=\"_blank\" href=\"https://www.mohfw.gov.in/\"> COVID-19 MyGov</a> for More Information.",
-        "5": "5. <img src=\"w.webp\" width=\"30\">  <a target=\"_blank\" href=\"https://chat.whatsapp.com/CrixgcfCCfx8iNaPe1VM2V/\"> Click Here </a> to join our Official WhatsApp Community."
+        "5": "5. <img src=\"w.webp\" width=\"30\">  <a target=\"_blank\" href=\"https://chat.whatsapp.com/CrixgcfCCfx8iNaPe1VM2V/\"> Click Here </a> to join our WhatsApp Community to provide for feedback on the app."
       },
       ".btn-covid": {
         "0": "Next"
