@@ -1,5 +1,5 @@
 
-const staticCacheName = 'Av3';
+const staticCacheName = 'Av3.0.0';
 
 
 const assets = [
@@ -9,6 +9,9 @@ const assets = [
   '/js/jq.js',
   '/js/bootstrap.min.js',
   '/css/bootstrap.min.css',
+  '/credits.html',
+  '/terms.html',
+  '/schema.pdf',
   'https://fonts.googleapis.com/css?family=Roboto&display=swap',
 ];
 
