@@ -3,28 +3,22 @@
   <head>
     <title>Multilingual COVID-19 Symptoms Checker</title>
 
+    <!-- Required meta tags -->
 
+    <meta charset="utf-8" />
 
-      <!-- Required meta tags -->
-    
-  <meta charset="utf-8" />
+    <link rel="manifest" href="manifest.json" />
 
-  <link rel="manifest" href="manifest.json">
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/pwa.js")
+          .then(reg => console.log("service worker registered"))
+          .catch(err => console.log("service worker not registered", err));
+      }
+    </script>
 
-
-<script>
-
-  if('serviceWorker' in navigator){
-    navigator.serviceWorker.register('/pwa.js')
-      .then(reg => console.log('service worker registered'))
-      .catch(err => console.log('service worker not registered', err));
-  }
-  
-  
-  
-  </script>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-162151085-1"
@@ -56,9 +50,6 @@
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
 
-
-
-
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no"
@@ -79,7 +70,10 @@
 
     <!-- Preloader -->
     <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
-    <link href="https://unpkg.com/nprogress@0.2.0/nprogress.css" rel="stylesheet">
+    <link
+      href="https://unpkg.com/nprogress@0.2.0/nprogress.css"
+      rel="stylesheet"
+    />
 
     <!-- Manually starting preloader because no JSON overhead -->
     <script>
@@ -91,131 +85,131 @@
     </script>
 
     <style type="text/css">
-            body {
-           font-family: 'Cabin', sans-serif;
-              overflow-x:hidden;
-              -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;
-            }
+                body {
+               font-family: 'Cabin', sans-serif;
+                  overflow-x:hidden;
+                  -webkit-user-select: none;  /* Chrome all / Safari all */
+      -moz-user-select: none;     /* Firefox all */
+      -ms-user-select: none;      /* IE 10+ */
+      user-select: none;
+                }
 
-            /* Style the form */
-            #regForm {
-              background-color: #f5f5f7;
-              padding: 30px;
-              min-height: 650px !important;
-              padding-bottom: 100px;
-
-
-            }
+                /* Style the form */
+                #regForm {
+                  background-color: #f5f5f7;
+                  padding: 30px;
+                  min-height: 650px !important;
+                  padding-bottom: 100px;
 
 
-
-            /* Mark input boxes that gets an error on validation: */
-            input.invalid {
-              background-color: #ffdddd;
-            }
+                }
 
 
 
-            /* Make circles that indicate the steps of the form: */
-            .step {
-              height: 15px;
-              width: 15px;
-              margin: 0 2px;
-              background-color: #bbbbbb;
-              border: none;
-              border-radius: 50%;
-              display: inline-block;
-              opacity: 0.5;
-            }
+                /* Mark input boxes that gets an error on validation: */
+                input.invalid {
+                  background-color: #ffdddd;
+                }
 
-            /* Mark the active step: */
-            .step.active {
-              opacity: 1;
-            }
 
-            /* Mark the steps that are finished and valid: */
-            .step.finish {
-              background-color: #4CAF50;
-            }
 
-            .title-2 > h4 {
-              font-size: 20px !important;
-              min-height: 100px;
-              line-height: 35px;
-              padding-top: 15px;
-              padding-bottom: 15px;
-            }
+                /* Make circles that indicate the steps of the form: */
+                .step {
+                  height: 15px;
+                  width: 15px;
+                  margin: 0 2px;
+                  background-color: #bbbbbb;
+                  border: none;
+                  border-radius: 50%;
+                  display: inline-block;
+                  opacity: 0.5;
+                }
 
-            .btn-covid {
-              min-height: 50px;
+                /* Mark the active step: */
+                .step.active {
+                  opacity: 1;
+                }
+
+                /* Mark the steps that are finished and valid: */
+                .step.finish {
+                  background-color: #4CAF50;
+                }
+
+                .title-2 > h4 {
+                  font-size: 20px !important;
+                  min-height: 100px;
+                  line-height: 35px;
+                  padding-top: 15px;
+                  padding-bottom: 15px;
+                }
+
+                .btn-covid {
+                  min-height: 50px;
+                  border-radius: 10px;
+                  margin-top: 1em;
+                  font-size: 20px;
+                  width: 100%;
+                  padding-bottom: 0.2em !important;
+                }
+
+                #prevBtn {
+                  background: transparent;
+                  color:  #007bff;
+                  outline: none;
+                  border: none;
+                }
+
+                #prevBtn:hover {
+                  text-decoration: underline;
+                  color:#0069d9;
+                }
+                .title-1 {
+          font-size:22px;
+                line-height:1.6
+                }
+
+           label.btn {
+             width:100%;
+              background-color: #FFF;
+              margin-top: 1em;
+
               border-radius: 10px;
               margin-top: 1em;
               font-size: 20px;
-              width: 100%;
-              padding-bottom: 0.2em !important;
-            }
+              padding-bottom: .2em !important;
+              line-height: 50px;
+              text-align: left;
+              border:3px solid #FFF;
 
-            #prevBtn {
-              background: transparent;
-              color:  #007bff;
-              outline: none;
-              border: none;
-            }
+          }
+          label.btn {
+              border:3px solid #CCC;
 
-            #prevBtn:hover {
-              text-decoration: underline;
-              color:#0069d9;
-            }
-            .title-1 {
-      font-size:22px;
-            line-height:1.6
-            }
+          }
 
-       label.btn {
-         width:100%;
-          background-color: #FFF;
-          margin-top: 1em;
+            label.btn-c {
+              background-color: #FFF;
+              display:!important;
+              margin-top: 1em;
+              margin-right:15px;
+              border-radius: 10px;
+              margin-top: 1em;
+              font-size: 20px;
+              padding-top:10px !important;
+              padding-bttom:10px !important;
+              text-align: left;
+              border:3px solid #FFF;
 
-          border-radius: 10px;
-          margin-top: 1em;
-          font-size: 20px;
-          padding-bottom: .2em !important;
-          line-height: 50px;
-          text-align: left;
-          border:3px solid #FFF;
+          }
+          label.btn-c {
+              border:3px solid #CCC;
 
-      }
-      label.btn {
-          border:3px solid #CCC;
+          }
 
-      }
-
-        label.btn-c {
-          background-color: #FFF;
-          display:!important;
-          margin-top: 1em;
-          margin-right:15px;
-          border-radius: 10px;
-          margin-top: 1em;
-          font-size: 20px;
-          padding-top:10px !important;
-          padding-bttom:10px !important;
-          text-align: left;
-          border:3px solid #FFF;
-
-      }
-      label.btn-c {
-          border:3px solid #CCC;
-
-      }
-
-      .checked{ border:3px solid #0069d9 !important; }
+          .checked{ border:3px solid #0069d9 !important; }
 
 
-      }
+          }
     </style>
   </head>
   <body>
@@ -249,27 +243,15 @@
 
           <div class="tab" id="intro-text">
             <div class="col-lg-12">
-              
-             
-              
-              <h1 class="display-5">COVID-19 Symptoms Checker</h1>
-            
-
-              <hr />
-
               <label class=" btn btn-default btn-lg">
                 <input
                   name="participant"
-                  value="children"
+                  value="kannada"
                   type="radio"
                   onclick="kannada()"
                 />
 
                 &ensp; ಕನ್ನಡದಲ್ಲಿ ಮುಂದುವರಿಸು &rarr;<br />
-                &ensp; &ensp;<img
-                  src="https://upload.wikimedia.org/wikipedia/kn/f/f0/Map_karnataka_flag.png"
-                  width="20"
-                />&ensp;ನಮ್ಮೆ ಹೆಮ್ಮೆಯ ಕರುನಾಡು
               </label>
 
               <br /><br />
@@ -277,41 +259,99 @@
               <label class=" btn btn-default btn-lg">
                 <input
                   name="participant"
-                  value="children"
+                  value="english"
                   type="radio"
                   onclick="english()"
                 />
 
-                &ensp; Continue In English &rarr;
+                &ensp; Continue In English &rarr;</label
+              >
+
+              <br /><br />
+
+              <label class=" btn btn-default btn-lg">
+                <input
+                  name="participant"
+                  value="hindi"
+                  type="radio"
+                  onclick="hindi()"
+                />
+
+                &ensp; हिंदी मे आगे बढें &rarr;
               </label>
-              
-             <br /><br /> <br /><br /><hr>
-            <p>
-              &copy; 2020, COVID-19 Symptoms Checker App by 
-              <a target="_blank" href="https://g.co/kgs/qJ1ZfR">Mohammed Suhail CS</a> &amp;  <a target="_blank" href="https://www.google.com/search?q=pranav+shikarpur&oq=pranav+shikarp&aqs=chrome.1.69i57j0j69i61j69i60.4005j0j7&sourceid=chrome&ie=UTF-8">Pranav Shikarpur.</a>
-            </p>
 
+              <br /><br />
 
-            Supported by
-            <img
-              src="https://res.cloudinary.com/db0oijipf/image/upload/v1584367464/favicon/android-icon-36x36_e3ohsy.png"
-              width="25"
-            />
-            <a href="https://unboxrobotics.com" target="_blank">Unbox Robotics</a>
-            <p>
-              
-            </p>
+              <label class=" btn btn-default btn-lg">
+                <input
+                  name="participant"
+                  value="hindi"
+                  type="radio"
+                  onclick="marathi()"
+                />
+
+                &ensp; मराठी साठी हा पर्याय &rarr;
+              </label>
+
+              <br /><br />
+
+              <label class=" btn btn-default btn-lg">
+                <input
+                  name="participant"
+                  value="hindi"
+                  type="radio"
+                  onclick="bengali()"
+                />
+
+                &ensp; বাংলা ভাষার জন্যে &rarr;
+              </label>
+
+              <br /><br />
+              <br /><br />
+              <hr />
+              <p>
+                &copy; 2020, COVID-19 Symptoms Checker App by
+                <a target="_blank" href="https://g.co/kgs/qJ1ZfR"
+                  >Mohammed Suhail CS</a
+                >
+                &amp;
+                <a
+                  target="_blank"
+                  href="https://www.google.com/search?q=pranav+shikarpur&oq=pranav+shikarp&aqs=chrome.1.69i57j0j69i61j69i60.4005j0j7&sourceid=chrome&ie=UTF-8"
+                  >Pranav Shikarpur.</a
+                >
+              </p>
+
+              Supported by
+              <img
+                src="https://res.cloudinary.com/db0oijipf/image/upload/v1584367464/favicon/android-icon-36x36_e3ohsy.png"
+                width="25"
+              />
+              <a href="https://unboxrobotics.com" target="_blank"
+                >Unbox Robotics</a
+              >
+              <p></p>
 
               <p>
-              <a target="_blank" href="terms.html">Privacy &amp; Data Policy </a> &ensp; |
-              &ensp; <a target="_blank" href="credits.html"> Credits </a> &ensp; |
-              &ensp;  <a  target="_blank" href="schema.pdf"> Prediction Logic Schema </a> &ensp; |
-              &ensp; <a target="_blank" href="https://github.com/covidselfcheck/covid19-self-check"> GitHub </a>
-            </p>
-              
+                <a target="_blank" href="terms.html"
+                  >Privacy &amp; Data Policy
+                </a>
+                &ensp; | &ensp;
+                <a target="_blank" href="credits.html"> Credits </a> &ensp; |
+                &ensp;
+                <a target="_blank" href="schema.pdf">
+                  Prediction Logic Schema
+                </a>
+                &ensp; | &ensp;
+                <a
+                  target="_blank"
+                  href="https://github.com/covidselfcheck/covid19-self-check"
+                >
+                  GitHub
+                </a>
+              </p>
+
               <p style="color:#ccc">V3.0.1 SERVED FROM I-1</p>
-              
-              
             </div>
           </div>
         </form>
@@ -320,51 +360,52 @@
 
     <script src="./js/jq.js"></script>
 
-
-
-
     <script>
-
-
-           function kannada(){
-             
-             
-             window.location.href = "test.html?lang=kannada";
-             
-            }
-
-      function english(){
-        
-        
-          window.location.href = "test.html?lang=english";
-        
+      function kannada() {
+        window.location.href = "test.html?lang=kannada";
       }
 
-          $(document).ready(function() {
-              /* HIGHLIGHT AND SELECT ONE RADIO ONLY */
+      function english() {
+        window.location.href = "test.html?lang=english";
+      }
 
-              $('input[type="radio"]').click(function() {
-                $('input[type="radio"]').each(function() {
-                  if ($(this).is(":checked")) {
-                    $(this)
-                      .parent()
-                      .addClass("checked");
-                  } else {
-                    $(this)
-                      .parent()
-                      .removeClass("checked");
-                  }
-                });
-              });
-             });
+      function hindi() {
+        window.location.href = "test.html?lang=hindi";
+      }
+
+      function marathi() {
+        window.location.href = "test.html?lang=marathi";
+      }
+
+      function bengali() {
+        window.location.href = "test.html?lang=bengali";
+      }
+
+      $(document).ready(function() {
+        /* HIGHLIGHT AND SELECT ONE RADIO ONLY */
+
+        $('input[type="radio"]').click(function() {
+          $('input[type="radio"]').each(function() {
+            if ($(this).is(":checked")) {
+              $(this)
+                .parent()
+                .addClass("checked");
+            } else {
+              $(this)
+                .parent()
+                .removeClass("checked");
+            }
+          });
+        });
+      });
     </script>
-  <!-- Ending Preloader -->
-  <script>
-    try {
-      NProgress.done();
-    } catch(err) {
-      console.warn(err);
-    }
-  </script>
+    <!-- Ending Preloader -->
+    <script>
+      try {
+        NProgress.done();
+      } catch (err) {
+        console.warn(err);
+      }
+    </script>
   </body>
 </html>
