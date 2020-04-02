@@ -1,24 +1,25 @@
 <!DOCTYPE html">
 <html>
   <head>
-    <title>Multilingual COVID-19 Symptoms Checker</title>
-
-    <!-- Required meta tags -->
 
     <meta charset="utf-8" />
 
-    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="manifest.json">
+ 
+<script>
 
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("/pwa.js")
-          .then(reg => console.log("service worker registered"))
-          .catch(err => console.log("service worker not registered", err));
-      }
-    </script>
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('/pwa.js')
+      .then(reg => console.log('service worker registered'))
+      .catch(err => console.log('service worker not registered', err));
+  }
+  
+  
+  
+  </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
+
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-162151085-1"
@@ -50,6 +51,12 @@
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
 
+
+    <!-- Required meta tags -->
+
+
+    <meta name="author" content="Mohammed Suhail Chinya Salimpasha" />
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no"
@@ -70,19 +77,7 @@
 
     <!-- Preloader -->
     <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
-    <link
-      href="https://unpkg.com/nprogress@0.2.0/nprogress.css"
-      rel="stylesheet"
-    />
-
-    <!-- Manually starting preloader because no JSON overhead -->
-    <script>
-      try {
-        NProgress.start();
-      } catch (err) {
-        console.warn(err);
-      }
-    </script>
+    <link href="https://unpkg.com/nprogress@0.2.0/nprogress.css" rel="stylesheet">
 
     <style type="text/css">
                 body {
@@ -100,8 +95,6 @@
                   padding: 30px;
                   min-height: 650px !important;
                   padding-bottom: 100px;
-
-
                 }
 
 
@@ -111,7 +104,10 @@
                   background-color: #ffdddd;
                 }
 
-
+                /* Hide all steps by default: */
+                .tab {
+                  display: none;
+                }
 
                 /* Make circles that indicate the steps of the form: */
                 .step {
@@ -165,7 +161,7 @@
                 }
                 .title-1 {
           font-size:22px;
-                line-height:1.6
+                line-height:1.6;
                 }
 
            label.btn {
@@ -210,6 +206,10 @@
 
 
           }
+
+          .hidden, .pageclip-form__success, .pageclip-form__success__message{
+
+          }
     </style>
   </head>
   <body>
@@ -243,209 +243,688 @@
 
           <div class="tab" id="intro-text">
             <div class="col-lg-12">
-              <label class=" btn btn-default btn-lg">
-                <input
-                 
-                  type="radio"
-                  onclick="kannada()"
-                />
+              <p>
+                <a href="index.html" class="title"> </a>
+              </p>
 
-                &ensp; ಕನ್ನಡದಲ್ಲಿ ಮುಂದುವರಿಸು &rarr;<br />
-              </label>
-
-              <br /><br />
-
-              <label class=" btn btn-default btn-lg">
-                <input
-               
-                  type="radio"
-                  onclick="english()"
-                />
-
-                &ensp; Continue In English &rarr;</label
-              >
-
-              <br /><br />
-
-              <label class=" btn btn-default btn-lg">
-                <input
-                 
-                  type="radio"
-                  onclick="hindi()"
-                />
-
-                &ensp; हिंदी मे आगे बढें &rarr;
-              </label>
-              
-              
-              
-              
-                    <br /><br />
-
-              <label class=" btn btn-default btn-lg">
-                <input
-           
-                  type="radio"
-                  onclick="malyalam()"
-                />
-
-                &ensp; മലയാളത്തിൽ തുടരുക &rarr;
-              </label>
-              
-              
-
-              <br /><br />
-
-              <label class=" btn btn-default btn-lg">
-                <input
-            
-                  type="radio"
-                  onclick="marathi()"
-                />
-
-                &ensp; मराठी साठी हा पर्याय &rarr;
-              </label>
-
-              <br /><br />
-
-              <label class=" btn btn-default btn-lg">
-                <input
-     
-                  type="radio"
-                  onclick="bengali()"
-                />
-
-                &ensp; বাংলা ভাষার জন্যে &rarr;
-              </label>
-              
-              
-              
-              
-              
-                    <br /><br />
-
-              <label class=" btn btn-default btn-lg">
-                <input
-                  type="radio"
-                  onclick="gujrathi()"
-                />
-
-                &ensp; ગુજરાતીમાં આગળ વધો &rarr;
-              </label>
-              
-              
-              
-
-              <br /><br />
-              <br /><br />
+              <h1 class="display-5 title"></h1>
               <hr />
-              <p>
-                &copy; 2020, COVID-19 Symptoms Checker App by
-                <a target="_blank" href="https://g.co/kgs/qJ1ZfR"
-                  >Mohammed Suhail CS</a
-                >
-                &amp;
-                <a
-                  target="_blank"
-                  href="https://www.google.com/search?q=pranav+shikarpur&oq=pranav+shikarp&aqs=chrome.1.69i57j0j69i61j69i60.4005j0j7&sourceid=chrome&ie=UTF-8"
-                  >Pranav Shikarpur.</a
-                >
-              </p>
 
-              Supported by
-              <img
-                src="https://res.cloudinary.com/db0oijipf/image/upload/v1584367464/favicon/android-icon-36x36_e3ohsy.png"
-                width="25"
-              />
-              <a href="https://unboxrobotics.com" target="_blank"
-                >Unbox Robotics</a
-              >
-              <p></p>
+              <div class="title-2">
+                <h4 class="description"></h4>
+              </div>
 
-              <p>
-                <a target="_blank" href="terms.html"
-                  >Privacy &amp; Data Policy
-                </a>
-                &ensp; | &ensp;
-                <a target="_blank" href="credits.html"> Credits </a> &ensp; |
-                &ensp;
-                <a target="_blank" href="schema.pdf">
-                  Prediction Logic Schema
-                </a>
-                &ensp; | &ensp;
-                <a
-                  target="_blank"
-                  href="https://github.com/covidselfcheck/covid19-self-check"
-                >
-                  GitHub
-                </a>
-              </p>
+              <div class="title-2">
+                <h4 class="description"></h4>
+              </div>
 
-              <p style="color:#ccc">V5 SERVED FROM I-2</p>
+              <div style="display:none">
+                <input style="display:none !important" type="radio" checked />
+              </div>
             </div>
+          </div>
+
+          <div class="tab" id="formpage-0">
+            <div class="col-lg-12">
+              <br />
+              <h1 class="title-1 question"></h1>
+              <p class="question-description"></p>
+
+              <hr />
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="participant"
+                  value="self"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="participant"
+                  value="parents"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="participant"
+                  value="spouse"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="participant"
+                  value="children"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="participant"
+                  value="other"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="tab" id="formpage-1">
+            <div class="col-lg-12">
+              <br />
+              <h1 class="title-1 question"></h1>
+              <p class="question-description"></p>
+
+              <hr />
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="gender"
+                  value="male"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="gender"
+                  value="female"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="gender"
+                  value="other"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="tab" id="formpage-2">
+            <div class="col-lg-12">
+              <br />
+              <h1 class="title-1 question"></h1>
+              <p class="question-description"></p>
+
+              <hr />
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="age"
+                  value="12"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="age"
+                  value="12-50"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="age"
+                  value="51-60"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="age"
+                  value="60"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="tab" id="formpage-3">
+            <div class="col-lg-12">
+              <br />
+              <h1 class="title-1 question"></h1>
+              <p class="question-description"></p>
+
+              <hr />
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="pre_existing_conditions"
+                  value="yes"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="pre_existing_conditions"
+                  value="no"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="tab" id="formpage-4">
+            <div class="col-lg-12">
+              <br />
+              <h1 class="title-1 question"></h1>
+              <p class="question-description"></p>
+              <hr />
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="travel"
+                  value="yes"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="travel"
+                  value="no"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="tab" id="formpage-5">
+            <div class="col-lg-12">
+              <br />
+              <h1 class="title-1 question"></h1>
+              <p class="question-description"></p>
+
+              <hr />
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="internal_travel_contact"
+                  value="yes"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="internal_travel_contact"
+                  value="no"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="internal_travel_contact"
+                  value="no"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="tab" id="formpage-6">
+            <div class="col-lg-12">
+              <br />
+              <h1 class="title-1 question"></h1>
+              <p class="question-description"></p>
+
+              <hr />
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="covid_confirm_relation"
+                  value="yes"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="covid_confirm_relation"
+                  value="no"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="tab" id="formpage-7">
+            <div class="col-lg-12">
+              <br />
+              <h1 class="title-1 question"></h1>
+              <p class="question-description"></p>
+              <hr />
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="fever"
+                  value="yes"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="fever"
+                  value="no"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="tab" id="formpage-8">
+            <div class="col-lg-12">
+              <br />
+              <h1 class="title-1 question"></h1>
+              <p class="question-description"></p>
+
+              <hr />
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="headache"
+                  value="yes"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="headache"
+                  value="no"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="tab" id="formpage-9">
+            <div class="col-lg-12">
+              <br />
+              <h1 class="title-1 question"></h1>
+              <p class="question-description"></p>
+              <hr />
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="cough"
+                  value="yes"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="cough"
+                  value="no"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="tab" id="formpage-10">
+            <div class="col-lg-12">
+              <br />
+              <h1 class="title-1 question"></h1>
+              <p class="question-description"></p>
+              <hr />
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="cold"
+                  value="yes"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="cold"
+                  value="no"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="tab" id="formpage-11">
+            <div class="col-lg-12">
+              <br />
+              <h1 class="title-1  question"></h1>
+              <p class="question-description"></p>
+
+              <hr />
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="breathing_disorders"
+                  value="yes"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input
+                  name="breathing_disorders"
+                  value="no"
+                  type="radio"
+                  onclick="nextPrev(1)"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="tab" id="formpage-12">
+            <div class="col-lg-12">
+              <br />
+              <h1 class="title-1 question"></h1>
+              <p class="question-description"></p>
+
+              <hr />
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input name="speaking_disorders" value="yes" type="radio" />
+              </label>
+
+              <label class=" btn btn-default btn-lg primary option">
+                <input name="speaking_disorders" value="no" type="radio" />
+              </label>
+            </div>
+          </div>
+
+          <input style="display:none;" name="prediction" id="pdo" value="" />
+
+          <div class="tab">
+            <div class="col-lg-12">
+              <h1 class="title-1 bad-outcome-title"></h1>
+
+              <a href="" id="restart-btn" onlick="location.reload();">
+                &#8426;
+              </a>
+
+              <hr />
+
+              <div id="status">
+                <div id="hr" class="title-2" style="display:none">
+                  <h3 style="color:red" class="bad-outcome-title"></h3>
+                  <h5 class="bad-outcome-title"><b></b></h5>
+
+                  <br />
+
+                  <h5 class="bad-next-steps"></h5>
+                  <hr />
+
+                  <h5 class="bad-next-steps"></h5>
+
+                  <br />
+
+                  <h5 class="bad-next-steps"></h5>
+
+                  <br />
+
+                  <h5 class="bad-next-steps"></h5>
+                  
+                   <br />
+
+                  <h5 class="bad-next-steps"></h5>
+                  
+                     <br />
+
+                  <h5 class="bad-next-steps"></h5>
+
+                  <br />
+                </div>
+
+
+                <div id="nr" class="title-2" style="display:none">
+                  <h3 style="color:green" class="good-outcome-title"></h3>
+                  <h5 class="good-outcome-title "><b></b></h5>
+
+                  <br />
+
+                  <h5 class="good-next-steps"></h5>
+                  <hr />
+
+                  <h5 class="good-next-steps"></h5>
+
+                  <br />
+
+                  <h5 class="good-next-steps"></h5>
+
+                  <br />
+
+                  <h5 class="good-next-steps"></h5>
+
+                  <br />
+
+                  <h5 class="good-next-steps"></h5>
+
+                  <br />
+                  
+                   <h5 class="good-next-steps"></h5>
+
+                  <br />
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="overflow:auto;">
+            <div class="col-12">
+              <button
+                type="button"
+                id="nextBtn"
+                class="btn-covid btn btn-primary col-lg-12 button pageclip-form__submit"
+                onclick="nextPrev(1)"
+              ></button>
+            </div>
+          </div>
+
+          <div style="display:none">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+          </div>
+
+          <div class="col-lg-12">
+      
+            <br /><br />
+            <hr />
+            <p>
+              &copy; 2020, COVID-19 Symptoms Checker App by
+              <a target="_blank" href="https://g.co/kgs/qJ1ZfR"
+                >Mohammed Suhail CS</a
+              >
+              &amp;
+              <a
+                target="_blank"
+                href="https://www.google.com/search?q=pranav+shikarpur&oq=pranav+shikarp&aqs=chrome.1.69i57j0j69i61j69i60.4005j0j7&sourceid=chrome&ie=UTF-8"
+                >Pranav Shikarpur.</a
+              >
+            </p>
+
+            Supported by
+            <img
+              src="https://res.cloudinary.com/db0oijipf/image/upload/v1584367464/favicon/android-icon-36x36_e3ohsy.png"
+              width="25"
+            />
+            <a href="https://unboxrobotics.com" target="_blank"
+              >Unbox Robotics</a
+            >
+            <p></p>
+
+            <p>
+              <a target="_blank" href="terms.html">Privacy &amp; Data Policy </a> &ensp; |
+              &ensp; <a target="_blank" href="credits.html"> Credits </a> &ensp; |
+              &ensp;  <a  target="_blank" href="schema.pdf"> Prediction Logic Schema </a> &ensp; |
+              &ensp; <a target="_blank" href="https://github.com/covidselfcheck/covid19-self-check"> GitHub </a>
+            </p>
+
+            <p style="color:#ccc">V4 SERVED FROM I-2</p>
+
           </div>
         </form>
       </div>
     </div>
 
-    <script src="./js/jq.js"></script>
+    <!-- Optional JavaScript -->
+
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    
+    
+     <script src="./js/jq.js"></script>
+    
+    
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    
+     
+     <script src="./js/bootstrap.min.js"></script>
+
+    <script src="./static/json.js"></script>
+    <script src="./js/ui.js"></script>
+    <script src="./js/ui-val.js"></script>
 
     <script>
-      function kannada() {
-        window.location.href = "test.html?lang=kannada";
-      }
-
-      function english() {
-        window.location.href = "test.html?lang=english";
-      }
-
-      function hindi() {
-        window.location.href = "test.html?lang=hindi";
-      }
-
-      function marathi() {
-        window.location.href = "test.html?lang=marathi";
-      }
-
-      function bengali() {
-        window.location.href = "test.html?lang=bengali";
-      }
-      
-        function gujrathi() {
-        window.location.href = "test.html?lang=gujrathi";
-      }
-      
-        function malyalam() {
-        window.location.href = "test.html?lang=malyalam";
-      }
-      
-      
-
-      $(document).ready(function() {
-        /* HIGHLIGHT AND SELECT ONE RADIO ONLY */
-
-        $('input[type="radio"]').click(function() {
-          $('input[type="radio"]').each(function() {
-            if ($(this).is(":checked")) {
-              $(this)
-                .parent()
-                .addClass("checked");
-            } else {
-              $(this)
-                .parent()
-                .removeClass("checked");
-            }
-          });
-        });
+      var form = document.querySelector(".pageclip-form");
+      Pageclip.form(form, {
+        onSubmit: function(event) {},
+        successTemplate: "<span></span>"
       });
     </script>
-    <!-- Ending Preloader -->
-    <script>
-      try {
-        NProgress.done();
-      } catch (err) {
-        console.warn(err);
+
+    <script type="text/javascript">
+      function covid() {
+        var data = $("form")
+          .serialize()
+          .split("&");
+        console.log(data);
+        var obj = {};
+        for (var key in data) {
+          console.log(data[key]);
+          obj[data[key].split("=")[0]] = data[key].split("=")[1];
+        }
+
+        console.log(obj);
+
+        var participant = obj.participant;
+
+        var gender = obj.gender;
+
+        var age = obj.age;
+
+        var ped = obj.pre_extisting_disorders;
+
+        var tr = obj.travel;
+
+        var ic = obj.internal_travel_contact;
+
+        var rl = obj.covid_confirm_relation;
+
+        var fever = obj.fever;
+
+        var hdc = obj.hdc;
+
+        var cough = obj.cough;
+
+        var cold = obj.cold;
+
+        var bc = obj.breathing_disorders;
+
+        var tp = obj.speaking_disorder;
+
+        var st = 0;
+
+        if (rl == "yes") {st = 1;} 
+        else if ((tr == "yes" || rl == "yes") && (fever == "yes" || cough == "yes"|| cold == "yes" || bc == "yes" || tp == "yes")) 
+        {
+          st = 1;
+        } 
+        
+        else if ( ((fever=="yes" || cold == "yes" || tp == "yes") || (fever == "yes" && cold == "yes" && tp == "yes")) && (cough=="yes" || bc == "yes"))
+         {
+          st = 1;
+        } 
+        
+        else if (
+          fever == "yes" ||
+          cold == "yes" ||
+          hdc == "yes" ||
+          tp == "yes"
+        ) {
+          st = 3;
+        } else {
+          st = 3;
+        }
+
+        $("#pdo").val(st);
+
+        if (st == "1") {
+          $("#hr").css("display", "block");
+         
+        }
+
+        if (st == "3") {
+          $("#nr").css("display", "block");
+          
+        }
       }
     </script>
+
+
+  
+  
+
   </body>
 </html>
