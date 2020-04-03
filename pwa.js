@@ -9,6 +9,7 @@ const assets = [
   '/js/jq.js',
   '/js/bootstrap.min.js',
   '/css/bootstrap.min.css',
+  '/css/preloader.css',
   '/credits.html',
   '/terms.html',
   '/schema.pdf',
