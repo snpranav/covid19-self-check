@@ -5,6 +5,7 @@ $(document).ready(function() {
     let lang = urlParams.get('lang');
 
     new Promise((resolve, reject) => {
+        // Starting Preloader
         NProgress.start();
         return fetch(`./static/${lang}.json`).then(response => {
             if(response.status==200) {
@@ -15,7 +16,9 @@ $(document).ready(function() {
             resolve(response.status);
         })
     }).then(() => {
-    // Pulling dynamic app-content
+        // Setting Preloader to half
+        NProgress.set(0.5);
+        // Pulling dynamic app-content
         let submitButtonText;
         let radioButtonCharacter = "&ensp; ";
         if(language==undefined) {
@@ -84,7 +87,13 @@ $(document).ready(function() {
             }
         });
     }).then(() => {
-        NProgress.done();
+        try {
+            NProgress.done();
+            $(".loader-wrapper").fadeOut("slow");
+        } catch (err) {
+            console.warn(err);
+            $(".loader-wrapper").fadeOut("slow");
+        }
     });
 });
 

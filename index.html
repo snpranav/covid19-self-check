@@ -74,6 +74,7 @@
       href="https://unpkg.com/nprogress@0.2.0/nprogress.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/preloader.css">
 
     <!-- Manually starting preloader because no JSON overhead -->
     <script>
@@ -401,6 +402,20 @@
         NProgress.done();
       } catch (err) {
         console.warn(err);
+      }
+    </script>
+
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <script>
+      try {
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
+      } catch {
+        console.warn(err);
+        $(".loader-wrapper").fadeOut("slow");
       }
     </script>
   </body>
