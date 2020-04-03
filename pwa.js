@@ -1,5 +1,5 @@
 
-const staticCacheName = 'v5.5';
+const staticCacheName = 'aplha-v5.5';
 
 
 const assets = [
