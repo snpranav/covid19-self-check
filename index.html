@@ -74,7 +74,7 @@
       href="https://unpkg.com/nprogress@0.2.0/nprogress.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/preloader.css" />
 
     <!-- Manually starting preloader because no JSON overhead -->
     <script>
@@ -274,6 +274,22 @@
               <br /><br />
 
               <label class=" btn btn-default btn-lg">
+                <input type="radio" onclick="konkani()" />
+
+                &ensp; कोंकणी तल्यान फुडें वचपा खातीर &rarr;
+              </label>
+
+              <br /><br />
+
+              <label class=" btn btn-default btn-lg">
+                <input type="radio" onclick="telegu()" />
+
+                &ensp; తెలుగు భాష కోసం &rarr;
+              </label>
+
+              <br /><br />
+
+              <label class=" btn btn-default btn-lg">
                 <input type="radio" onclick="marathi()" />
 
                 &ensp; मराठी साठी हा पर्याय &rarr;
@@ -340,7 +356,7 @@
                 </a>
               </p>
 
-              <p style="color:#ccc">V5.0.6</p>
+              <p style="color:#ccc">V5.5</p>
             </div>
           </div>
         </form>
@@ -378,6 +394,14 @@
         window.location.href = "test.html?lang=malyalam";
       }
 
+      function telugu() {
+        window.location.href = "test.html?lang=telugu";
+      }
+
+      function konkani() {
+        window.location.href = "test.html?lang=konkani";
+      }
+
       $(document).ready(function() {
         /* HIGHLIGHT AND SELECT ONE RADIO ONLY */
 
@@ -410,7 +434,7 @@
     </div>
     <script>
       try {
-        $(window).on("load",function(){
+        $(window).on("load", function() {
           $(".loader-wrapper").fadeOut("slow");
         });
       } catch {

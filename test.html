@@ -75,7 +75,7 @@
       href="https://unpkg.com/nprogress@0.2.0/nprogress.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/preloader.css" />
 
     <style type="text/css">
                 body {
@@ -812,7 +812,7 @@
               </a>
             </p>
 
-            <p style="color:#ccc">V5.0.6</p>
+            <p style="color:#ccc">V5.5</p>
           </div>
         </form>
       </div>
@@ -906,7 +906,9 @@
             cold == "yes" ||
             tp == "yes" ||
             (fever == "yes" && cold == "yes" && tp == "yes")) &&
-          (cough == "yes" || bc == "yes")
+          ((fever && cough == "yes") ||
+            (fever == "yes" && bc == "yes") ||
+           (bc == "yes"))
         ) {
           st = 1;
         } else if (
