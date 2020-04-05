@@ -1,0 +1,22 @@
+{
+  "name": "covidselfcheck.app",
+  "version": "1.0.0",
+  "description": "Multilingual Covid Symptoms Checker",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/covidselfcheck/covid19-self-check.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/covidselfcheck/covid19-self-check/issues"
+  },
+  "homepage": "https://covidselfcheck.app/",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
