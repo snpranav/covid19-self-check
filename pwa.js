@@ -1,9 +1,9 @@
 
-const staticCacheName = 'aplhav5.5';
+const staticCacheName = 'aplhav5.67754';
 
 
 const assets = [
-  '/index.html',
+   '/index.html',
   '/test.html',
   '/manifest.json',
   '/js/jq.js',
@@ -16,7 +16,9 @@ const assets = [
   'https://fonts.googleapis.com/css?family=Roboto&display=swap',
   'https://unpkg.com/nprogress@0.2.0/nprogress.js',
   'https://unpkg.com/nprogress@0.2.0/nprogress.css'
+ 
 ];
+
 
 
 self.addEventListener('activate', function(event) {
