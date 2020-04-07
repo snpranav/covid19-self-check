@@ -53,13 +53,10 @@
 <script src="./js/jq.js"></script>
 
 <script>
-
-
 $.get("https://locate.covidselfcheck.app", function(data){
-    console.log(data['ip']);
-  alert("Data: " + data);
+   var region = data['region'];
+   $("#region").html(region);
 });
-
 
 
 
@@ -243,6 +240,8 @@ $.get("https://locate.covidselfcheck.app", function(data){
           <!-- FORM TITLE -->
 
           <div class="col-lg-12">
+            <p>Accessing site via <span id="region"></span></p>
+            <p></p>
             <p>
               [Information] By Continuing, You are agreeing to our
               <a href="terms.html">Terms</a> and acknowledging that this website
