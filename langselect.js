@@ -14,13 +14,13 @@ $(document).ready(() => {
             regionName = data["region"];
         }).then(() => {
             writeLanguages();
-        }).catch(error => {
+        }).catch((error) => {
             writeLanguages();
             console.warn(error);
         });
     } catch(err) {
         writeLanguages();
-        console.warn(error);
+        console.warn(err);
     }
 
     function insertLanguageInHTML(key, val) {
