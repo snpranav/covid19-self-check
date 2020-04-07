@@ -62,6 +62,7 @@ $(document).ready(() => {
                     arrayOfLanguages.forEach((lang) => {
                         insertLanguageInHTML(lang, data[lang]);
                     });
+                    $(".loader-wrapper").fadeOut("slow");
                 }
             })
     }
