@@ -1,38 +1,38 @@
 {
     "kannada": {
-        "region": ["Karnataka"],
+        "region_code": ["KN"],
         "text": "ಕನ್ನಡದಲ್ಲಿ ಮುಂದುವರಿಸು"
     },
     "english": {
-        "region": [null],
+        "region_code": [null],
         "text": "Continue In English"
     },
     "hindi": {
-        "region": ["Delhi"],
+        "region_code": ["DL", "HR", "HP"],
         "text": "हिंदी मे आगे बढें"
     },
     "malayalam": {
-        "region": ["Kerala"],
+        "region_code": ["KL"],
         "text": "മലയാളത്തിൽ തുടരുക"
     },
     "konkani": {
-        "region": ["Goa"],
+        "region_code": ["GA"],
         "text": "कोंकणी तल्यान फुडें वचपा खातीर"
     },
     "telugu": {
-        "region": ["Telangana", "Andhra Pradesh"],
+        "region_code": ["TG", "AP"],
         "text": "తెలుగు భాష కోసం"
     },
     "marathi": {
-        "region": ["Maharashtra"],
+        "region_code": ["MH"],
         "text": "मराठी साठी हा पर्याय"
     },
     "bengali": {
-        "region": ["West Bengal"],
+        "region_code": ["WB"],
         "text": "বাংলা ভাষার জন্যে"
     },
     "gujrathi": {
-        "region": ["Gujrath"],
+        "region_code": ["GJ"],
         "text": "ગુજરાતીમાં આગળ વધો"
     }
 

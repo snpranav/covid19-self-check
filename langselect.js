@@ -11,7 +11,7 @@ $(document).ready(() => {
         .then((response) => {
             return response.json();
         }).then((data) => {
-            regionName = data["region"];
+            regionName = data["region_code"];
         }).then(() => {
             writeLanguages();
         }).catch((error) => {
@@ -49,7 +49,7 @@ $(document).ready(() => {
                         },1000);
                     } else {
                         arrayOfLanguages.forEach((lang) => {
-                            if(data[lang]["region"].includes(regionName)) {
+                            if(data[lang]["region_code"].includes(regionName.toUpperCase())) {
                                 arrayOfLanguages.splice(arrayOfLanguages.indexOf(lang), 1);
                                 arrayOfLanguages.unshift(lang);
                             }
