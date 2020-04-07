@@ -54,9 +54,15 @@
 
 <script>
 
-$.get("https://locate.covidselfcheck.app", function(data){
-  alert("Data: " + data);
-});
+$.ajax({
+        url: "https://locate.covidselfcheck.app",
+        type: 'GET',
+        dataType: 'json', // added data type
+        success: function(res) {
+            console.log(res);
+            alert(res);
+        }
+    });
 
 
 
