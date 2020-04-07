@@ -27,7 +27,7 @@ $(document).ready(() => {
         $(`#lang-select`).eq(0)
         .prepend(`
             <label class=" btn btn-default btn-lg lang-select-btn">
-                <input type="radio" onclick="languageClick(${key})" />
+                <input type="radio" onclick="languageClick('${key}')" />
                 &ensp; ${val["text"]} &rarr;<br />
             </label>
 
