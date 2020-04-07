@@ -50,6 +50,15 @@
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
 
+<script>
+  $.get("server.php", function(data){
+     $("#server").html(data);
+  });
+  
+  
+  
+  </script>
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no"
@@ -350,7 +359,7 @@
                 </a>
               </p>
               <br>
-              <p style="color:#ccc; text-align: center;">CV-INDIA-ONE-BANGALORE</p>
+              <p style="color:#ccc; text-align: center;" id="server"></p>
              <p style="color:#ccc; text-align: center;"><a target="_blank" href="https://digitalocean.com"><img src="do.png" width="150"></a> </p>
             </div>
           </div>
