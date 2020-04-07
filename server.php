@@ -1,5 +1,6 @@
 <?php
 $ip = $_SERVER['REMOTE_ADDR']; 
+echo $ip;
 
 if($ip == "10.122.0.6"){
     echo "COVIDSELFCHECK-DO-01";
