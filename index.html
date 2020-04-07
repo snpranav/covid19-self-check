@@ -240,194 +240,91 @@
           <!-- One "tab" for each step in the form: -->
 
           <div class="tab" id="intro-text">
-            <div class="col-lg-12">
-              <label class=" btn btn-default btn-lg">
-                <input type="radio" onclick="kannada()" />
-
-                &ensp; ಕನ್ನಡದಲ್ಲಿ ಮುಂದುವರಿಸು &rarr;<br />
-              </label>
-
-              <br /><br />
-
-              <label class=" btn btn-default btn-lg">
-                <input type="radio" onclick="english()" />
-
-                &ensp; Continue In English &rarr;</label
-              >
-
-              <br /><br />
-
-              <label class=" btn btn-default btn-lg">
-                <input type="radio" onclick="hindi()" />
-
-                &ensp; हिंदी मे आगे बढें &rarr;
-              </label>
-
-              <br /><br />
-
-              <label class=" btn btn-default btn-lg">
-                <input type="radio" onclick="malyalam()" />
-
-                &ensp; മലയാളത്തിൽ തുടരുക &rarr;
-              </label>
-
-              <br /><br />
-
-              <label class=" btn btn-default btn-lg">
-                <input type="radio" onclick="konkani()" />
-
-                &ensp; कोंकणी तल्यान फुडें वचपा खातीर &rarr;
-              </label>
-
-              <br /><br />
-
-              <label class=" btn btn-default btn-lg">
-                <input type="radio" onclick="telugu()" />
-
-                &ensp; తెలుగు భాష కోసం &rarr;
-              </label>
-
-              <br /><br />
-
-              <label class=" btn btn-default btn-lg">
-                <input type="radio" onclick="marathi()" />
-
-                &ensp; मराठी साठी हा पर्याय &rarr;
-              </label>
-
-              <br /><br />
-
-              <label class=" btn btn-default btn-lg">
-                <input type="radio" onclick="bengali()" />
-
-                &ensp; বাংলা ভাষার জন্যে &rarr;
-              </label>
-
-              <br /><br />
-
-              <label class=" btn btn-default btn-lg">
-                <input type="radio" onclick="gujrathi()" />
-
-                &ensp; ગુજરાતીમાં આગળ વધો &rarr;
-              </label>
-
-              <br /><br />
-              <br /><br />
-              <hr />
-              <p>
-                &copy; 2020, COVID-19 Symptoms Checker App by
-                <a target="_blank" href="https://g.co/kgs/qJ1ZfR"
-                  >Mohammed Suhail CS</a
-                >
-                &amp;
-                <a
-                  target="_blank"
-                  href="https://www.google.com/search?q=pranav+shikarpur&oq=pranav+shikarp&aqs=chrome.1.69i57j0j69i61j69i60.4005j0j7&sourceid=chrome&ie=UTF-8"
-                  >Pranav Shikarpur.</a
-                >
-              </p>
-
-              Supported by
-              <img
-                src="https://res.cloudinary.com/db0oijipf/image/upload/v1584367464/favicon/android-icon-36x36_e3ohsy.png"
-                width="25"
-              />
-              <a href="https://unboxrobotics.com" target="_blank"
-                >Unbox Robotics</a
-              >
-              <p></p>
-
-              <p>
-                <a target="_blank" href="terms.html"
-                  >Privacy &amp; Data Policy
-                </a>
-                &ensp; | &ensp;
-                <a target="_blank" href="credits.html"> Credits </a> &ensp; |
-                &ensp;
-                <a target="_blank" href="schema.pdf">
-                  Prediction Logic Schema
-                </a>
-                &ensp; | &ensp;
-                <a
-                  target="_blank"
-                  href="https://github.com/covidselfcheck/covid19-self-check"
-                >
-                  GitHub
-                </a>
-              </p>
-
-              <p style="color:#ccc">V5.5</p>
+            <div class="tab">
+              <div class="col-lg-12" id="lang-select">
+                <br /><br />
+                <hr />
+                <p>
+                  &copy; 2020, COVID-19 Symptoms Checker App by
+                  <a target="_blank" href="https://g.co/kgs/qJ1ZfR"
+                    >Mohammed Suhail CS</a
+                  >
+                  &amp;
+                  <a
+                    target="_blank"
+                    href="https://www.google.com/search?q=pranav+shikarpur&oq=pranav+shikarp&aqs=chrome.1.69i57j0j69i61j69i60.4005j0j7&sourceid=chrome&ie=UTF-8"
+                    >Pranav Shikarpur.</a
+                  >
+                </p>
+  
+               
+               
+                <p></p>
+  
+                <p>
+                  <a target="_blank" href="terms.html"
+                    >Privacy &amp; Data Policy
+                  </a>
+                  &ensp; | &ensp;
+                  <a target="_blank" href="credits.html"> Credits </a> &ensp; |
+                  &ensp;
+                  <a target="_blank" href="schema.pdf">
+                    Prediction Logic Schema
+                  </a>
+                  &ensp; | &ensp;
+                  <a
+                    target="_blank"
+                    href="https://github.com/covidselfcheck/covid19-self-check"
+                  >
+                    GitHub
+                  </a>
+                </p>
+  
+               <p style="color:#ccc">V5.6 HOSTED ON GLITCH.COM </p>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
-    </div>
-
-    <script src="./js/jq.js"></script>
-
-    <script>
-      function kannada() {
-        window.location.href = "test.html?lang=kannada";
-      }
-
-      function english() {
-        window.location.href = "test.html?lang=english";
-      }
-
-      function hindi() {
-        window.location.href = "test.html?lang=hindi";
-      }
-
-      function marathi() {
-        window.location.href = "test.html?lang=marathi";
-      }
-
-      function bengali() {
-        window.location.href = "test.html?lang=bengali";
-      }
-
-      function gujrathi() {
-        window.location.href = "test.html?lang=gujrathi";
-      }
-
-      function malyalam() {
-        window.location.href = "test.html?lang=malyalam";
-      }
-
-      function telugu() {
-        window.location.href = "test.html?lang=telugu";
-      }
-
-      function konkani() {
-        window.location.href = "test.html?lang=konkani";
-      }
-
-      $(document).ready(function() {
-        /* HIGHLIGHT AND SELECT ONE RADIO ONLY */
-
-        $('input[type="radio"]').click(function() {
-          $('input[type="radio"]').each(function() {
-            if ($(this).is(":checked")) {
-              $(this)
-                .parent()
-                .addClass("checked");
-            } else {
-              $(this)
-                .parent()
-                .removeClass("checked");
-            }
+  
+      <script src="./js/jq.js"></script>
+  
+      <script>
+        function languageClick(language) {
+          try {
+            window.location.href = `test.html?lang=${language}`;
+          } catch (err) {
+            console.log(err);
+            window.location.href = `test.html`;
+          }
+        }
+        
+        $(document).ready(function() {
+          /* HIGHLIGHT AND SELECT ONE RADIO ONLY */
+  
+          $('input[type="radio"]').click(function() {
+            $('input[type="radio"]').each(function() {
+              if ($(this).is(":checked")) {
+                $(this)
+                  .parent()
+                  .addClass("checked");
+              } else {
+                $(this)
+                  .parent()
+                  .removeClass("checked");
+              }
+            });
           });
         });
-      });
-    </script>
-    <!-- Ending Preloader -->
-    <script>
-      try {
-        NProgress.done();
-      } catch (err) {
-        console.warn(err);
-      }
-    </script>
+      </script>
+      <!-- Ending Preloader -->
+      <script>
+        try {
+          NProgress.done();
+        } catch (err) {
+          console.warn(err);
+        }
+      </script>  
 
     <div class="loader-wrapper">
       <span class="loader"><span class="loader-inner"></span></span>
@@ -443,4 +340,6 @@
       }
     </script>
   </body>
+  <script src="./env.js"></script>
+  <script src="./langselect.js"></script>
 </html>

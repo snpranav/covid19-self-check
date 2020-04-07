@@ -1,0 +1,39 @@
+{
+    "kannada": {
+        "region": ["Karnataka"],
+        "text": "ಕನ್ನಡದಲ್ಲಿ ಮುಂದುವರಿಸು"
+    },
+    "english": {
+        "region": [null],
+        "text": "Continue In English"
+    },
+    "hindi": {
+        "region": ["Delhi"],
+        "text": "हिंदी मे आगे बढें"
+    },
+    "malayalam": {
+        "region": ["Kerala"],
+        "text": "മലയാളത്തിൽ തുടരുക"
+    },
+    "konkani": {
+        "region": ["Goa"],
+        "text": "कोंकणी तल्यान फुडें वचपा खातीर"
+    },
+    "telugu": {
+        "region": ["Telangana", "Andhra Pradesh"],
+        "text": "తెలుగు భాష కోసం"
+    },
+    "marathi": {
+        "region": ["Maharashtra"],
+        "text": "मराठी साठी हा पर्याय"
+    },
+    "bengali": {
+        "region": ["West Bengal"],
+        "text": "বাংলা ভাষার জন্যে"
+    },
+    "gujrathi": {
+        "region": ["Gujrath"],
+        "text": "ગુજરાતીમાં આગળ વધો"
+    }
+
+}
