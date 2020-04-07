@@ -7,7 +7,7 @@
 $(document).ready(() => {
     let regionName;
     try {
-        fetch(`https://ipapi.co/json/?key=${IPAPI_API_KEY}`)
+        fetch(`https://locate.covidselfcheck.app/`)
         .then((response) => {
             return response.json();
         }).then((data) => {
