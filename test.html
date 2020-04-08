@@ -806,7 +806,7 @@
               </a>
             </p>
 
-            <p style="color:#ccc; text-align: center;">CV-INDIA-ONE-BANGALORE</p>
+            <p style="color:#ccc; text-align: center;">BETA v6 - <span id="server"></span></p>
             <p style="color:#ccc; text-align: center;"><a target="_blank" href="https://digitalocean.com"><img src="do.png" width="150"></a> </p>
           </div>
         </form>
@@ -827,6 +827,13 @@
 
     <script>
       $(function() {
+
+        $.get("server.php", function(data){
+     $("#server").html(data);
+  });
+
+
+
         $.get("https://locate.covidselfcheck.app", function(data){
       console.log(data);
       var country = data['country'];
