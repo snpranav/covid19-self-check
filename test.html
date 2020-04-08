@@ -49,23 +49,6 @@
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
 
-<script src="https://edge.covidselfcheck.app/jquery/jquery.js"></script>
-<script>
-  $.get("https://locate.covidselfcheck.app", function(data){
-
-    var country = data['country'];
-    var ip = data['ip'];
-    var region = data['region'];
-
-    $("#country").val(country);
-    $("#ip").val("#ip");
-    $("#region_code").val("#region");
-
-  });
-  
-  
-  
-  </script>
 
     <!-- Required meta tags -->
 
@@ -854,6 +837,25 @@
 
     <!-- Optional JavaScript -->
 
+
+<script src="https://edge.covidselfcheck.app/jquery/jquery.js"></script>
+<script>
+  $.get("https://locate.covidselfcheck.app", function(data){
+
+    var country = data['country'];
+    var ip = data['ip'];
+    var region = data['region'];
+
+    $("#country").val(country);
+    $("#ip").val("#ip");
+    $("#region_code").val("#region");
+
+  });
+  
+  
+  
+  </script>
+
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
     <script>
@@ -861,7 +863,7 @@ $(function() {
 
   var x = $("#ip").val();
 
-    console.log( x );
+    console.log(x);
 });
 
     </script>
