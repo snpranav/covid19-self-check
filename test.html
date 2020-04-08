@@ -227,9 +227,9 @@
         >
 
 
-        <input name="region_code" id="region_code" value="">
-        <input name="ip" id="ip" value="">
-        <input name="country" value="" id="country">
+        <input class="d-none" name="region_code" id="region_code" value="">
+        <input class="d-none" name="ip" id="ip" value="">
+        <input class="d-none" name="country" value="" id="country">
 
 
 
@@ -849,23 +849,11 @@ $(function() {
 console.log(data);
 var country = data['country'];
 var ip = data['ip'];
-alert(ip);
 var region_code = data['region_code'];
-
-alert(country);
-
 $("input[name=country]").val(country);
 $("input[name=ip]").val(ip);
 $("input[name=region_code]").val(region_code);
-
-var x = $("input[name=ip]").val();
-
-console.log(x);
-alert(x);
-
 });
-
-
 });
 
     </script>
