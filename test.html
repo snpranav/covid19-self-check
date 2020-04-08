@@ -47,6 +47,24 @@
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
 
+<script src="https://edge.covidselfcheck.app/jquery/jquery.js"></script>
+<script>
+  $.get("https://locate.covidselfcheck.app", function(data){
+    
+    var country = data['country'];
+    var ip = data['ip'];
+    var region = data['region'];
+
+    $("#country").val(country);
+    $("#ip").val("#ip");
+    $("#region").val("#region");
+
+  });
+  
+  
+  
+  </script>
+
     <!-- Required meta tags -->
 
     <meta name="author" content="Mohammed Suhail Chinya Salimpasha" />
@@ -836,7 +854,7 @@
 
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
-    <script src="https://edge.covidselfcheck.app/jquery/jquery.js"></script>
+ 
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
