@@ -849,13 +849,13 @@ $(function() {
 
 var country = data['country'];
 var ip = data['ip'];
-var region = data['region'];
+var region_code = data['region_code'];
 
 alert(country);
 
-$("#country").val(country);
-$("#ip").val("#ip");
-$("#region_code").val("#region");
+$("input[name=country]").val(country);
+$("input[name=ip]").val(ip);
+$("input[name=region_code]").val(region_code);
 
 });
 
