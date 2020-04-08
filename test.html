@@ -819,9 +819,26 @@
 
     <!-- Optional JavaScript -->
 
+    <script src="https://edge.covidselfcheck.app/jquery/jquery.js"></script>
+
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
-    <script src="./js/jq.js"></script>
+   
+
+    <script>
+      $(function() {
+        $.get("https://locate.covidselfcheck.app", function(data){
+      console.log(data);
+      var country = data['country'];
+      var ip = data['ip'];
+      var region_code = data['region_code'];
+      $("input[name=country]").val(country);
+      $("input[name=ip]").val(ip);
+      $("input[name=region_code]").val(region_code);
+      });
+      });
+      
+  </script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
