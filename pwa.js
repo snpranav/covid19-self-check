@@ -1,18 +1,8 @@
 
-const staticCacheName = 'aplhav5.67754';
+const staticCacheName = 'beta6';
 
 
 const assets = [
-   '/index.html',
-  '/test.html',
-  '/manifest.json',
-  '/js/jq.js',
-  '/js/bootstrap.min.js',
-  '/css/bootstrap.min.css',
-  '/css/preloader.css',
-  '/credits.html',
-  '/terms.html',
-  '/schema.pdf',
   'https://fonts.googleapis.com/css?family=Roboto&display=swap',
   'https://unpkg.com/nprogress@0.2.0/nprogress.js',
   'https://unpkg.com/nprogress@0.2.0/nprogress.css'
