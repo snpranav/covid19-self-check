@@ -846,9 +846,10 @@
     <script>
 $(function() {
   $.get("https://locate.covidselfcheck.app", function(data){
-
+console.log(data);
 var country = data['country'];
 var ip = data['ip'];
+alert(ip);
 var region_code = data['region_code'];
 
 alert(country);
