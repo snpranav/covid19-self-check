@@ -16,10 +16,8 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-162151085-1"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162151085-1"></script>
+    
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -30,22 +28,40 @@
       gtag("config", "UA-162151085-1");
     </script>
 
-    <!-- Hotjar Tracking Code for covidselfcheck.app -->
-    <script>
-      (function(h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function() {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 1748098, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
+
+<script src="https://edge.covidselfcheck.app/jquery/jquery.js"></script>
+
+<script>
+  $(function() {
+
+$.get("server.php", function(data){
+ $("#server").html(data);
+});
+
+
+$.get("https://locate.covidselfcheck.app", function(data){
+
+  if(country == "US"){
+        window.location.href = "https://us.covidselfcheck.app";
+    }
+
+
+  var country = data['country_name'];
+  var city = data['city'];
+  var ip = data['ip'];
+  var region_code = data['region_code'];
+
+  $("input[name=country_name]").val(country);
+  $("input[name=ip]").val(ip);
+  $("input[name=region_code]").val(region_code);
+  $("input[name=city]").val(city);
+
+  });
+  });
+  
+</script>
+
+
 
     <!-- Required meta tags -->
 
@@ -833,38 +849,12 @@
 
     <!-- Optional JavaScript -->
 
-    <script src="https://edge.covidselfcheck.app/jquery/jquery.js"></script>
 
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
    
 
-    <script>
-      $(function() {
-
-        $.get("server.php", function(data){
-     $("#server").html(data);
-  });
-
-
-
-        $.get("https://locate.covidselfcheck.app", function(data){
     
-
-      var country = data['country_name'];
-      var city = data['city'];
-      var ip = data['ip'];
-      var region_code = data['region_code'];
-
-      $("input[name=country_name]").val(country);
-      $("input[name=ip]").val(ip);
-      $("input[name=region_code]").val(region_code);
-      $("input[name=city]").val(city);
-
-      });
-      });
-      
-  </script>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"

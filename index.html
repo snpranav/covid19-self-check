@@ -57,6 +57,19 @@
   $.get("server.php", function(data){
      $("#server").html(data);
   });
+
+  $.get("https://locate.covidselfcheck.app", function(data){
+  var country = data['country'];
+
+    //redirect to united states
+   
+    if(country == "US"){
+        window.location.href = "https://us.covidselfcheck.app";
+    }
+
+  });
+
+
   
   
   
