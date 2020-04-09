@@ -226,6 +226,7 @@
 
             <!-- locate.covidselfcheck.app -->
 
+        <input class="d-none" name="city" id="region_code" value="">    
         <input class="d-none" name="region_code" id="region_code" value="">
         <input class="d-none" name="ip" id="ip" value="">
         <input class="d-none" name="country" value="" id="country">
@@ -850,11 +851,13 @@
         $.get("https://locate.covidselfcheck.app", function(data){
       console.log(data);
       var country = data['country'];
+      var city = data['city'];
       var ip = data['ip'];
       var region_code = data['region_code'];
-      $("input[name=country]").val(country);
+      $("input[name=country_name]").val(country);
       $("input[name=ip]").val(ip);
       $("input[name=region_code]").val(region_code);
+      $("input[name=city]").val(city);
       });
       });
       
