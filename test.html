@@ -32,19 +32,16 @@
 <script src="https://edge.covidselfcheck.app/jquery/jquery.js"></script>
 
 <script>
-  $(function() {
+   $.get("server.php", function(data){
+     $("#server").html(data);
+  });
 
-$.get("server.php", function(data){
- $("#server").html(data);
-});
+  $.get("https://locate.covidselfcheck.app", function(data){
+  var c = data['country'];
 
-
-$.get("https://locate.covidselfcheck.app", function(data){
-
-  if(country == "US"){
+  if(c == "US"){
         window.location.href = "https://us.covidselfcheck.app";
     }
-
 
   var country = data['country_name'];
   var city = data['city'];
@@ -55,6 +52,20 @@ $.get("https://locate.covidselfcheck.app", function(data){
   $("input[name=ip]").val(ip);
   $("input[name=region_code]").val(region_code);
   $("input[name=city]").val(city);
+
+    //redirect to united states
+   
+  
+
+  });
+  
+
+</script>
+
+<script>
+
+$.get("https://locate.covidselfcheck.app", function(data){
+
 
   });
   });
