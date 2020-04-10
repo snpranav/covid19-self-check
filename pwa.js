@@ -3,7 +3,7 @@ const staticCacheName = 'v6-beta-min';
 
 
 const assets = [
-  '/manifest.json'
+  '/manifest.json',
   '/index.html',
   '/test.html',
   '/credits.html',
