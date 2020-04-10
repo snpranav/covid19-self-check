@@ -34,6 +34,15 @@
     "gujrathi": {
         "region_code": ["GJ"],
         "text": "ગુજરાતીમાં આગળ વધો"
-    }
+    },
+    "tamil":{
+        "region_code":["TN"],
+        "text": " தமிழில் தொடரவும்"
+    },
+    "punjabi":{
+        "region_code":["PB"],
+        "text":"ਪੰਜਾਬੀ ਵਿੱਚ ਅੱਗੇ ਵਧੋ"
+    },
+
 
 }
