@@ -12,7 +12,7 @@
         "text": "हिंदी मे आगे बढें"
     },
     "malayalam": {
-        "region_code": ["KL"],
+        "region_code": ["KL", "KN"],
         "text": "മലയാളത്തിൽ തുടരുക"
     },
     "konkani": {
