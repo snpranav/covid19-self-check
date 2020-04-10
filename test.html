@@ -101,10 +101,10 @@
 
     <!-- locate.covidselfcheck.app -->
 
-    <input class="d-none" name="city" id="city" value="">    
-    <input class="d-none" name="region_code" id="region_code" value="">
-    <input class="d-none" name="ip" id="ip" value="">
-    <input class="d-none" name="country_name" value="" id="country_name">
+    <input style="display: none;" name="city" id="city" value="">    
+    <input style="display: none;" name="region_code" id="region_code" value="">
+    <input style="display: none;" name="ip" id="ip" value="">
+    <input style="display: none;" name="country_name" id="country_name"  value="">
     
         <!-- end locate.covidselfcheck.app -->
 
@@ -743,7 +743,7 @@
 
 <!-- Prediction Algorithm -->
 
-<script async>function covid(){var e=$("form").serialize().split("&");console.log(e);var s={};for(var o in e)console.log(e[o]),s[e[o].split("=")[0]]=e[o].split("=")[1];console.log(s);s.participant,s.gender,s.age,s.pre_extisting_disorders;var r=s.travel,i=(s.internal_travel_contact,s.covid_confirm_relation),l=s.fever,y=(s.hdc,s.cough),a=s.cold,c=s.breathing_disorders,n=s.speaking_disorder,t=0;t="yes"==i?1:"yes"!=r&&"yes"!=i||"yes"!=l&&"yes"!=y&&"yes"!=a&&"yes"!=c&&"yes"!=n?("yes"==l||"yes"==a||"yes"==n||"yes"==l&&"yes"==a&&"yes"==n)&&(l&&"yes"==y||"yes"==l&&"yes"==c||"yes"==c)?1:3:1,$("#pdo").val(t),"1"==t&&$("#hr").css("display","block"),"3"==t&&$("#nr").css("display","block")}</script>
+<script async>function covid(){var e=$("form").serialize().split("&");var s={};for(var o in e)console.log(e[o]),s[e[o].split("=")[0]]=e[o].split("=")[1];console.log(s);s.participant,s.gender,s.age,s.pre_extisting_disorders;var r=s.travel,i=(s.internal_travel_contact,s.covid_confirm_relation),l=s.fever,y=(s.hdc,s.cough),a=s.cold,c=s.breathing_disorders,n=s.speaking_disorder,t=0;t="yes"==i?1:"yes"!=r&&"yes"!=i||"yes"!=l&&"yes"!=y&&"yes"!=a&&"yes"!=c&&"yes"!=n?("yes"==l||"yes"==a||"yes"==n||"yes"==l&&"yes"==a&&"yes"==n)&&(l&&"yes"==y||"yes"==l&&"yes"==c||"yes"==c)?1:3:1,$("#pdo").val(t),"1"==t&&$("#hr").css("display","block"),"3"==t&&$("#nr").css("display","block")}</script>
 
 <!-- DIGITALOCEAN ID -->
 <script async> $.get("server.php",function(e){$("#server").html(e)});</script>
