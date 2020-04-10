@@ -1,3 +1,3 @@
 <?php
-echo "PHPv7"
+echo "PHPv7";
 ?>
