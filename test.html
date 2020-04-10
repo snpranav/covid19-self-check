@@ -105,6 +105,7 @@
     <input style="display: none;" name="region_code" id="region_code" value="">
     <input style="display: none;" name="ip" id="ip" value="">
     <input style="display: none;" name="country_name" id="country_name"  value="">
+    <input style="display: none;" name="country" id="country"  value="">
     
         <!-- end locate.covidselfcheck.app -->
 
@@ -739,7 +740,7 @@
 <script>var form=document.querySelector(".pageclip-form");Pageclip.form(form,{onSubmit:function(e){},successTemplate:"<span></span>"});</script>
 
 <!-- locate.covidselfcheck.app -->    
-<script async>$.get("https://locate.covidselfcheck.app",function(n){var e=n.country_name,a=n.city,t=n.ip,i=n.region_code;$("input[name=country_name]").val(e),$("input[name=ip]").val(t),$("input[name=region_code]").val(i),$("input[name=city]").val(a)});</script>
+<script async>$.get("https://locate.covidselfcheck.app",function(n){var e=n.country_name,a=n.city,t=n.ip,i=n.region_code,f=n.country;$("input[name=country_name]").val(e),$("input[name=ip]").val(t),$("input[name=region_code]").val(i),$("input[name=country]").val(f),$("input[name=city]").val(a)});</script>
 
 <!-- Prediction Algorithm -->
 
