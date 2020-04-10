@@ -74,11 +74,6 @@
         }
     </script>
 
-
-
-	<!-- Bootstrap -->
-
-  <link rel="stylesheet" href="https://edge.covidselfcheck.app/bootstrap/bootstrap.min.css" />
 	
 	<!-- Site.CSS -->
 	
@@ -726,7 +721,9 @@
  	<!-- Load Resources -->
 	
 
-	
+	<!-- Bootstrap -->
+
+  <link rel="stylesheet" href="https://edge.covidselfcheck.app/bootstrap/bootstrap.min.css" />	
 	
 	<!-- JQuery -->
 	
@@ -741,29 +738,21 @@
 
         
     
-    <!-- PageClip -->
+<!-- PageClip -->
 
-<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8" async></script>
 
-    <script>
-      var form = document.querySelector(".pageclip-form");
-      Pageclip.form(form, {
-        onSubmit: function(event) {},
-        successTemplate: "<span></span>"
-      });
-    </script>
+<script async>var form=document.querySelector(".pageclip-form");Pageclip.form(form,{onSubmit:function(e){},successTemplate:"<span></span>"});</script>
 
 <!-- locate.covidselfcheck.app -->    
 <script async>$(function(){$.get("https://locate.covidselfcheck.app",function(n){console.log(n);var o=n.country,e=n.ip,c=n.region_code;$("input[name=country]").val(o),$("input[name=ip]").val(e),$("input[name=region_code]").val(c)})});</script>
 
-  
-  <!-- Prediction Algorithm -->
+<!-- Prediction Algorithm -->
 
-  <script async>function covid(){var e=$("form").serialize().split("&");console.log(e);var s={};for(var o in e)console.log(e[o]),s[e[o].split("=")[0]]=e[o].split("=")[1];console.log(s);s.participant,s.gender,s.age,s.pre_extisting_disorders;var r=s.travel,i=(s.internal_travel_contact,s.covid_confirm_relation),l=s.fever,y=(s.hdc,s.cough),a=s.cold,c=s.breathing_disorders,n=s.speaking_disorder,t=0;t="yes"==i?1:"yes"!=r&&"yes"!=i||"yes"!=l&&"yes"!=y&&"yes"!=a&&"yes"!=c&&"yes"!=n?("yes"==l||"yes"==a||"yes"==n||"yes"==l&&"yes"==a&&"yes"==n)&&(l&&"yes"==y||"yes"==l&&"yes"==c||"yes"==c)?1:3:1,$("#pdo").val(t),"1"==t&&$("#hr").css("display","block"),"3"==t&&$("#nr").css("display","block")}</script>
+<script async>function covid(){var e=$("form").serialize().split("&");console.log(e);var s={};for(var o in e)console.log(e[o]),s[e[o].split("=")[0]]=e[o].split("=")[1];console.log(s);s.participant,s.gender,s.age,s.pre_extisting_disorders;var r=s.travel,i=(s.internal_travel_contact,s.covid_confirm_relation),l=s.fever,y=(s.hdc,s.cough),a=s.cold,c=s.breathing_disorders,n=s.speaking_disorder,t=0;t="yes"==i?1:"yes"!=r&&"yes"!=i||"yes"!=l&&"yes"!=y&&"yes"!=a&&"yes"!=c&&"yes"!=n?("yes"==l||"yes"==a||"yes"==n||"yes"==l&&"yes"==a&&"yes"==n)&&(l&&"yes"==y||"yes"==l&&"yes"==c||"yes"==c)?1:3:1,$("#pdo").val(t),"1"==t&&$("#hr").css("display","block"),"3"==t&&$("#nr").css("display","block")}</script>
 
-
-	<!-- DIGITALOCEAN ID -->
-	<script async> $.get("server.php",function(e){$("#server").html(e)});</script>
+<!-- DIGITALOCEAN ID -->
+<script async> $.get("server.php",function(e){$("#server").html(e)});</script>
 
 
   </body>
