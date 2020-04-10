@@ -1,5 +1,5 @@
 
-const staticCacheName = 'v6-beta';
+const staticCacheName = 'v6-beta-min';
 
 
 const assets = [
