@@ -1,4 +1,5 @@
 
+
 const staticCacheName = 'v6.0.0';
 
 
@@ -20,6 +21,7 @@ const assets = [
   'https://s.pageclip.co/v1/pageclip.js',  
   'https://res.cloudinary.com/thesuhailcompany/image/upload/c_scale,w_150/v1586528239/covidselfcheck/do.png',
 ];
+
 
 
 self.addEventListener('activate', function(event) {

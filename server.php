@@ -1,3 +1,6 @@
 <?php
-echo "V6 DIGITALOCEAN-IN-01";
-?>
+
+echo "COVIDSELFCHECK-DO-01";
+
+
+?
