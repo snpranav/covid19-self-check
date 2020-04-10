@@ -1,12 +1,25 @@
 
-const staticCacheName = 'beta6.1';
+
+const staticCacheName = 'v6.0.0';
 
 
 const assets = [
+  '/manifest.json',
+  '/index.html',
+  '/test.html',
+  '/credits.html',
+  '/terms.html',
+  '/schema.pdf',
+  'https://edge.covidselfcheck.app/bootstrap/bootstrap.min.css',
+  'https://edge.covidselfcheck.app/nprogress/nprogress.min.js',
+  'https://edge.covidselfcheck.app/nprogress/nprogress.min.css',
+  'https://edge.covidselfcheck.app/jquery/jquery.js',
+  'https://edge.covidselfcheck.app/site/ui.val.min.js',
+  '/https://edge.covidselfcheck.app/site/ui.min.js',
+  'https://edge.covidselfcheck.app/site/preloader.css',
   'https://fonts.googleapis.com/css?family=Roboto&display=swap',
-  'https://unpkg.com/nprogress@0.2.0/nprogress.js',
-  'https://unpkg.com/nprogress@0.2.0/nprogress.css'
- 
+  'https://s.pageclip.co/v1/pageclip.js',  
+  'https://res.cloudinary.com/thesuhailcompany/image/upload/c_scale,w_150/v1586528239/covidselfcheck/do.png',
 ];
 
 

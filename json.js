@@ -7,7 +7,7 @@ $(document).ready(function() {
     new Promise((resolve, reject) => {
         // Starting Preloader
         NProgress.start();
-        return fetch(`./static/${lang}.json`).then(response => {
+        return fetch(`./languages/${lang}.json`).then(response => {
             if(response.status==200) {
                 language = lang;
             } else {
@@ -25,7 +25,7 @@ $(document).ready(function() {
             language = "kannada";
         }
 
-        $.getJSON(`./static/${language}.json`, function(data) {
+        $.getJSON(`./languages/${language}.json`, function(data) {
             $.each(data["app-content"], function(key, val) {
                 $.each(val, function(className, classValues) {
                     $.each(classValues, function(textKey, textValue) {
