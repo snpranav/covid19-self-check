@@ -42,7 +42,9 @@
     "punjabi":{
         "region_code":["PB"],
         "text":"ਪੰਜਾਬੀ ਵਿੱਚ ਅੱਗੇ ਵਧੋ"
+    },
+    "oriya":{
+        "region_code":["OD"],
+        "text":"ଓଡ଼ିଆ ରେ ଜାରି ରଖନ୍ତୁ"
     }
-
-
 }
