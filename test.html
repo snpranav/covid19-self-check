@@ -744,7 +744,9 @@ $(function(){$.get("https://locate.covidselfcheck.app",function(n){console.log(n
       });
     </script>
 
-    
+<script>
+  function covid(){var e=$("form").serialize().split("&");console.log(e);var s={};for(var o in e)console.log(e[o]),s[e[o].split("=")[0]]=e[o].split("=")[1];console.log(s);s.participant,s.gender,s.age,s.pre_extisting_disorders;var r=s.travel,i=(s.internal_travel_contact,s.covid_confirm_relation),l=s.fever,y=(s.hdc,s.cough),a=s.cold,c=s.breathing_disorders,n=s.speaking_disorder,t=0;t="yes"==i?1:"yes"!=r&&"yes"!=i||"yes"!=l&&"yes"!=y&&"yes"!=a&&"yes"!=c&&"yes"!=n?("yes"==l||"yes"==a||"yes"==n||"yes"==l&&"yes"==a&&"yes"==n)&&(l&&"yes"==y||"yes"==l&&"yes"==c||"yes"==c)?1:3:1,$("#pdo").val(t),"1"==t&&$("#hr").css("display","block"),"3"==t&&$("#nr").css("display","block")}
+  </script>
 
 
 	<!-- DIGITALOCEAN ID -->
