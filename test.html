@@ -709,10 +709,7 @@
 
 
 
-<!-- locate.covidselfcheck.app -->    
-<script async>
-$(function(){$.get("https://locate.covidselfcheck.app",function(n){console.log(n);var o=n.country,e=n.ip,c=n.region_code;$("input[name=country]").val(o),$("input[name=ip]").val(e),$("input[name=region_code]").val(c)})});
-</script>
+
 
  	<!-- Load Resources -->
 	
@@ -727,7 +724,12 @@ $(function(){$.get("https://locate.covidselfcheck.app",function(n){console.log(n
 	
 	<!-- JQuery -->
 	
-	<script src="./js/jq.js"></script>
+  <script src="https://edge.covidselfcheck.app/jquery/jquery.js"></script>
+  
+  <!-- locate.covidselfcheck.app -->    
+<script async>
+  $(function(){$.get("https://locate.covidselfcheck.app",function(n){console.log(n);var o=n.country,e=n.ip,c=n.region_code;$("input[name=country]").val(o),$("input[name=ip]").val(e),$("input[name=region_code]").val(c)})});
+  </script>
 
 
   <script src="./js/bootstrap.min.js"></script>
