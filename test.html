@@ -741,9 +741,9 @@
     
 <!-- PageClip -->
 
-<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8" async></script>
+<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
-<script async>var form=document.querySelector(".pageclip-form");Pageclip.form(form,{onSubmit:function(e){},successTemplate:"<span></span>"});</script>
+<script>var form=document.querySelector(".pageclip-form");Pageclip.form(form,{onSubmit:function(e){},successTemplate:"<span></span>"});</script>
 
 <!-- locate.covidselfcheck.app -->    
 <script async>$(function(){$.get("https://locate.covidselfcheck.app",function(n){console.log(n);var o=n.country,e=n.ip,c=n.region_code;$("input[name=country]").val(o),$("input[name=ip]").val(e),$("input[name=region_code]").val(c)})});</script>
