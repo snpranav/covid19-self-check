@@ -14,7 +14,7 @@
     margin: 100px auto;
     -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
     animation: sk-rotateplane 1.2s infinite ease-in-out;
-    z-index: 99999999;
+    z-index: 1000;
 }
 
 @-webkit-keyframes sk-rotateplane {
