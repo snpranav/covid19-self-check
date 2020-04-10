@@ -28,7 +28,7 @@
         "text": "मराठी साठी हा पर्याय"
     },
     "bengali": {
-        "region_code": ["WB"],
+        "region_code": ["WB", "AS"],
         "text": "বাংলা ভাষার জন্যে"
     },
     "gujrathi": {
