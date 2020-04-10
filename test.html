@@ -1,217 +1,80 @@
-<!DOCTYPE html>
+<!DOCTYPE html">
 <html>
-  <head>
+
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162151085-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-162151085-1');
+</script>
+
+
+    <!-- SEARCH ENGINE OPTIMIZATION -->
+
+
+    <title> COVIDSELFCHECK.APP | COVID-19 Symptoms Checker App |</title>
+	
+	
+	<!-- Critical Meta Tags -->
+
     <meta charset="utf-8" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+    <!-- Favicons -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="https://edge.covidselfcheck.app/fav/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://edge.covidselfcheck.app/fav/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://edge.covidselfcheck.app/fav/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://edge.covidselfcheck.app/fav/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://edge.covidselfcheck.app/fav/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://edge.covidselfcheck.app/fav/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://edge.covidselfcheck.app/fav/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://edge.covidselfcheck.app/fav/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://edge.covidselfcheck.app/fav/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://edge.covidselfcheck.app/fav/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://edge.covidselfcheck.app/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://edge.covidselfcheck.app/fav/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://edge.covidselfcheck.app/fav/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#1E2EDE">
+    <meta name="msapplication-TileImage" content="https://edge.covidselfcheck.app/fav/ms-icon-144x144.png">
+    <meta name="theme-color" content="#1E2EDE">
+
+	
+	<!-- PWA -->
 
     <link rel="manifest" href="manifest.json" />
 
-    <!--
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker
-          .register("/pwa.js")
-          .then(reg => console.log("service worker registered"))
-          .catch(err => console.log("service worker not registered", err));
-      }
-    </script>
-   -->
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<!-- Google Fonts -->
+	
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet" />
+	
+	
+	<!-- NProgress -->
+	
+    <script src="https://edge.covidselfcheck.app/nprogress/nprogress.min.js"></script>
+	
+    <link rel="stylesheet" href="https://edge.covidselfcheck.app/nprogress/nprogress.min.css" />
+    
+	<link rel="stylesheet" href="https://edge.covidselfcheck.app/site/preloader.css" />
 
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-162151085-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-162151085-1");
+    
+	<!-- Manually starting preloader because no JSON overhead -->
+    
+	<script>
+        try {
+            NProgress.start();
+        } catch (err) {
+            console.warn(err);
+        }
     </script>
 
-    <!-- Hotjar Tracking Code for covidselfcheck.app -->
-    <script>
-      (function(h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function() {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 1748098, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
-
-
-    <!-- Required meta tags -->
-
-    <meta name="author" content="Mohammed Suhail Chinya Salimpasha" />
-
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no"
-    />
-
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cabin&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Preloader -->
-    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
-    <link
-      href="https://unpkg.com/nprogress@0.2.0/nprogress.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/preloader.css" />
-
-    <style type="text/css">
-                body {
-               font-family: 'Cabin', sans-serif;
-                  overflow-x:hidden;
-                  -webkit-user-select: none;  /* Chrome all / Safari all */
-      -moz-user-select: none;     /* Firefox all */
-      -ms-user-select: none;      /* IE 10+ */
-      user-select: none;
-                }
-
-                /* Style the form */
-                #regForm {
-                  background-color: #f5f5f7;
-                  padding: 30px;
-                  min-height: 650px !important;
-                  padding-bottom: 100px;
-                }
-
-
-
-                /* Mark input boxes that gets an error on validation: */
-                input.invalid {
-                  background-color: #ffdddd;
-                }
-
-                /* Hide all steps by default: */
-                .tab {
-                  display: none;
-                }
-
-                /* Make circles that indicate the steps of the form: */
-                .step {
-                  height: 15px;
-                  width: 15px;
-                  margin: 0 2px;
-                  background-color: #bbbbbb;
-                  border: none;
-                  border-radius: 50%;
-                  display: inline-block;
-                  opacity: 0.5;
-                }
-
-                /* Mark the active step: */
-                .step.active {
-                  opacity: 1;
-                }
-
-                /* Mark the steps that are finished and valid: */
-                .step.finish {
-                  background-color: #4CAF50;
-                }
-
-                .title-2 > h4 {
-                  font-size: 20px !important;
-                  min-height: 100px;
-                  line-height: 35px;
-                  padding-top: 15px;
-                  padding-bottom: 15px;
-                }
-
-                .btn-covid {
-                  min-height: 50px;
-                  border-radius: 10px;
-                  margin-top: 1em;
-                  font-size: 20px;
-                  width: 100%;
-                  padding-bottom: 0.2em !important;
-                }
-
-                #prevBtn {
-                  background: transparent;
-                  color:  #007bff;
-                  outline: none;
-                  border: none;
-                }
-
-                #prevBtn:hover {
-                  text-decoration: underline;
-                  color:#0069d9;
-                }
-                .title-1 {
-          font-size:22px;
-                line-height:1.6;
-                }
-
-           label.btn {
-             width:100%;
-              background-color: #FFF;
-              margin-top: 1em;
-
-              border-radius: 10px;
-              margin-top: 1em;
-              font-size: 20px;
-              padding-bottom: .2em !important;
-              line-height: 50px;
-              text-align: left;
-              border:3px solid #FFF;
-
-          }
-          label.btn {
-              border:3px solid #CCC;
-
-          }
-
-            label.btn-c {
-              background-color: #FFF;
-              display:!important;
-              margin-top: 1em;
-              margin-right:15px;
-              border-radius: 10px;
-              margin-top: 1em;
-              font-size: 20px;
-              padding-top:10px !important;
-              padding-bttom:10px !important;
-              text-align: left;
-              border:3px solid #FFF;
-
-          }
-          label.btn-c {
-              border:3px solid #CCC;
-
-          }
-
-          .checked{ border:3px solid #0069d9 !important; }
-
-
-          }
-
-          .hidden, .pageclip-form__success, .pageclip-form__success__message{
-
-          }
-    </style>
+</head>
   </head>
   <body>
     <div class="row">
@@ -825,7 +688,11 @@
               </a>
             </p>
 
-            <p style="color:#ccc">V5.5</p>
+          <br>
+          <p style="color:#ccc; text-align: center;" id="server"></p>
+          <p style="color:#ccc; text-align: center;"><a target="_blank" href="https://digitalocean.com"><img src="do.png" width="150"></a> </p>
+
+
           </div>
         </form>
       </div>
@@ -838,35 +705,31 @@
     <!-- Optional JavaScript -->
 
 
-<script src="https://edge.covidselfcheck.app/jquery/jquery.js"></script>
-
-
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
-    <script>
-$(function() {
-  $.get("https://locate.covidselfcheck.app", function(data){
-console.log(data);
-var country = data['country'];
-var ip = data['ip'];
-var region_code = data['region_code'];
-$("input[name=country]").val(country);
-$("input[name=ip]").val(ip);
-$("input[name=region_code]").val(region_code);
-});
-});
 
-    </script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
+<!-- locate.covidselfcheck.app -->    
+<script async>
+$(function(){$.get("https://locate.covidselfcheck.app",function(n){console.log(n);var o=n.country,e=n.ip,c=n.region_code;$("input[name=country]").val(o),$("input[name=ip]").val(e),$("input[name=region_code]").val(c)})});
+</script>
 
-    <script src="./js/bootstrap.min.js"></script>
+ 	<!-- Load Resources -->
+	
+	<!-- Bootstrap -->
 
-    <script src="./static/json.js"></script>
+  <link rel="stylesheet" href="https://edge.covidselfcheck.app/bootstrap/bootstrap.min.css" />
+	
+	<!-- Site.CSS -->
+	
+	<link rel="stylesheet" href="https://edge.covidselfcheck.app/site/site.css">
+	
+	
+	<!-- JQuery -->
+	
+	<script src="https://edge.covidselfcheck.app/jquery/jquery.js"></script>
+
+    <script src="./json.js"></script>
     <script src="./js/ui.js"></script>
     <script src="./js/ui-val.js"></script>
 
@@ -878,90 +741,14 @@ $("input[name=region_code]").val(region_code);
       });
     </script>
 
-    <script type="text/javascript">
-      function covid() {
-        var data = $("form")
-          .serialize()
-          .split("&");
-        console.log(data);
-        var obj = {};
-        for (var key in data) {
-          console.log(data[key]);
-          obj[data[key].split("=")[0]] = data[key].split("=")[1];
-        }
-
-        console.log(obj);
-
-        var participant = obj.participant;
-
-        var gender = obj.gender;
-
-        var age = obj.age;
-
-        var ped = obj.pre_extisting_disorders;
-
-        var tr = obj.travel;
-
-        var ic = obj.internal_travel_contact;
-
-        var rl = obj.covid_confirm_relation;
-
-        var fever = obj.fever;
-
-        var hdc = obj.hdc;
-
-        var cough = obj.cough;
-
-        var cold = obj.cold;
-
-        var bc = obj.breathing_disorders;
-
-        var tp = obj.speaking_disorder;
-
-        var st = 0;
-
-        if (rl == "yes") {
-          st = 1;
-        } else if (
-          (tr == "yes" || rl == "yes") &&
-          (fever == "yes" ||
-            cough == "yes" ||
-            cold == "yes" ||
-            bc == "yes" ||
-            tp == "yes")
-        ) {
-          st = 1;
-        } else if (
-          (fever == "yes" ||
-            cold == "yes" ||
-            tp == "yes" ||
-            (fever == "yes" && cold == "yes" && tp == "yes")) &&
-          ((fever && cough == "yes") ||
-            (fever == "yes" && bc == "yes") ||
-           (bc == "yes"))
-        ) {
-          st = 1;
-        } else if (
-          fever == "yes" ||
-          cold == "yes" ||
-          hdc == "yes" ||
-          tp == "yes"
-        ) {
-          st = 3;
-        } else {
-          st = 3;
-        }
-
-        $("#pdo").val(st);
-
-        if (st == "1") {
-          $("#hr").css("display", "block");
-        }
-
-        if (st == "3") {
-          $("#nr").css("display", "block");
-        }
-      }
+    <script async>
+    function covid(){var e=$("form").serialize().split("&");console.log(e);var s={};for(var o in e)console.log(e[o]),s[e[o].split("=")[0]]=e[o].split("=")[1];console.log(s);s.participant,s.gender,s.age,s.pre_extisting_disorders;var r=s.travel,i=(s.internal_travel_contact,s.covid_confirm_relation),l=s.fever,y=(s.hdc,s.cough),a=s.cold,c=s.breathing_disorders,n=s.speaking_disorder,t=0;t="yes"==i?1:"yes"!=r&&"yes"!=i||"yes"!=l&&"yes"!=y&&"yes"!=a&&"yes"!=c&&"yes"!=n?("yes"==l||"yes"==a||"yes"==n||"yes"==l&&"yes"==a&&"yes"==n)&&(l&&"yes"==y||"yes"==l&&"yes"==c||"yes"==c)?1:3:1,$("#pdo").val(t),"1"==t&&$("#hr").css("display","block"),"3"==t&&$("#nr").css("display","block")}
     </script>
+
+
+	<!-- DIGITALOCEAN ID -->
+	<script async> $.get("server.php",function(e){$("#server").html(e)});</script>
+
+
   </body>
 </html>
