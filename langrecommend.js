@@ -5,7 +5,11 @@ $(document).ready(() => {
         .then((response) => {
             return response.json();
         }).then((data) => {
-            regionName = data["country"] + "-" + data["region_code"];
+            if(data["country"]=="IN") {
+                regionName = data["country"] + "-" + data["region_code"];
+            } else {
+                regionName = data["country"];
+            }
         }).then(() => {
             writeLanguages();
         }).catch((error) => {
@@ -37,17 +41,31 @@ $(document).ready(() => {
             }).then((data) => {
                 let arrayOfLanguages = Object.keys(data);
                 try {
+                    let languagesToWrite = [];
                     // If regionName is undefined setting timeout
                     if(regionName == undefined) {
                         setTimeout(() => {
                         },1000);
                     } else {
                         arrayOfLanguages.forEach((lang) => {
-                            if(data[lang]["region_code"].includes(regionName.toUpperCase())) {
-                                arrayOfLanguages.splice(arrayOfLanguages.indexOf(lang), 1);
-                                arrayOfLanguages.unshift(lang);
+                            if(Object.keys(data[lang]).includes("primary_region_code") && data[lang]["primary_region_code"].includes(regionName.toUpperCase())) {
+                                if(data[lang]["region_code"].includes(regionName.toUpperCase())) {
+                                    // Removing duplicates in region_code and primary_region_code
+                                    data[lang]["region_code"].splice(data[lang]["region_code"].indexOf(regionName.toUpperCase()));
+                                }
+                                languagesToWrite.splice(0, 0, lang);
+                            } else if(data[lang]["region_code"].includes(regionName.toUpperCase())) {
+                                languagesToWrite.push(lang);
+                            }
+                            if(data[lang]["region_code"].includes(null)) {
+                                languagesToWrite.splice(1, 0, lang);
                             }
                         });
+                    }
+                    if(languagesToWrite.length!=0) {
+                        arrayOfLanguages = languagesToWrite;
+                    } else {
+                        arrayOfLanguages = ["english"];
                     }
                 } catch (err) {
                     console.warn(err);
