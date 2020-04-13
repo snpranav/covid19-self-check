@@ -1,50 +1,126 @@
 {
-    "kannada": {
-        "region_code": ["KN"],
-        "text": "ಕನ್ನಡದಲ್ಲಿ ಮುಂದುವರಿಸು"
-    },
     "english": {
-        "region_code": [null],
+        "region_code": [
+            null
+        ],
         "text": "Continue In English"
     },
+    "kannada": {
+        "region_code": [
+            "IN-GA",
+            "IN-TN",
+            "IN-TG",
+            "IN-AP",
+            "IN-KL",
+            "IN-MH"
+        ],
+        "primary_region_code": [
+            "IN-KA"
+        ],
+        "text": "ಕನ್ನಡದಲ್ಲಿ ಮುಂದುವರಿಸು"
+    },
     "hindi": {
-        "region_code": ["DL", "HR", "HP"],
+        "region_code": [
+            "IN-DL",
+            "IN-HR",
+            "NP"
+        ],
+        "primary_region_code": [
+            "IN-DL",
+            "IN-UP",
+            "IN-HP"
+        ],
         "text": "हिंदी मे आगे बढें"
     },
     "malayalam": {
-        "region_code": ["KL", "KN"],
+        "region_code": [
+            "IN-KA",
+            "IN-TN",
+            "IN-TG",
+            "IN-AP",
+            "IN-GA",
+            "IN-MH"
+        ],
+        "primary_region_code": [
+            "IN-KL"
+        ],
         "text": "മലയാളത്തിൽ തുടരുക"
     },
     "konkani": {
-        "region_code": ["GA"],
+        "region_code": [
+            "IN-KA",
+            "IN-TN",
+            "IN-TG",
+            "IN-AP",
+            "IN-KL",
+            "IN-MH"
+        ],
         "text": "कोंकणी तल्यान फुडें वचपा खातीर"
     },
     "telugu": {
-        "region_code": ["TG", "AP"],
+        "region_code": [
+            "IN-GA",
+            "IN-TN",
+            "IN-KA",
+            "IN-KL",
+            "IN-MH"
+        ],
+        "primary_region_code": [
+            "IN-TG",
+            "IN-AP"
+        ],
         "text": "తెలుగు భాష కోసం"
     },
     "marathi": {
-        "region_code": ["MH"],
+        "region_code": [
+            "IN-KA",
+            "IN-TG",
+            "IN-AP",
+            "IN-MH"
+        ],
+        "primary_code": [
+            "IN-MH"
+        ],
         "text": "मराठी साठी हा पर्याय"
     },
     "bengali": {
-        "region_code": ["WB"],
+        "region_code": [
+            "IN-WB",
+            "BD"
+        ],
         "text": "বাংলা ভাষার জন্যে"
     },
     "gujrathi": {
-        "region_code": ["GJ"],
+        "region_code": [
+            "IN-GJ"
+        ],
         "text": "ગુજરાતીમાં આગળ વધો"
     },
-    "tamil":{
-        "region_code":["TN"],
+    "tamil": {
+        "region_code": [
+            "IN-KA",
+            "IN-GA",
+            "IN-TG",
+            "IN-AP",
+            "IN-KL",
+            "IN-MH",
+            "LK"
+        ],
+        "primary_region_code": [
+            "IN-TN"
+        ],
         "text": " தமிழில் தொடரவும்"
     },
-    "punjabi":{
-        "region_code":["PB"],
-        "text":"ਪੰਜਾਬੀ ਵਿੱਚ ਅੱਗੇ ਵਧੋ"
+    "punjabi": {
+        "region_code": [
+            "IN-PB"
+        ],
+        "text": "ਪੰਜਾਬੀ ਵਿੱਚ ਅੱਗੇ ਵਧੋ"
     },
-    "oriya":{
-        "region_code":["OD"],
-        "text":"ଓଡ଼ିଆ ରେ ଜାରି ରଖନ୍ତୁ"
+    "oriya": {
+        "region_code": [
+            "IN-OD"
+        ],
+        "text": "ଓଡ଼ିଆ ରେ ଜାରି ରଖନ୍ତୁ"
     }
 }
