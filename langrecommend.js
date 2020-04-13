@@ -41,12 +41,12 @@ $(document).ready(() => {
             }).then((data) => {
                 let arrayOfLanguages = Object.keys(data);
                 try {
+                    let languagesToWrite = [];
                     // If regionName is undefined setting timeout
                     if(regionName == undefined) {
                         setTimeout(() => {
                         },1000);
                     } else {
-                        let languagesToWrite = [];
                         arrayOfLanguages.forEach((lang) => {
                             if(Object.keys(data[lang]).includes("primary_region_code") && data[lang]["primary_region_code"].includes(regionName.toUpperCase())) {
                                 if(data[lang]["region_code"].includes(regionName.toUpperCase())) {
@@ -61,7 +61,11 @@ $(document).ready(() => {
                                 languagesToWrite.splice(1, 0, lang);
                             }
                         });
+                    }
+                    if(languagesToWrite.length!=0) {
                         arrayOfLanguages = languagesToWrite;
+                    } else {
+                        arrayOfLanguages = ["english"];
                     }
                 } catch (err) {
                     console.warn(err);
