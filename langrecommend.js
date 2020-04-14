@@ -6,9 +6,9 @@ $(document).ready(() => {
             return response.json();
         }).then((data) => {
             if(data["country"]=="IN") {
-                regionName = data["body"]["country"] + "-" + data["body"]["region_code"];
+                regionName = data["country"] + "-" + data["region_code"];
             } else {
-                regionName = data["body"]["country"];
+                regionName = data["country"];
             }
         }).then(() => {
             writeLanguages();
@@ -51,8 +51,7 @@ $(document).ready(() => {
                             if(Object.keys(data[lang]).includes("primary_region_code") && data[lang]["primary_region_code"].includes(regionName.toUpperCase())) {
                                 if(data[lang]["region_code"].includes(regionName.toUpperCase())) {
                                     // Removing duplicates in region_code and primary_region_code
-                                    data[lang]["region_code"].splice(data[lang]["region_code"].indexOf(regionName.toUpperCase()));
-                                    console.log(language)
+
                                 }
                                 languagesToWrite.splice(0, 0, lang);
                             } else if(data[lang]["region_code"].includes(regionName.toUpperCase())) {
