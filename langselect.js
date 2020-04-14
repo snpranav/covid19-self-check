@@ -6,6 +6,7 @@ $(document).ready(() => {
             return response.json();
         }).then((data) => {
             regionName = data["country"] + "-" + data["region_code"];
+
         }).then(() => {
             writeLanguages();
         }).catch((error) => {

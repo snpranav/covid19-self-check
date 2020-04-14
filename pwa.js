@@ -3,6 +3,7 @@
 const staticCacheName = 'v6.0.5';
 
 
+
 const assets = [
   '/manifest.json',
   '/index.html',
