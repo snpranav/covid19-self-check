@@ -1,0 +1,5 @@
+covidselfcheck.app, www.covidselfcheck.app {
+    root * /var/www/covidselfcheck.app
+    encode gzip
+    file_server
+}
